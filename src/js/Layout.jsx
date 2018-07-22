@@ -21,7 +21,7 @@ class Layout extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <BrowserRouter>
+                <BrowserRouter basename="/training-final-project">
                     <Switch>
                         <Provider value={{state:this.state, actions:this.actions}}>
                             <Route exact path="/" component={Home} />
