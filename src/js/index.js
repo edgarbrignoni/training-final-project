@@ -9,10 +9,11 @@ import 'bootstrap';
 import '../styles/index.scss';
 
 //import your own components
+import {MainPage} from './component/MainPage.jsx';
 import {ProfileWorkout} from './component/ProfileWorkout.jsx';
-
+import {WorkoutForm} from './component/WorkoutForm.jsx';
 //render your react application
 ReactDOM.render(
-    <ProfileWorkout />,
+    <WorkoutForm />,
     document.querySelector('#app')
 );

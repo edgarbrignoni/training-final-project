@@ -86,3 +86,103 @@ body {font-family: Verdana, sans-serif;}
     background: #1abc9c;
     color: white !important
 }
+
+/*WorkOut Profile Style*/
+
+div {
+    display: block;
+}
+.container {
+    padding: 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    margin-top:15px;
+}
+
+p.empty {
+    font-family: ProximaNovaExCnBold,Arial,sans-serif;
+    color: #CBCBCB;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 35px;
+    display: block;
+}
+
+h3.goaltitle {
+    color: #919191;
+    font-size: 20px;
+    font-family: ProximaNovaExCnBold,Arial,sans-serif;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding-right: 0;
+}
+
+#bctitle {
+    float: none;
+    text-transform: uppercase;
+    color: #919191;
+    line-height: 15px;
+    font-family: ProximaNovaExCnBold,Arial,sans-serif;
+}
+
+#wbftitle {
+    float: none;
+    text-transform: uppercase;
+    color: #919191;
+    line-height: 15px;
+    font-family: ProximaNovaExCnBold,Arial,sans-serif;
+}
+
+#cwdiv {
+    max-width: 45%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#cbfdiv {
+    max-width: 45%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#lbmdiv {
+    max-width: 45%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#imgdiv {
+    max-width: 45%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#descdiv {
+    max-width: 45%;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#calendar {
+    margin-top:15px;
+}
+
+#programCard {
+    margin-top:15px;
+}
+
+#custWG {
+    margin-top:15px;
+}
+
+#photoprogress {
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
