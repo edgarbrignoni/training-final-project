@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "dbe149a213b7e35a0de3";
+/******/ 	var hotCurrentHash = "a470916e32992736df1b";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -42553,7 +42553,7 @@ var Layout = function (_React$Component) {
                 null,
                 _react2.default.createElement(
                     _reactRouterDom.BrowserRouter,
-                    { basename: "/training-final-project" },
+                    { basename: "/public" },
                     _react2.default.createElement(
                         _reactRouterDom.Switch,
                         null,
