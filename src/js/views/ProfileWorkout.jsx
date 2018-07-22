@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from "../component/Navbar.jsx";
 
-class Profile extends React.Component{
+//create your first component
+class ProfileWorkout extends React.Component{
     
     render(){
         return (
@@ -187,4 +188,4 @@ class Profile extends React.Component{
     }
 }
 
-export default Profile;
+export default ProfileWorkout;
