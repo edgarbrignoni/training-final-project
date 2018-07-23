@@ -55,7 +55,7 @@ node_modules/
 !public/*
 !public/index.html
 
-dist/*
+!dist/*
 !dist/index.html
 
 !.gitkeep

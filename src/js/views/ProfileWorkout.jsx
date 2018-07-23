@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from "../component/Navbar.jsx";
 
-//create your first component
 class ProfileWorkout extends React.Component{
     
     render(){
