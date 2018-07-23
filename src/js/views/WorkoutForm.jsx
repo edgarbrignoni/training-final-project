@@ -37,25 +37,25 @@ class WorkoutForm extends React.Component{
                                         <label htmlFor="inputOcupationN4">Ocupation</label>
                                         <input type="OcupationN" className="form-control" id="inputOcupationN4"/>
                                     </div>
-                                </div>
-                                <fieldset className="form-group">
-                                    <div className="row">
-                                        <h6>TRAUMAS OSEO-ARTRO-MUSCULARES</h6>
-                                        <legend className="col-form-label col-sm-2 pt-0">Fracturas</legend>
-                                        <div className="col-sm-10">
-                                            <div className="form-check">
-                                                <div className="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" className="custom-control-input"/>
-                                                    <label className="custom-control-label" htmlFor="customRadioInline1">Yes</label>
-                                                </div>
-                                                <div className="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" className="custom-control-input"/>
-                                                    <label className="custom-control-label" htmlFor="customRadioInline2">No</label>
+                                    <fieldset className="form-group">
+                                        <div className="row">
+                                            <h6>TRAUMAS OSEO-ARTRO-MUSCULARES</h6>
+                                            <legend className="col-form-label col-sm-2 pt-0">Fracturas</legend>
+                                            <div className="col-sm-10">
+                                                <div className="form-check">
+                                                    <div className="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" className="custom-control-input"/>
+                                                        <label className="custom-control-label" htmlFor="customRadioInline1">Yes</label>
+                                                    </div>
+                                                    <div className="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" className="custom-control-input"/>
+                                                        <label className="custom-control-label" htmlFor="customRadioInline2">No</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </fieldset>
+                                    </fieldset>
+                                </div>
                             </form>    
                         </div>
                         <div className="card-footer bg-transparent border-dark">* All fields with an asterisk are required.</div>
