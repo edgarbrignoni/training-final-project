@@ -68,7 +68,7 @@ class Layout extends React.Component {
                 },
                 {
                     ID: 3,
-                    title: "Proper Nutrition",
+                    title: "Lose Weight",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at tellus at urna condimentum. Massa placerat duis ultricies lacus sed turpis. Sed turpis tincidunt id aliquet risus. Curabitur vitae nunc sed velit.",
                     image: "./img/proper-nutrition.png"
                 }

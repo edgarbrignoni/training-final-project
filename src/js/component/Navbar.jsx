@@ -3,6 +3,7 @@ import $ from "jquery";
 import { Link } from "react-router-dom";
 import { withSession } from '../stores/AppContext.jsx';
 import PropTypes from "prop-types";
+import logo4Geeks from '../../img/logo4Geeks.png';
 
 class NavBar extends React.Component{
     constructor(props){
@@ -30,7 +31,7 @@ class NavBar extends React.Component{
             <div>
                 <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-sm">
                     <Link className="navbar-brand" to="/">
-                        <img className="img-fluid" src="./img/logo.png" />
+                        <img id="logoInverted" className="img-fluid" src={logo4Geeks} />
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
