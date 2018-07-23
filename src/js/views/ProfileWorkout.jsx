@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from "../component/Navbar.jsx";
+import ProfileInfo from "../component/ProfileInfo.jsx";
+import ProfileOverall from "../component/ProfileOverall.jsx";
 
 class ProfileWorkout extends React.Component{
     
@@ -9,36 +11,11 @@ class ProfileWorkout extends React.Component{
                 <Navbar />
                 <div className="container">
                     <div className="row">
-                        <div className="col-xs-12 col-md-6">
-                            <div className="row">
-                                <div className="col-m-6">
-                                    <ul>
-                                        <li>NAME</li>
-                                        <li>AGE</li>
-                                        <li>GENDER</li>
-                                        <li>LOCATION</li>
-                                        <li>member since Jul 16, 2018</li>
-                                    </ul>
-                                </div>    
-                                <div className="col-6 text-left">    
-                                    <a className="editInfo" href="#">Edit</a>
-                                </div>    
-                            </div>
+                        <div className="col-md-6">
+                            <ProfileInfo />   
                         </div>
-                        <div className="col-xs-12 col-md-6">
-                            <div className="row">
-                                <div className="col-6">
-                                    <h3>OVERALL GOAL</h3>
-                                </div>
-                                <div className="col-6 text-right">    
-                                    <a className="editGoal" href="#">Edit</a>
-                                </div>
-                            </div>        
-                            <div className="row">    
-                                <div className="col-6 text-center">
-                                    <p className="empty">THIS IS YOUR OVERALL GOAL.</p>
-                                </div>
-                            </div>    
+                        <div className="col-md-6">
+                            <ProfileOverall />
                         </div>
                     </div>
                     <div className="row">

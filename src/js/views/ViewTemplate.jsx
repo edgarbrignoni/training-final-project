@@ -22,11 +22,6 @@ class ViewName extends React.Component{
                                 <Card 
                                     key={map_index}
                                     ID={map_item.ID}
-                                    // whatever_post_title={map_item.post_title}
-                                    // whatever_day={map_item.day}
-                                    // whatever_time={map_item.time}
-                                    // whatever_description={map_item.description}
-                                    // whatever_location={map_item.location}
                                 />
                             );
                         })

@@ -17,19 +17,19 @@ class Layout extends React.Component {
                 {
                     ID: 1,
                     title: "Muscle Building",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et malesuada. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Ipsum nunc aliquet bibendum enim facilisis. Viverra mauris in aliquam sem fringilla ut.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/muscle-building.jpg"
                 },
                 {
                     ID: 2,
                     title: "Fat Loss",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet porttitor eget dolor. Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque. Porttitor eget dolor morbi non arcu risus. Ultrices vitae auctor eu augue ut.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/fat-loss.jpg"
                 },
                 {
                     ID: 3,
                     title: "Increase Strength",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at tellus at urna condimentum. Massa placerat duis ultricies lacus sed turpis. Sed turpis tincidunt id aliquet risus. Curabitur vitae nunc sed velit.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/increase-strength.jpg"
                 }
             ],
@@ -37,19 +37,19 @@ class Layout extends React.Component {
                 {
                     ID: 1,
                     title: "Mountain Pose",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et malesuada. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Ipsum nunc aliquet bibendum enim facilisis. Viverra mauris in aliquam sem fringilla ut.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/mountain-pose.jpg"
                 },
                 {
                     ID: 2,
                     title: "Downward Dog",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet porttitor eget dolor. Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque. Porttitor eget dolor morbi non arcu risus. Ultrices vitae auctor eu augue ut.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/downward-dog.jpg"
                 },
                 {
                     ID: 3,
                     title: "Warrior Pose",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at tellus at urna condimentum. Massa placerat duis ultricies lacus sed turpis. Sed turpis tincidunt id aliquet risus. Curabitur vitae nunc sed velit.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/warrior-pose.jpg"
                 }
             ],
@@ -57,20 +57,49 @@ class Layout extends React.Component {
                 {
                     ID: 1,
                     title: "Sports Nutrition",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et malesuada. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Ipsum nunc aliquet bibendum enim facilisis. Viverra mauris in aliquam sem fringilla ut.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/sports-nutrition.jpg"
                 },
                 {
                     ID: 2,
                     title: "Eat Right",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet porttitor eget dolor. Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque. Porttitor eget dolor morbi non arcu risus. Ultrices vitae auctor eu augue ut.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/eat-right.jpg"
                 },
                 {
                     ID: 3,
                     title: "Lose Weight",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis at tellus at urna condimentum. Massa placerat duis ultricies lacus sed turpis. Sed turpis tincidunt id aliquet risus. Curabitur vitae nunc sed velit.",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                     image: "./img/proper-nutrition.png"
+                }
+            ],
+            "profile": [
+                {
+                    ID: 1,
+                    memberFirstName: "John",
+                    memberLastName: "Doe",
+                    memberAge: 35,
+                    memberGender: "Male",
+                    memberLocation: "Miami",
+                    memberSubscriptionDate: 20180723,
+                    membertHeightCM: 170,
+                    membertWeightLBS: 200,
+                    membertWaistINCH: 38,
+                    membertBodyFatPERC: 6,
+                    memberLeanBodyMass: 0,
+                    memberPhoto: "./img/no-photo-headshot.jpg",
+                    currentWeightLBS: 180,
+                    currentWaistINCH: 36,
+                    currentBodyFatPERC: 5,
+                    currentLeanBodyMass: 0,
+                    currentPhoto: "./img/no-photo-headshot.jpg",
+                    goalWeightLBS: 170,
+                    goalWaistINCH: 32,
+                    goalBodyFatPERC: 4,
+                    goalLeanBodyMass: 0,
+                    goalPhoto: "./img/no-photo-fuulshot.png",
+                    goalOverallPERC: 0,
+                    bodyFat: 0
                 }
             ]
         };
