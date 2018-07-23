@@ -37,9 +37,9 @@ class NavBar extends React.Component{
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <Link to={"/MainPage"} className="nav-item nav-link" >MainPage</Link>
-                            <Link to={"/ProfileWorkout"} className="nav-item nav-link" >ProfileWorkout</Link>
-                            <Link to={"/WorkoutForm"} className="nav-item nav-link" >WorkoutForm</Link>
+                            <Link to={"/MainPage"} className="nav-item nav-link" >Home</Link>
+                            <Link to={"/ProfileWorkout"} className="nav-item nav-link" >Profile</Link>
+                            <Link to={"/WorkoutForm"} className="nav-item nav-link" >Form</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button type="button" className="btn btn-danger">
                                     Logout
