@@ -6,6 +6,7 @@ import MainPage from "./views/MainPage.jsx";
 import ProfileWorkout from "./views/ProfileWorkout.jsx";
 import Mike from "./views/Mike.jsx";
 import WorkoutForm from "./views/WorkoutForm.jsx";
+import NewView from "./views/NewView.jsx";
 
 
 class Layout extends React.Component {
@@ -98,7 +99,7 @@ class Layout extends React.Component {
                     goalWaistINCH: 32,
                     goalBodyFatPERC: 4,
                     goalLeanBodyMass: 0,
-                    goalPhoto: "./img/no-photo-fuulshot.png",
+                    goalPhoto: "./img/no-photo-fullshot.png",
                     goalOverallPERC: 0,
                     bodyFat: 0
                 }
@@ -121,6 +122,7 @@ class Layout extends React.Component {
                             <Route exact path="/ProfileWorkout" component={ProfileWorkout} />
                             <Route exact path="/Mike" component={Mike} />
                             <Route exact path="/WorkoutForm" component={WorkoutForm} />
+                            <Route exact path="/NewView" component={NewView} />
                         </Provider>
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>
