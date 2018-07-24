@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
-
-class ProfileInfo extends React.Component{
+class ProfileBodyComposition extends React.Component{
 
 	constructor(props){
         super(props);
@@ -14,21 +14,24 @@ class ProfileInfo extends React.Component{
     render(){
         return (
             <div className="card border-dark mb-3">
-                <div className="card-header text-white bg-dark border-dark">MEMBER INFO:
+                <div className="card-header text-white bg-dark border-dark">CURRENT BODY COMPOSITION:
                     <button type="button" className="btn btn-secondary btn-sm float-right">
                         <FontAwesomeIcon className="fa-lg" icon={faCog} />
                     </button>
                 </div>
                 <div className="card-body text-dark">
-                    <h5 className="card-title">Name:</h5>
-                    <h5 className="card-title">Age:</h5>
-                    <h5 className="card-title">Gender:</h5>
-                    <h5 className="card-title">Location:</h5>
+                    <h5 className="card-title">Current Weight: -- Lbs.</h5>
+                    <h5 className="card-title">Current Body Fat: -- %</h5>
+                    <h5 className="card-title">Lean Body Mass: -- Lbs.</h5>
+                    <h5 className="card-title">Body Fat: -- Lbs.</h5>
                 </div>
-                <div className="card-footer bg-transparent border-dark">Member since June 16 ,2018</div>
             </div>
         );
     }
 }
 
-export default ProfileInfo;
+export default ProfileBodyComposition;
+
+ProfileBodyComposition.propTypes = {
+    //prop_name: PropTypes.type_of_the_prop
+};

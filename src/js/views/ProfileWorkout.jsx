@@ -1,7 +1,10 @@
 import React from 'react';
 import Navbar from "../component/Navbar.jsx";
 import ProfileInfo from "../component/ProfileInfo.jsx";
-import ProfileOverall from "../component/ProfileOverall.jsx";
+import ProfileOverallGoal from "../component/ProfileOverallGoal.jsx";
+import ProfileBodyComposition from "../component/ProfileBodyComposition.jsx";
+import ProfileWeightFatGoals from "../component/ProfileWeightFatGoals.jsx";
+import ProfileProgressPhoto from "../component/ProfileProgressPhoto.jsx";
 
 class ProfileWorkout extends React.Component{
     
@@ -15,105 +18,21 @@ class ProfileWorkout extends React.Component{
                             <ProfileInfo />   
                         </div>
                         <div className="col-md-6">
-                            <ProfileOverall />
+                            <ProfileOverallGoal />
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-sm-6">
-                            <div className="card bg-light mb-3">
-                                <div className="card-header">
-                                    <div className="row">
-                                        <div className="col-m-6">
-                                            <h4>Current Body Composition</h4>
-                                        </div>
-                                        <div className="col-m-6 text-right">
-                                            <ul>
-                                                <li className="add">
-                                                    <a data-action="activeRequired" href="#"><div className="icon"></div>Add Goal</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>    
-                                </div>
-                                <div className="row">
-                                    <div className="col-6 text-center">
-                                        <h3><small className="text-muted">Current Weight</small></h3>
-                                        <ul>
-                                            <li><span className="currentValue">--</span><span className="unit currentValueUnit">Lbs.</span></li>
-                                        </ul> 
-                                    </div>
-                                    <div className="col-6 text-center">
-                                        <h3><small className="text-muted">Current Body Fat</small></h3>
-                                        <ul>
-                                            <li><span className="currentValueFat">--</span><span className="currentValueUnit">%</span></li>
-                                        </ul>
-                                    </div>    
-                                </div>
-                                <div className="row">
-                                    <div className="col-6"></div>
-                                    <div className="col-6 text-right">
-                                        <div className="stats">
-                                            <h3><small className="text-muted">Lean Body Mass</small></h3>
-                                            <span className="number lbm">--</span><span className="unit">Lbs.</span>
-                                        </div>
-                                        <div className="stats">
-                                            <h3><small className="text-muted">Body Fat</small></h3>
-                                            <span className="number bodyfat">--</span><span className="unit">Lbs.</span>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
+                        <div className="col-md-6">
+                            <ProfileBodyComposition />   
                         </div> 
                         <div className="col-sm-6">
-                            <div className="card bg-light mb-3">
-                                <div className="card-header">
-                                    <div className="row">
-                                        <div className="col-m-6">
-                                            <h4>Weight &amp; Body Fat Goals</h4>
-                                        </div>    
-                                        <div className="col-m-6 text-right">
-                                            <ul>
-                                                <li className="add"><a href="#">Add Goal</a></li>
-                                                <li className="graph-3"><a href="#">View Goal History</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>    
-                                </div>
-                                <div className="row">
-                                    <div className="col-6 text-center">
-                                        <img className="weightModalEmpty" src="https://common.bbcomcdn.com/BB/WicketBasedModules/WeightBodyFatGoal/images/weightBFModalEmpty.png"/>
-                                    </div>
-                                    <div className="col-6 text-right">
-                                        <h3> <small className="text-muted">Ready, Set, Goal</small></h3>
-                                        <p className="text-muted">Achieving the health and fitness goals of your dreams starts with a goal.  Set your weight and body fat goals and get the tools you need to succeed.</p>
-                                    </div>
-                                </div>        
-                            </div>
+                            <ProfileWeightFatGoals />
                         </div>
                     </div>
-                    <div className="card bg-light">
-                        <div className="card-header">
-                            <div className="row">
-                                <div className="col-m-6">
-                                    <h4>Progress Photos</h4>
-                                </div>
-                                <div className="col-6 text-right">
-                                    <ul>
-                                        <li className="upload"><a href="#">Upload New Progress Photo</a></li>
-                                    </ul>
-                                </div>    
-                            </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <ProfileProgressPhoto />
                         </div>
-                        <div className="row">
-                            <div className="col-sm-4">
-                                <img className="card-img-bottom" src="https://assets.bodybuilding.com/common/images/default-avatar/Avatar-Male-Default_196x196.jpg"/>
-                                <h3>Before</h3>
-                            </div>
-                            <div className="col-sm-4">
-                                <img className="card-img-bottom" src="https://assets.bodybuilding.com/common/images/default-avatar/Avatar-Male-Default_196x196.jpg"/>
-                                <h3>Current</h3>
-                            </div>
-                        </div>    
                     </div>
                     <div className="row">
                         <div className="col-12">

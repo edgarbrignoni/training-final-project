@@ -4,6 +4,7 @@ import { Provider } from "./stores/AppContext.jsx";
 
 import MainPage from "./views/MainPage.jsx";
 import ProfileWorkout from "./views/ProfileWorkout.jsx";
+import Mike from "./views/Mike.jsx";
 import WorkoutForm from "./views/WorkoutForm.jsx";
 
 
@@ -118,6 +119,7 @@ class Layout extends React.Component {
                             <Route exact path="/" component={MainPage} />
                             <Route exact path="/MainPage" component={MainPage} />
                             <Route exact path="/ProfileWorkout" component={ProfileWorkout} />
+                            <Route exact path="/Mike" component={Mike} />
                             <Route exact path="/WorkoutForm" component={WorkoutForm} />
                         </Provider>
                         <Route render={() => <h1>Not found!</h1>} />

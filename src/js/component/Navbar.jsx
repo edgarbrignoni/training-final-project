@@ -40,6 +40,7 @@ class NavBar extends React.Component{
                         <div className="navbar-nav">
                             <Link to={"/MainPage"} className="nav-item nav-link" >Home</Link>
                             <Link to={"/ProfileWorkout"} className="nav-item nav-link" >Profile</Link>
+                            <Link to={"/Mike"} className="nav-item nav-link" >Mike</Link>
                             <Link to={"/WorkoutForm"} className="nav-item nav-link" >Form</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button type="button" className="btn btn-danger">
