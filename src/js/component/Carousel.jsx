@@ -12,7 +12,7 @@ class Carousel extends React.Component{
     render(){
         return (
             <div className="row">
-                <div className="col-md-12 col-md-6">
+                <div className="col-md-12 mb-4">
                     {/* Carousel Wrapper */}
                     <div id="carousel-example-1z" className="carousel slide carousel-fade" data-ride="carousel">
                         {/* Indicators */}
@@ -26,17 +26,29 @@ class Carousel extends React.Component{
                         <div className="carousel-inner" role="listbox">
                             {/* First slide */}
                             <div className="carousel-item active">
-                                <img className="d-block w-100" src="./img/workout.jpg" alt="First slide"/>
+                                <img
+                                    className="d-block w-100"
+                                    src="https://www.condohotelsplayadelcarmen.com/wp-content/uploads/2016/03/THE-GYM.png"
+                                    alt="First slide"
+                                />
                             </div>
                             {/* First slide */}
                             {/* Second slide */}
                             <div className="carousel-item">
-                                <img className="d-block w-100" src="./img/yoga.jpg" alt="Second slide"/>
+                                <img
+                                    className="d-block w-100"
+                                    src="https://higherlogicdownload.s3.amazonaws.com/THELANDING/3c8de08e-e6aa-40f9-ab1c-e9cfc8b94fd0/UploadedImages/summit-2018/Sunrise-Yoga.jpg"
+                                    alt="Second slide"
+                                />
                             </div>
                             {/* /Second slide */}
                             {/* Third slide */}
                             <div className="carousel-item">
-                                <img className="d-block w-100" src="./img/nutrition.jpg" alt="Third slide"/>
+                                <img
+                                    className="d-block w-100"
+                                    src="https://static1.squarespace.com/static/5a7f8d418fd4d236a4ae0a7d/t/5aad3423575d1f89f2b65f17/1521303750853/banner-cookingstage.jpg?format=1500w"
+                                    alt="Third slide"
+                                />
                             </div>
                             {/* /Third slide */}
                         </div>

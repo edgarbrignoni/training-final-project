@@ -12,8 +12,8 @@ class Card extends React.Component{
     
     render(){
         return (
-            <div className="col-lg-4 col-md-6 mb-4">
-                <div className="card card-cascade wider mb-4">
+            <div className="col-md-4 mt-2 mb-4">
+                <div className="card card-cascade wider">
                     <div className="view view-cascade">
                         <img src={"" + this.props.image + ""} className="card-img-top"/>
                         <a href="#!">
@@ -22,7 +22,6 @@ class Card extends React.Component{
                     </div>
                     <div className="card-body card-body-cascade">
                         <h4 className="card-title text-center"><strong>{this.props.title}</strong></h4>
-                        <p className="card-text">{this.props.description}</p>
                     </div>
                 </div>
             </div>

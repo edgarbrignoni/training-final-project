@@ -14,28 +14,28 @@ class ProfileWorkout extends React.Component{
                 <Navbar />
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-lg-6">
                             <ProfileInfo />   
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-lg-6">
                             <ProfileOverallGoal />
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-lg-6">
                             <ProfileBodyComposition />   
                         </div> 
-                        <div className="col-sm-6">
+                        <div className="col-lg-6">
                             <ProfileWeightFatGoals />
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-lg-12">
                             <ProfileProgressPhoto />
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-lg-12">
                             <div className="month">
                                 <ul>
                                     <li className="prev">&#10094;</li>
@@ -46,7 +46,7 @@ class ProfileWorkout extends React.Component{
                         </div>     
                     </div>
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-lg-12">
                             <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
@@ -59,7 +59,7 @@ class ProfileWorkout extends React.Component{
                         </div>
                     </div>    
                     <div className="row">    
-                        <div className="col-12">
+                        <div className="col-lg-12">
                             <ul className="days"> 
                                 <li>1</li>
                                 <li>2</li>

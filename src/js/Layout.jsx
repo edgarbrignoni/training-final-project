@@ -6,7 +6,6 @@ import MainPage from "./views/MainPage.jsx";
 import ProfileWorkout from "./views/ProfileWorkout.jsx";
 import Mike from "./views/Mike.jsx";
 import WorkoutForm from "./views/WorkoutForm.jsx";
-import NewView from "./views/NewView.jsx";
 
 
 class Layout extends React.Component {
@@ -20,19 +19,19 @@ class Layout extends React.Component {
                     ID: 1,
                     title: "Muscle Building",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/muscle-building.jpg"
+                    img600x400: "https://legionathletics.com/wp-content/uploads/2016/02/best-shoulder-workouts-bodybuilding.jpg.pagespeed.ce.gqJBfDv4jB.jpg"
                 },
                 {
                     ID: 2,
                     title: "Fat Loss",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/fat-loss.jpg"
+                    img600x400: "http://banzweightloss.com/wp-content/uploads/2015/06/fat-loss-tips.jpg"
                 },
                 {
                     ID: 3,
                     title: "Increase Strength",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/increase-strength.jpg"
+                    img600x400: "https://cdn.shopify.com/s/files/1/1602/7323/t/5/assets/promo1.jpg?632522925084405598"
                 }
             ],
             "clases": [
@@ -40,39 +39,39 @@ class Layout extends React.Component {
                     ID: 1,
                     title: "Mountain Pose",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/mountain-pose.jpg"
+                    img600x400: "https://cdn.shopify.com/s/files/1/2289/7641/files/CV0A4202_grande.jpg?v=1527110452"
                 },
                 {
                     ID: 2,
                     title: "Downward Dog",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/downward-dog.jpg"
+                    img600x400: "http://www.veroyoga.com/wp-content/uploads/2017/01/veronica-yoga-downdog.jpg"
                 },
                 {
                     ID: 3,
                     title: "Warrior Pose",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/warrior-pose.jpg"
+                    img600x400: "https://cdn.shopify.com/s/files/1/1908/5465/files/warrior_pose_o_grande.jpeg?v=1509134214"
                 }
             ],
             "plans": [
                 {
                     ID: 1,
-                    title: "Sports Nutrition",
+                    title: "Eat Right",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/sports-nutrition.jpg"
+                    img600x400: "https://holisticpowersite.files.wordpress.com/2017/02/right-meal-for-weight-loss.jpg?w=600&h=400&crop=1"
                 },
                 {
                     ID: 2,
-                    title: "Eat Right",
+                    title: "Sports Nutrition",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/eat-right.jpg"
+                    img600x400: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg"
                 },
                 {
                     ID: 3,
                     title: "Lose Weight",
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "./img/proper-nutrition.png"
+                    img600x400: "https://img-aws.ehowcdn.com/600x600p/photos.demandstudios.com/getty/article/56/244/87622630.jpg"
                 }
             ],
             "profile": [
@@ -122,7 +121,6 @@ class Layout extends React.Component {
                             <Route exact path="/ProfileWorkout" component={ProfileWorkout} />
                             <Route exact path="/Mike" component={Mike} />
                             <Route exact path="/WorkoutForm" component={WorkoutForm} />
-                            <Route exact path="/NewView" component={NewView} />
                         </Provider>
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>

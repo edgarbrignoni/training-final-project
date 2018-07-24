@@ -10,9 +10,13 @@ class MainPage extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
-                <Carousel />
-                <h5 className="py-2 text-center text-white bg-dark">WORKOUT ROUTINES</h5>
                 <div className="container">
+                    <Carousel />
+                    <div className="row">
+                        <div className="col-md-12 col-md-6">
+                            <h4 className="py-4 text-center">Workout Routines</h4>
+                        </div>
+                    </div>
                     <div className="row">
                         <Consumer>
                             {({ state }) => (
@@ -23,16 +27,18 @@ class MainPage extends React.Component{
                                             ID={item.ID}
                                             title={item.title}
                                             description={item.description}
-                                            image={item.img600x400}
+                                            image={item.image}
                                         />
                                     );
                                 })
                             )}
                         </Consumer>
                     </div>
-                </div>
-                <h5 className="py-2 text-center text-white bg-dark">YOGA CLASSES</h5>
-                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 col-md-6">
+                            <h4 className="py-4 text-center">Yoga Clases</h4>
+                        </div>
+                    </div>
                     <div className="row">
                         <Consumer>
                             {({ state }) => (
@@ -43,16 +49,18 @@ class MainPage extends React.Component{
                                             ID={item.ID}
                                             title={item.title}
                                             description={item.description}
-                                            image={item.img600x400}
+                                            image={item.image}
                                         />
                                     );
                                 })
                             )}
                         </Consumer>
                     </div>
-                </div>
-                <h5 className="py-2 text-center text-white bg-dark">NUTRITION PLANS</h5>
-                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 col-md-6">
+                            <h4 className="py-4 text-center">Nutrition Plans</h4>
+                        </div>
+                    </div>
                     <div className="row">
                         <Consumer>
                             {({ state }) => (
@@ -63,7 +71,7 @@ class MainPage extends React.Component{
                                             ID={item.ID}
                                             title={item.title}
                                             description={item.description}
-                                            image={item.img600x400}
+                                            image={item.image}
                                         />
                                     );
                                 })

@@ -5,40 +5,13 @@
     filter: invert(100%);
 }
 
-.login {
-    font-size: 12px;
-}
-
-.top-spacer {
-    margin-top: 78px;
-}
-
-button.btn.btn-dark {
-    height: 62px;
-    background-color: #343a40 !important;
-    border: #343a40 !important;
-}
-
-a.btn.btn-dark.active {
-    height: 62px;
-    background-color: #343a40 !important;
-    border: #343a40 !important;
-}
-
-a.nav-item.nav-link.text-white {
-    margin: 10px 10px 10px 10px;
-}
-
-.card-header {
+.text-white {
     color: #fff !important;
     line-height: 30px;
 }
 
-.card-title {
-    margin: 0px;
-}
-
 ul {list-style-type: none;}
+
 body {font-family: Verdana, sans-serif;}
 
 /* Month header */

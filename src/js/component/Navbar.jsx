@@ -3,7 +3,7 @@ import $ from "jquery";
 import { Link } from "react-router-dom";
 import { withSession } from '../stores/AppContext.jsx';
 import PropTypes from "prop-types";
-import logo4Geeks from '../../img/logo4Geeks.png';
+import logo from '../../img/logo4Geeks.png';
 
 class NavBar extends React.Component{
     constructor(props){
@@ -19,7 +19,7 @@ class NavBar extends React.Component{
     componentDidUpdate(prevProps, prevState) {
         // Previous ThemeContext value is prevProps.theme
         // New ThemeContext value is this.props.theme
-        if(this.props.session.token) $('#exampleModal').modal('hide');
+        //if(this.props.session.token) $('#exampleModal').modal('hide');
     }
     
     render(){
@@ -29,35 +29,38 @@ class NavBar extends React.Component{
         
         return(
             <div>
-                <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-sm">
+                <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-sm fixed-top">
                     <Link className="navbar-brand" to="/">
-                        <img id="logoInverted" className="img-fluid" src={logo4Geeks} />
+                        <img id="logoInverted" className="img-fluid" src="./img/logo.png" />
                     </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <Link to={"/MainPage"} className="nav-item nav-link" >Home</Link>
-                            <Link to={"/ProfileWorkout"} className="nav-item nav-link" >Profile</Link>
-                            <Link to={"/Mike"} className="nav-item nav-link" >Mike</Link>
-                            <Link to={"/WorkoutForm"} className="nav-item nav-link" >Form</Link>
+                            <Link to={"/MainPage"} className="nav-item nav-link text-white" >Home</Link>
+                            <Link to={"/ProfileWorkout"} className="nav-item nav-link text-white" >Profile</Link>
+                            <Link to={"/WorkoutForm"} className="nav-item nav-link text-white" >Form</Link>
+                            <Link to={"/Mike"} className="nav-item nav-link text-white" >Mike</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button type="button" className="btn btn-danger">
                                     Logout
                                 </button>
                             :
-                                <button 
-                                    type="button" 
-                                    className="btn btn-primary" 
+                                <button
+                                    type="button"
+                                    className="btn btn-dark"
                                     data-toggle="modal" 
-                                    data-target="#exampleModal-disabled">
-                                    Login
+                                    data-target="#exampleModal">
+                                    <img id="logoInverted" className="img-fluid" src="./img/user.png" />
+                                    <p className="login">Login</p>
                                 </button>
                             }
                         </div>
                     </div>
                 </nav>
+                <div className="row top-spacer">
+                </div>
                 <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
