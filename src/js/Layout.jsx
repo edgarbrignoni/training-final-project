@@ -4,7 +4,9 @@ import { Provider } from "./stores/AppContext.jsx";
 
 import MainPage from "./views/MainPage.jsx";
 import ProfileWorkout from "./views/ProfileWorkout.jsx";
-import Mike from "./views/Mike.jsx";
+import WorkoutsView from "./views/WorkoutsView.jsx";
+import YogaView from "./views/YogaView.jsx";
+import NutritionView from "./views/NutritionView.jsx";
 import WorkoutForm from "./views/WorkoutForm.jsx";
 
 
@@ -106,7 +108,27 @@ class Layout extends React.Component {
         };
         
         this.actions = {
-            
+            "loadSession": (receivedUsername, receivedPassword) => {
+                fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/jwt-auth/v1/token', {
+                method: 'post',
+                body: JSON.stringify(
+                    {
+                        "username":receivedUsername,
+                        "password":receivedPassword
+                    }),
+                headers: new Headers(
+                    {
+                        'Content-Type':'application/json'
+                    })
+                })
+                .then(response => response.json())
+                .then(data => this.setState({ session: data}))
+                .catch(error => console.log(error));
+            },
+            "logout": () => this.setState({
+                session: {
+                }
+            })
         };
     }
 
@@ -119,7 +141,9 @@ class Layout extends React.Component {
                             <Route exact path="/" component={MainPage} />
                             <Route exact path="/MainPage" component={MainPage} />
                             <Route exact path="/ProfileWorkout" component={ProfileWorkout} />
-                            <Route exact path="/Mike" component={Mike} />
+                            <Route exact path="/WorkoutsView" component={WorkoutsView} />
+                            <Route exact path="/YogaView" component={YogaView} />
+                            <Route exact path="/NutritionView" component={NutritionView} />
                             <Route exact path="/WorkoutForm" component={WorkoutForm} />
                         </Provider>
                         <Route render={() => <h1>Not found!</h1>} />
