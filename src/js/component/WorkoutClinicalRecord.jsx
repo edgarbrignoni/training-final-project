@@ -69,14 +69,16 @@ class WorkoutClinicalRecord extends React.Component{
                                 id="defaultCheck555"
                             />
                             <label className="form-check-label" htmlFor="defaultCheck555">
-                                Other Cardiac Disease
+                                Heart Attack
                             </label>
+                        </div>
+                        <div className="form-check-1">
                             <p></p>
                             <input 
-                                type="text" 
                                 className="form-control" 
+                                type="text" 
                                 id="inputText1" 
-                                placeholder="Explain"
+                                placeholder="Other Cardiac Disease..."
                             />
                         </div>
                     </form>

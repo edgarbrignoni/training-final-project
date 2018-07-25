@@ -58,7 +58,7 @@ class WorkoutCondition extends React.Component{
                                 id="defaultCheck44"
                             />
                             <label className="form-check-label" htmlFor="defaultCheck44">
-                                Column Injures
+                                Column Injury
                             </label>
                         </div>
                         <div className="form-check">
@@ -80,7 +80,7 @@ class WorkoutCondition extends React.Component{
                                 id="defaultCheck66"
                             />
                             <label className="form-check-label" htmlFor="defaultCheck66">
-                                Knee Injuries
+                                Knee Injury
                             </label>
                         </div>
                         <div className="form-check">

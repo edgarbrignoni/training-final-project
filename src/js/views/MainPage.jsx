@@ -1,6 +1,7 @@
 import React from 'react';
 import { Consumer } from "../stores/AppContext.jsx";
 import Navbar from "../component/Navbar.jsx";
+import Footer from "../component/Footer.jsx";
 import Carousel from "../component/Carousel.jsx";
 import Card from "../component/Card.jsx";
 
@@ -71,6 +72,7 @@ class MainPage extends React.Component{
                         </Consumer>
                     </div>
                 </div>
+                <Footer />
             </React.Fragment>
         );
     }

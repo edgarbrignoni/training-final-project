@@ -41,7 +41,6 @@ class NavBar extends React.Component{
                             <Link to={"/MainPage"} className="nav-item nav-link text-white" >Home</Link>
                             <Link to={"/ProfileWorkout"} className="nav-item nav-link text-white" >Profile</Link>
                             <Link to={"/WorkoutForm"} className="nav-item nav-link text-white" >Form</Link>
-                            <Link to={"/Mike"} className="nav-item nav-link text-white" >Mike</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button type="button" className="btn btn-danger">
                                     Logout

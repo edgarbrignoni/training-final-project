@@ -72,6 +72,15 @@ class WorkoutFamilyHistory extends React.Component{
                                 Heart Attack
                             </label>
                         </div>
+                        <div className="form-check-1">
+                            <p></p>
+                            <input 
+                                className="form-control" 
+                                type="text" 
+                                id="inputText2" 
+                                placeholder="Other Cardiac Disease..."
+                            />
+                        </div>
                     </form>
                 </div>
                 <div className="card-footer bg-transparent border-dark">Check all that apply.</div>

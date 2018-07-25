@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from "../component/Navbar.jsx";
+import Footer from "../component/Footer.jsx";
 import WorkoutPersonalInfo from "../component/WorkoutPersonalInfo.jsx";
 import WorkoutClinicalRecord from "../component/WorkoutClinicalRecord.jsx";
 import WorkoutFamilyHistory from "../component/WorkoutFamilyHistory.jsx";
@@ -31,6 +32,7 @@ class WorkoutForm extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer />
             </React.Fragment>
         );
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "./stores/AppContext.jsx";
 
+import Navbar from "./component/Navbar.jsx";
 import MainPage from "./views/MainPage.jsx";
 import ProfileWorkout from "./views/ProfileWorkout.jsx";
 import Mike from "./views/Mike.jsx";

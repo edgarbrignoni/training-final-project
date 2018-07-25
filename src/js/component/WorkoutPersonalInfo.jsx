@@ -20,11 +20,11 @@ class WorkoutPersonalInfo extends React.Component{
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <label htmlFor="inputName4">First Name *</label>
-                                <input type="Name" className="form-control" id="inputName4" placeholder="First Name"/>
+                                <input type="Name" className="form-control" id="inputName4" placeholder=""/>
                             </div>
                             <div className="form-group col-md-6">
                                 <label htmlFor="inputLastN4">Last Name *</label>
-                                <input type="LastN" className="form-control" id="inputLastN4" placeholder="Last Name"/>
+                                <input type="LastN" className="form-control" id="inputLastN4" placeholder=""/>
                             </div>
                             <div className="form-group col-md-2">
                                 <label htmlFor="inputAge">Age *</label>

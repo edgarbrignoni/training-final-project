@@ -14,7 +14,7 @@ class ProfileWeightFatGoals extends React.Component{
     render(){
         return (
             <div className="card border-dark mb-3">
-                <div className="card-header text-white bg-dark border-dark">WEIGHT &amp; BODY FAT GOALS:
+                <div className="card-header text-white bg-dark border-dark">BODY FAT GOALS:
                     <button type="button" className="btn btn-secondary btn-sm float-right">
                         <FontAwesomeIcon className="fa-lg" icon={faCog} />
                     </button>
