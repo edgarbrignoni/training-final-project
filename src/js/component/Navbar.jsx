@@ -16,11 +16,11 @@ class NavBar extends React.Component{
         };
     }
     
-    componentDidUpdate(prevProps, prevState) {
+    //componentDidUpdate(prevProps, prevState) {
         // Previous ThemeContext value is prevProps.theme
         // New ThemeContext value is this.props.theme
         //if(this.props.session.token) $('#exampleModal').modal('hide');
-    }
+    //}
     
     render(){
         let homeActive = this.props.currentView === "home" ? "active" :"";
@@ -39,6 +39,9 @@ class NavBar extends React.Component{
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <Link to={"/MainPage"} className="nav-item nav-link text-white" >Home</Link>
+                            <Link to={"/WorkoutsView"} className="nav-item nav-link text-white" >Workouts</Link>
+                            <Link to={"/YogaView"} className="nav-item nav-link text-white" >Yoga</Link>
+                            <Link to={"/NutritionView"} className="nav-item nav-link text-white" >Nutrition</Link>
                             <Link to={"/ProfileWorkout"} className="nav-item nav-link text-white" >Profile</Link>
                             <Link to={"/WorkoutForm"} className="nav-item nav-link text-white" >Form</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
