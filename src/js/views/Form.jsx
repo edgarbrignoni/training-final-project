@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
-import WorkoutPersonalInfo from "../component/WorkoutPersonalInfo.jsx";
-import WorkoutClinicalRecord from "../component/WorkoutClinicalRecord.jsx";
-import WorkoutFamilyHistory from "../component/WorkoutFamilyHistory.jsx";
-import WorkoutCondition from "../component/WorkoutCondition.jsx";
-import WorkoutActivity from "../component/WorkoutActivity.jsx";
+import BasicInfo from "../component/BasicInfo.jsx";
+import ClinicalRecord from "../component/ClinicalRecord.jsx";
+import FamilyHistory from "../component/FamilyHistory.jsx";
+import PhysicalCondition from "../component/PhysicalCondition.jsx";
+import PhysicalActivity from "../component/PhysicalActivity.jsx";
 
 class WorkoutForm extends React.Component{
     
@@ -14,21 +14,21 @@ class WorkoutForm extends React.Component{
             <React.Fragment>
                 <Navbar />
                 <div className="container">
-                    <WorkoutPersonalInfo />
+                    <BasicInfo />
                     <div className="row">
                         <div className="col-lg-6">
-                            <WorkoutClinicalRecord />
+                            <ClinicalRecord />
                         </div>
                         <div className="col-lg-6">
-                            <WorkoutFamilyHistory />
+                            <FamilyHistory />
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-6">
-                            <WorkoutCondition />
+                            <PhysicalCondition />
                         </div>
                         <div className="col-lg-6">
-                            <WorkoutActivity />
+                            <PhysicalActivity />
                         </div>
                     </div>
                 </div>

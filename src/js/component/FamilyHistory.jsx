@@ -3,7 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
 
-class WorkoutFamilyHistory extends React.Component{
+class FamilyHistory extends React.Component{
 
 	constructor(props){
         super(props);
@@ -89,4 +89,4 @@ class WorkoutFamilyHistory extends React.Component{
     }
 }
 
-export default WorkoutFamilyHistory;
+export default FamilyHistory;

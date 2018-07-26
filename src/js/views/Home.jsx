@@ -1,6 +1,7 @@
 import React from 'react';
 import { Consumer } from "../stores/AppContext.jsx";
 import Navbar from "../component/Navbar.jsx";
+import Footer from "../component/Footer.jsx";
 import Carousel from "../component/Carousel.jsx";
 import Card from "../component/Card.jsx";
 
@@ -10,13 +11,9 @@ class MainPage extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
+                <Carousel />
+                <h5 className="py-2 text-center text-white bg-dark">WORKOUT ROUTINES</h5>
                 <div className="container">
-                    <Carousel />
-                    <div className="row">
-                        <div className="col-md-12 col-md-6">
-                            <h4 className="py-4 text-center">Workout Routines</h4>
-                        </div>
-                    </div>
                     <div className="row">
                         <Consumer>
                             {({ state }) => (
@@ -27,40 +24,36 @@ class MainPage extends React.Component{
                                             ID={item.ID}
                                             title={item.title}
                                             description={item.description}
-                                            image={item.image}
+                                            image={item.img600x400}
                                         />
                                     );
                                 })
                             )}
                         </Consumer>
                     </div>
-                    <div className="row">
-                        <div className="col-md-12 col-md-6">
-                            <h4 className="py-4 text-center">Yoga Clases</h4>
-                        </div>
-                    </div>
+                </div>
+                <h5 className="py-2 text-center text-white bg-dark">YOGA CLASSES</h5>
+                <div className="container">
                     <div className="row">
                         <Consumer>
                             {({ state }) => (
-                                state.clases.map((item, index) => {
+                                state.classes.map((item, index) => {
                                     return (
                                         <Card 
                                             key={index}
                                             ID={item.ID}
                                             title={item.title}
                                             description={item.description}
-                                            image={item.image}
+                                            image={item.img600x400}
                                         />
                                     );
                                 })
                             )}
                         </Consumer>
                     </div>
-                    <div className="row">
-                        <div className="col-md-12 col-md-6">
-                            <h4 className="py-4 text-center">Nutrition Plans</h4>
-                        </div>
-                    </div>
+                </div>
+                <h5 className="py-2 text-center text-white bg-dark">NUTRITION PLANS</h5>
+                <div className="container">
                     <div className="row">
                         <Consumer>
                             {({ state }) => (
@@ -71,7 +64,7 @@ class MainPage extends React.Component{
                                             ID={item.ID}
                                             title={item.title}
                                             description={item.description}
-                                            image={item.image}
+                                            image={item.img600x400}
                                         />
                                     );
                                 })
@@ -79,6 +72,7 @@ class MainPage extends React.Component{
                         </Consumer>
                     </div>
                 </div>
+                <Footer />
             </React.Fragment>
         );
     }

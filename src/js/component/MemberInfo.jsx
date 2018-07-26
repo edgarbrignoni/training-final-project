@@ -3,7 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
 
-class ProfileInfo extends React.Component{
+class MemberInfo extends React.Component{
 
 	constructor(props){
         super(props);
@@ -31,4 +31,4 @@ class ProfileInfo extends React.Component{
     }
 }
 
-export default ProfileInfo;
+export default MemberInfo;

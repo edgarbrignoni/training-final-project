@@ -3,7 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
 
-class WorkoutCondition extends React.Component{
+class PhysicalCondition extends React.Component{
 
 	constructor(props){
         super(props);
@@ -113,4 +113,4 @@ class WorkoutCondition extends React.Component{
     }
 }
 
-export default WorkoutCondition;
+export default PhysicalCondition;

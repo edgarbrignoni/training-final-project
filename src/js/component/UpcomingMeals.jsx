@@ -3,7 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
 
-class ProfileUpcoming extends React.Component{
+class UpcomingMeals extends React.Component{
 
 	constructor(props){
         super(props);
@@ -14,7 +14,7 @@ class ProfileUpcoming extends React.Component{
     render(){
         return (
             <div className="card border-dark mb-3">
-                <div className="card-header text-white bg-dark border-dark p-2">UPCOMING WORKOUTS:
+                <div className="card-header text-white bg-dark border-dark">UPCOMING MEALS:
                     <button type="button" className="btn btn-secondary btn-sm float-right">
                         <FontAwesomeIcon className="fa-lg" icon={faCog} />
                     </button>
@@ -25,9 +25,9 @@ class ProfileUpcoming extends React.Component{
                     </div>
                     <div className="col-8">
                         <div className="card-footer bg-transparent border-dark p-2">
-                            UPPER BODY:<br />
-                            REPETITIONS:<br />
-                            INTENSITY:<br />
+                            BREAKFAST:<br />
+                            LUNCH:<br />
+                            DINNER:<br />
                         </div>
                     </div>
                 </div>
@@ -37,9 +37,9 @@ class ProfileUpcoming extends React.Component{
                     </div>
                     <div className="col-8">
                         <div className="card-footer bg-transparent border-dark p-2">
-                            LOWER BODY:<br />
-                            REPETITIONS:<br />
-                            INTENSITY:<br />
+                            BREAKFAST:<br />
+                            LUNCH:<br />
+                            DINNER:<br />
                         </div>
                     </div>
                 </div>
@@ -49,9 +49,9 @@ class ProfileUpcoming extends React.Component{
                     </div>
                     <div className="col-8">
                         <div className="card-footer bg-transparent border-dark p-2">
-                            CARDIO:<br />
-                            TIME:<br />
-                            INTENSITY:<br />
+                            BREAKFAST:<br />
+                            LUNCH:<br />
+                            DINNER:<br />
                         </div>
                     </div>
                 </div>
@@ -61,9 +61,9 @@ class ProfileUpcoming extends React.Component{
                     </div>
                     <div className="col-8">
                         <div className="card-footer bg-transparent border-dark p-2">
-                            UPPER BODY:<br />
-                            REPETITIONS:<br />
-                            INTENSITY:<br />
+                            BREAKFAST:<br />
+                            LUNCH:<br />
+                            DINNER:<br />
                         </div>
                     </div>
                 </div>
@@ -73,9 +73,9 @@ class ProfileUpcoming extends React.Component{
                     </div>
                     <div className="col-8">
                         <div className="card-footer bg-transparent border-dark p-2">
-                            LOWER BODY:<br />
-                            REPETITIONS:<br />
-                            INTENSITY:<br />
+                            BREAKFAST:<br />
+                            LUNCH:<br />
+                            DINNER:<br />
                         </div>
                     </div>
                 </div>
@@ -85,9 +85,9 @@ class ProfileUpcoming extends React.Component{
                     </div>
                     <div className="col-8">
                         <div className="card-footer bg-transparent border-dark p-2">
-                            CARDIO:<br />
-                            TIME:<br />
-                            INTENSITY:<br />
+                            BREAKFAST:<br />
+                            LUNCH:<br />
+                            DINNER:<br />
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,11 @@ class ProfileUpcoming extends React.Component{
                         <div className="card-footer bg-transparent border-dark p-2">SUNDAY</div>
                     </div>
                     <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">REST</div>
+                        <div className="card-footer bg-transparent border-dark p-2">
+                            BREAKFAST:<br />
+                            LUNCH:<br />
+                            DINNER:<br />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,4 +108,4 @@ class ProfileUpcoming extends React.Component{
     }
 }
 
-export default ProfileUpcoming;
+export default UpcomingMeals;

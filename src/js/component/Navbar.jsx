@@ -3,7 +3,7 @@ import $ from "jquery";
 import { Link } from "react-router-dom";
 import { withSession } from '../stores/AppContext.jsx';
 import PropTypes from "prop-types";
-import logo from '../../img/logo4Geeks.png';
+// import logo from '../../img/logo4Geeks.png';
 
 class NavBar extends React.Component{
     constructor(props){
@@ -38,15 +38,16 @@ class NavBar extends React.Component{
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <Link to={"/MainPage"} className="nav-item nav-link text-white" >Home</Link>
-                            <Link to={"/WorkoutsView"} className="nav-item nav-link text-white" >Workouts</Link>
-                            <Link to={"/YogaView"} className="nav-item nav-link text-white" >Yoga</Link>
-                            <Link to={"/NutritionView"} className="nav-item nav-link text-white" >Nutrition</Link>
-                            <Link to={"/ProfileWorkout"} className="nav-item nav-link text-white" >Profile</Link>
-                            <Link to={"/WorkoutForm"} className="nav-item nav-link text-white" >Form</Link>
+                            <Link to={"/Home"} className="nav-item nav-link text-white" >Home</Link>
+                            <Link to={"/Workout"} className="nav-item nav-link text-white" >Workout</Link>
+                            <Link to={"/Yoga"} className="nav-item nav-link text-white" >Yoga</Link>
+                            <Link to={"/Nutrition"} className="nav-item nav-link text-white" >Nutrition</Link>
+                            <Link to={"/Profile"} className="nav-item nav-link text-white" >Profile</Link>
+                            <Link to={"/Form"} className="nav-item nav-link text-white" >Form</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
-                                <button type="button" className="btn btn-danger">
-                                    Logout
+                                <button type="button" className="btn btn-dark" onClick={(e) => actions.logout()}>
+                                    <img id="logoInverted" className="img-fluid" src="./img/login.png" />
+                                    <p className="login">Logout</p>
                                 </button>
                             :
                                 <button

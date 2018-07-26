@@ -3,7 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
 
-class WorkoutPersonalInfo extends React.Component{
+class BasicInfo extends React.Component{
 
 	constructor(props){
         super(props);
@@ -51,4 +51,4 @@ class WorkoutPersonalInfo extends React.Component{
     }
 }
 
-export default WorkoutPersonalInfo;
+export default BasicInfo;

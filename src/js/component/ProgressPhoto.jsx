@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
-class ProfileWeightFatGoals extends React.Component{
+class ProgressPhoto extends React.Component{
 
 	constructor(props){
         super(props);
@@ -14,22 +14,25 @@ class ProfileWeightFatGoals extends React.Component{
     render(){
         return (
             <div className="card border-dark mb-3">
-                <div className="card-header text-white bg-dark border-dark">BODY FAT GOALS:
+                <div className="card-header text-white bg-dark border-dark">PROGRESS PHOTOS:
                     <button type="button" className="btn btn-secondary btn-sm float-right">
                         <FontAwesomeIcon className="fa-lg" icon={faCog} />
                     </button>
                 </div>
                 <div className="card-body text-dark">
-                    <h5 className="card-title">Ready, Set, Goal</h5>
-                    <p className="card-text">Achieving the health and fitness goals of your dreams starts with a goal.  Set your weight and body fat goals and get the tools you need to succeed.</p>
+                    <div className="row">
+                        <div className="col-md-4 mb-1"><img src="./img/no-photo-headshot.jpg" className="card-img-top"/></div>
+                        <div className="col-md-4 mb-1"><img src="./img/no-photo-headshot.jpg" className="card-img-top"/></div>
+                        <div className="col-md-4 mb-1"><img src="./img/no-photo-headshot.jpg" className="card-img-top"/></div>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default ProfileWeightFatGoals;
+export default ProgressPhoto;
 
-ProfileWeightFatGoals.propTypes = {
+ProgressPhoto.propTypes = {
     //prop_name: PropTypes.type_of_the_prop
 };

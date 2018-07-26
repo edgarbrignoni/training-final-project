@@ -2,13 +2,12 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "./stores/AppContext.jsx";
 
-import Navbar from "./component/Navbar.jsx";
-import MainPage from "./views/MainPage.jsx";
-import ProfileWorkout from "./views/ProfileWorkout.jsx";
-import WorkoutsView from "./views/WorkoutsView.jsx";
-import YogaView from "./views/YogaView.jsx";
-import NutritionView from "./views/NutritionView.jsx";
-import WorkoutForm from "./views/WorkoutForm.jsx";
+import Home from "./views/Home.jsx";
+import Profile from "./views/Profile.jsx";
+import Workout from "./views/Workout.jsx";
+import Yoga from "./views/Yoga.jsx";
+import Nutrition from "./views/Nutrition.jsx";
+import Form from "./views/Form.jsx";
 
 
 class Layout extends React.Component {
@@ -37,7 +36,7 @@ class Layout extends React.Component {
                     img600x400: "https://cdn.shopify.com/s/files/1/1602/7323/t/5/assets/promo1.jpg?632522925084405598"
                 }
             ],
-            "clases": [
+            "classes": [
                 {
                     ID: 1,
                     title: "Mountain Pose",
@@ -139,13 +138,13 @@ class Layout extends React.Component {
                 <BrowserRouter>
                     <Switch>
                         <Provider value={{state:this.state, actions:this.actions}}>
-                            <Route exact path="/" component={MainPage} />
-                            <Route exact path="/MainPage" component={MainPage} />
-                            <Route exact path="/ProfileWorkout" component={ProfileWorkout} />
-                            <Route exact path="/WorkoutsView" component={WorkoutsView} />
-                            <Route exact path="/YogaView" component={YogaView} />
-                            <Route exact path="/NutritionView" component={NutritionView} />
-                            <Route exact path="/WorkoutForm" component={WorkoutForm} />
+                            <Route exact path="/" component={Home} />
+                            <Route exact path="/Home" component={Home} />
+                            <Route exact path="/Profile" component={Profile} />
+                            <Route exact path="/Workout" component={Workout} />
+                            <Route exact path="/Yoga" component={Yoga} />
+                            <Route exact path="/Nutrition" component={Nutrition} />
+                            <Route exact path="/Form" component={Form} />
                         </Provider>
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>
