@@ -109,21 +109,32 @@ class Layout extends React.Component {
         
         this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {
-                fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/jwt-auth/v1/token', {
-                method: 'post',
-                body: JSON.stringify(
+                // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/jwt-auth/v1/token', {
+                // method: 'post',
+                // body: JSON.stringify(
+                //     {
+                //         "username":receivedUsername,
+                //         "password":receivedPassword
+                //     }),
+                // headers: new Headers(
+                //     {
+                //         'Content-Type':'application/json'
+                //     })
+                // })
+                // .then(response => response.json())
+                // .then(data => this.setState({ session: data}))
+                // .catch(error => console.log(error));
+                
+                this.setState(
                     {
-                        "username":receivedUsername,
-                        "password":receivedPassword
-                    }),
-                headers: new Headers(
-                    {
-                        'Content-Type':'application/json'
-                    })
-                })
-                .then(response => response.json())
-                .then(data => this.setState({ session: data}))
-                .catch(error => console.log(error));
+                        session: {
+                            ID: 1000,
+                            user_nicename: receivedUsername,
+                            password: receivedPassword,
+                            token: "gfdrtu6545hftydhgrhxfh"
+                        }
+                    }
+                );
             },
             "logout": () => this.setState({
                 session: {
