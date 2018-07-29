@@ -16,7 +16,7 @@ class Layout extends React.Component {
         super();
         
         this.state = {
-            "routines": [
+            "workout": [
                 {
                     ID: 1,
                     title: "Muscle Building",
@@ -36,7 +36,7 @@ class Layout extends React.Component {
                     img600x400: "https://cdn.shopify.com/s/files/1/1602/7323/t/5/assets/promo1.jpg?632522925084405598"
                 }
             ],
-            "classes": [
+            "yoga": [
                 {
                     ID: 1,
                     title: "Mountain Pose",
@@ -56,7 +56,7 @@ class Layout extends React.Component {
                     img600x400: "https://cdn.shopify.com/s/files/1/1908/5465/files/warrior_pose_o_grande.jpeg?v=1509134214"
                 }
             ],
-            "plans": [
+            "nutrition": [
                 {
                     ID: 1,
                     title: "Eat Right",

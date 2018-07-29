@@ -12,64 +12,66 @@ class MainPage extends React.Component{
             <React.Fragment>
                 <Navbar />
                 <Carousel />
-                <h5 className="py-2 text-center text-white bg-dark">WORKOUT ROUTINES</h5>
                 <div className="container">
-                    <div className="row">
-                        <Consumer>
-                            {({ state }) => (
-                                state.routines.map((item, index) => {
-                                    return (
-                                        <Card 
-                                            key={index}
-                                            ID={item.ID}
-                                            title={item.title}
-                                            description={item.description}
-                                            image={item.img600x400}
-                                        />
-                                    );
-                                })
-                            )}
-                        </Consumer>
+                    <h5 className="py-2 text-center text-white bg-dark rounded">WORKOUT ROUTINES</h5>
+                    <div className="container p-0">
+                        <div className="row">
+                            <Consumer>
+                                {({ state }) => (
+                                    state.workout.map((item, index) => {
+                                        return (
+                                            <Card 
+                                                key={index}
+                                                ID={item.ID}
+                                                title={item.title}
+                                                description={item.description}
+                                                image={item.img600x400}
+                                            />
+                                        );
+                                    })
+                                )}
+                            </Consumer>
+                        </div>
                     </div>
-                </div>
-                <h5 className="py-2 text-center text-white bg-dark">YOGA CLASSES</h5>
-                <div className="container">
-                    <div className="row">
-                        <Consumer>
-                            {({ state }) => (
-                                state.classes.map((item, index) => {
-                                    return (
-                                        <Card 
-                                            key={index}
-                                            ID={item.ID}
-                                            title={item.title}
-                                            description={item.description}
-                                            image={item.img600x400}
-                                        />
-                                    );
-                                })
-                            )}
-                        </Consumer>
+                    <h5 className="py-2 text-center text-white bg-dark rounded">YOGA ARTICLES</h5>
+                    <div className="container p-0">
+                        <div className="row">
+                            <Consumer>
+                                {({ state }) => (
+                                    state.yoga.map((item, index) => {
+                                        return (
+                                            <Card 
+                                                key={index}
+                                                ID={item.ID}
+                                                title={item.title}
+                                                description={item.description}
+                                                image={item.img600x400}
+                                            />
+                                        );
+                                    })
+                                )}
+                            </Consumer>
+                        </div>
                     </div>
-                </div>
-                <h5 className="py-2 text-center text-white bg-dark">NUTRITION PLANS</h5>
-                <div className="container">
-                    <div className="row">
-                        <Consumer>
-                            {({ state }) => (
-                                state.plans.map((item, index) => {
-                                    return (
-                                        <Card 
-                                            key={index}
-                                            ID={item.ID}
-                                            title={item.title}
-                                            description={item.description}
-                                            image={item.img600x400}
-                                        />
-                                    );
-                                })
-                            )}
-                        </Consumer>
+                    <h5 className="py-2 text-center text-white bg-dark rounded">NUTRITION PLANS</h5>
+                    <div className="container p-0">
+                        <div className="row">
+                            <Consumer>
+                                {({ state }) => (
+                                    state.nutrition.map((item, index) => {
+                                        return (
+                                            <Card 
+                                                key={index}
+                                                ID={item.ID}
+                                                title={item.title}
+                                                description={item.description}
+                                                image={item.img600x400}
+                                            />
+                                        );
+                                    })
+                                )}
+                            </Consumer>
+                        </div>
                     </div>
                 </div>
                 <Footer />

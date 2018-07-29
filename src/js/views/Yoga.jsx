@@ -16,47 +16,7 @@ class YogaView extends React.Component{
                     <div className="row">
                         <Consumer>
                             {({ state }) => (
-                                state.clases.map((item, index) => {
-                                    return (
-                                        <Card 
-                                            key={index}
-                                            ID={item.ID}
-                                            title={item.title}
-                                            description={item.description}
-                                            image={item.img600x400}
-                                        />
-                                    );
-                                })
-                            )}
-                        </Consumer>
-                    </div>
-                </div>
-                <h5 className="py-2 text-center text-white bg-dark">YOGA SESSIONS</h5>
-                <div className="container">
-                    <div className="row">
-                        <Consumer>
-                            {({ state }) => (
-                                state.clases.map((item, index) => {
-                                    return (
-                                        <Card 
-                                            key={index}
-                                            ID={item.ID}
-                                            title={item.title}
-                                            description={item.description}
-                                            image={item.img600x400}
-                                        />
-                                    );
-                                })
-                            )}
-                        </Consumer>
-                    </div>
-                </div>
-                <h5 className="py-2 text-center text-white bg-dark">YOGA ASANAS</h5>
-                <div className="container">
-                    <div className="row">
-                        <Consumer>
-                            {({ state }) => (
-                                state.clases.map((item, index) => {
+                                state.yoga.map((item, index) => {
                                     return (
                                         <Card 
                                             key={index}
