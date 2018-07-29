@@ -44,6 +44,8 @@ class NavBar extends React.Component{
                             <Link to={"/Nutrition"} className="nav-item nav-link text-white" >Nutrition</Link>
                             <Link to={"/Profile"} className="nav-item nav-link text-white" >Profile</Link>
                             <Link to={"/Form"} className="nav-item nav-link text-white" >Form</Link>
+                            <Link to={"/Plans"} className="nav-item nav-link text-white" >Plans</Link>
+                            <Link to={"/SubscriptionForm"} className="nav-item nav-link text-white" >Subscribe</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button type="button" className="btn btn-dark" onClick={(e) => actions.logout()}>
                                     <img id="logoInverted" className="img-fluid" src="./img/login.png" />

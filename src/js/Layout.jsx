@@ -8,6 +8,8 @@ import Workout from "./views/Workout.jsx";
 import Yoga from "./views/Yoga.jsx";
 import Nutrition from "./views/Nutrition.jsx";
 import Form from "./views/Form.jsx";
+import Plans from "./views/Plans.jsx";
+import SubscriptionForm from "./views/SubscriptionForm.jsx";
 
 
 class Layout extends React.Component {
@@ -104,7 +106,38 @@ class Layout extends React.Component {
                     goalOverallPERC: 0,
                     bodyFat: 0
                 }
-            ]
+            ],
+            "planshop": [
+                {
+                    id: 1,
+                    name: "Personalized Training",
+                    price: 45,
+                    image: "https://legionathletics.com/wp-content/uploads/2016/02/best-shoulder-workouts-bodybuilding.jpg.pagespeed.ce.gqJBfDv4jB.jpg",
+                    description: "Achive your fitness goals with personlize training."
+                },
+                {
+                    id: 2,
+                    name: "Yoga Sessions",
+                    price: 45,
+                    image: "https://cdn.shopify.com/s/files/1/2289/7641/files/CV0A4202_grande.jpg?v=1527110452",
+                    description: "Get your body and mind sync with personlize sessions."
+                },
+                {
+                    id: 3,
+                    name: "Bundle Yoga and Workout Sessions",
+                    price: 80,
+                    image: "http://www.formulaoz.com/img/BODYBUILDING-DIET-yoga-and-bodybuilding-2.jpg",
+                    description: "With yoga becoming more and more popular, it's no surprise that bodybuilders can make use of it, get your bundle. "
+                },
+                {
+                    id: 4,
+                    name: "Training/Yoga/Nutrition",
+                    price: 175,
+                    image: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg",
+                    description: "The only thing standing between you an your goals is a click away, get the body you always wanted."
+                }    
+            ],
+            cart:[]
         };
         
         this.actions = {
@@ -139,7 +172,17 @@ class Layout extends React.Component {
             "logout": () => this.setState({
                 session: {
                 }
-            })
+            }),
+            addPlanToCart: (planId) => {
+                let tempCart = this.state.cart;
+                
+                let arrayWithThePlan = this.state.planshop.filter( (plan) => {
+                    return plan.id === planId;  
+                });
+                
+                tempCart.push(arrayWithThePlan[0]);
+                this.setState({cart: tempCart});
+            }
         };
     }
 
@@ -156,6 +199,8 @@ class Layout extends React.Component {
                             <Route exact path="/Yoga" component={Yoga} />
                             <Route exact path="/Nutrition" component={Nutrition} />
                             <Route exact path="/Form" component={Form} />
+                            <Route exact path="/Plans" component={Plans} />
+                            <Route exact path="/SubscriptionForm" component={SubscriptionForm} />
                         </Provider>
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>
