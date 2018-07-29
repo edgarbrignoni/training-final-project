@@ -126,15 +126,15 @@ class Layout extends React.Component {
                     id: 3,
                     name: "Bundle Yoga and Workout Sessions",
                     price: 80,
-                    image_url: "http://www.formulaoz.com/img/BODYBUILDING-DIET-yoga-and-bodybuilding-2.jpg",
+                    image: "http://www.formulaoz.com/img/BODYBUILDING-DIET-yoga-and-bodybuilding-2.jpg",
                     description: "With yoga becoming more and more popular, it's no surprise that bodybuilders can make use of it, get your bundle. "
                 },
                 {
                     id: 4,
                     name: "Training/Yoga/Nutrition",
                     price: 175,
-                    image_url: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg",
-                    description: "The only thing standing between you an your goals is a click away, get the body you always wanted"
+                    image: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg",
+                    description: "The only thing standing between you an your goals is a click away, get the body you always wanted."
                 }    
             ],
             cart:[]
