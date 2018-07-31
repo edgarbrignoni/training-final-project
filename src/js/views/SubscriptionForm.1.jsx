@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 
 //create your first component
-function Checkout() {
+function SubscriptionForm() {
     return (
         <React.Fragment>
             <Navbar />
@@ -72,7 +73,7 @@ function Checkout() {
                         <div className="row">
                             <div className="col-md-5 mb-3">
                                 <label htmlFor="country">Country</label>
-                                <select className="d-block w-100 form-control" id="country" required="">
+                                <select className="custom-select d-block w-100" id="country" required="">
                                     <option value="">Choose...</option>
                                     <option>United States</option>
                                 </select>
@@ -82,7 +83,7 @@ function Checkout() {
                             </div>
                             <div className="col-md-4 mb-3">
                                 <label htmlFor="state">State</label>
-                                <select className="d-block w-100 form-control" id="state" required="">
+                                <select className="custom-select d-block w-100" id="state" required="">
                                     <option value="">Choose...</option>
                                     <option>California</option>
                                 </select>
@@ -168,4 +169,4 @@ function Checkout() {
     );
 }
 
-export default Checkout;
+export default SubscriptionForm;

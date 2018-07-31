@@ -21,5 +21,5 @@ class ComponentName extends React.Component{
 export default ComponentName;
 
 ComponentName.propTypes = {
-    //prop_name: PropTypes.type_of_the_prop
+    prop_name: PropTypes.type_of_the_prop
 };

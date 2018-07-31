@@ -28,33 +28,41 @@ class NavBar extends React.Component{
         const {session, actions} = this.props;
         
         return(
-            <div>
-                <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-sm fixed-top">
-                    <Link className="navbar-brand" to="/">
-                        <img id="logoInverted" className="img-fluid" src="./img/logo.png" />
-                    </Link>
+            <div className="navbar-spacer">
+                <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-md fixed-top">
+                    <button 
+                        type="button" 
+                        className="btn btn-link p-0">
+                        <Link className="navbar-brand" to="/">
+                            <img id="logoInverted" className="img-fluid" src="./img/home.png" />
+                            <p className="login">Home</p>
+                        </Link>
+                    </button>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div className="collapse navbar-collapse justify-content-end text-center" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <Link to={"/Home"} className="nav-item nav-link text-white" >Home</Link>
                             <Link to={"/Workout"} className="nav-item nav-link text-white" >Workout</Link>
                             <Link to={"/Yoga"} className="nav-item nav-link text-white" >Yoga</Link>
                             <Link to={"/Nutrition"} className="nav-item nav-link text-white" >Nutrition</Link>
-                            <Link to={"/Profile"} className="nav-item nav-link text-white" >Profile</Link>
-                            <Link to={"/Form"} className="nav-item nav-link text-white" >Form</Link>
                             <Link to={"/Plans"} className="nav-item nav-link text-white" >Plans</Link>
-                            <Link to={"/SubscriptionForm"} className="nav-item nav-link text-white" >Subscribe</Link>
+                            <Link to={"/Registration"} className="nav-item nav-link text-white" >Registration</Link>
+                            <Link to={"/Checkout"} className="nav-item nav-link text-white" >Checkout</Link>
+                            <Link to={"/Profile"} className="nav-item nav-link text-white" >Profile</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
-                                <button type="button" className="btn btn-dark" onClick={(e) => actions.logout()}>
+                                <button 
+                                    type="button" 
+                                    className="btn btn-link text-white" 
+                                    onClick={(e) => actions.logout()}>
                                     <img id="logoInverted" className="img-fluid" src="./img/login.png" />
                                     <p className="login">Logout</p>
                                 </button>
                             :
                                 <button
                                     type="button"
-                                    className="btn btn-dark"
+                                    className="btn btn-link text-white"
                                     data-toggle="modal" 
                                     data-target="#exampleModal">
                                     <img id="logoInverted" className="img-fluid" src="./img/user.png" />
@@ -64,8 +72,6 @@ class NavBar extends React.Component{
                         </div>
                     </div>
                 </nav>
-                <div className="row top-spacer">
-                </div>
                 <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">

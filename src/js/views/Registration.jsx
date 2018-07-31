@@ -7,12 +7,13 @@ import FamilyHistory from "../component/FamilyHistory.jsx";
 import PhysicalCondition from "../component/PhysicalCondition.jsx";
 import PhysicalActivity from "../component/PhysicalActivity.jsx";
 
-class WorkoutForm extends React.Component{
+class Registration extends React.Component{
     
     render(){
         return (
             <React.Fragment>
                 <Navbar />
+                <h1 className="py-2 text-center">REGISTRATION</h1>
                 <div className="container">
                     <BasicInfo />
                     <div className="row">
@@ -37,4 +38,4 @@ class WorkoutForm extends React.Component{
         );
     }
 }
-export default WorkoutForm;
+export default Registration;

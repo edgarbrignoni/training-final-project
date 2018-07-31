@@ -1,22 +1,71 @@
-@import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap/scss/bootstrap.scss';
+// @import './cerulean.css';
+// @import './sketchy.css';
+@import './yeti.css';
+// @import './cosmo.css';
+// @import './superhero.css';
+// @import './solar.css';
+// @import './united.css';
+// @import './slate.css';
+// @import './journal.css';
+// @import './flaty.css';
+// @import './spacelab.css';
+// @import './sandstone.css';
+// @import './minty.css';
+// @import './lumen.css';
+// @import './darkly.css';
+// @import './lux.css';
+// @import './cyborg.css';
 
-#logoInverted {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
+
+button.btn.btn-link {
+    height: 62px;
+    text-decoration: none;
+}
+
+.plans-style {
+    width: 80%;
+    height: 300px;
+    border-radius: 21px 21px 0 0;
+}
+
+.navbar-spacer {
+    margin-top: 78px;
+}
+
+.btn-checkout {
+    margin-top: 7px;
+}
+
+.carousel {
+    margin-bottom: 4rem;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 50%;
+}
+
+.featurette {
+    margin-bottom: 4rem;
+}
+
+.featurette-image {
+    width: 500px;
+    // height: 500px;
+}
+
+.card-header {
+    color: #fff !important;
+    line-height: 30px;
+}
+
+.card-title {
+    margin: 0px;
 }
 
 .login {
     font-size: 12px;
-}
-
-.top-spacer {
-    margin-top: 78px;
-}
-
-button.btn.btn-dark {
-    height: 62px;
-    background-color: #343a40 !important;
-    border: #343a40 !important;
 }
 
 a.btn.btn-dark.active {
@@ -29,186 +78,7 @@ a.nav-item.nav-link.text-white {
     margin: 10px 10px 10px 10px;
 }
 
-.card-header {
-    color: #fff !important;
-    line-height: 30px;
-}
-
-.card-title {
-    margin: 0px;
-}
-
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-/* Month header */
-.month {
-    padding: 70px 25px;
-    width: 100%;
-    background: #1abc9c;
-    text-align: center;
-}
-
-/* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
-}
-
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-/* Previous button inside month header */
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-/* Next button */
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-
-/* Weekdays (Mon-Sun) */
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color:#ddd;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #666;
-    text-align: center;
-}
-
-/* Days (1-31) */
-.days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-}
-
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color: #777;
-}
-
-/* Highlight the "current" day */
-.days li .active {
-    padding: 5px;
-    background: #1abc9c;
-    color: white !important
-}
-
-/*WorkOut Profile Style*/
-
-div {
-    display: block;
-}
-.container {
-    //padding: 30px;
-    //border: 1px solid #e1e1e1;
-    //border-radius: 3px;
-    margin-top:15px;
-    margin-bottom: 15px;
-}
-
-p.empty {
-    font-family: ProximaNovaExCnBold,Arial,sans-serif;
-    color: #CBCBCB;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 35px;
-    display: block;
-}
-
-h3.goaltitle {
-    color: #919191;
-    font-size: 20px;
-    font-family: ProximaNovaExCnBold,Arial,sans-serif;
-    margin-bottom: 15px;
-    margin-top: 0;
-    padding-right: 0;
-}
-
-#bctitle {
-    float: none;
-    text-transform: uppercase;
-    color: #919191;
-    line-height: 15px;
-    font-family: ProximaNovaExCnBold,Arial,sans-serif;
-}
-
-#wbftitle {
-    float: none;
-    text-transform: uppercase;
-    color: #919191;
-    line-height: 15px;
-    font-family: ProximaNovaExCnBold,Arial,sans-serif;
-}
-
-#cwdiv {
-    max-width: 45%;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-#cbfdiv {
-    max-width: 45%;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-#lbmdiv {
-    max-width: 45%;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-#imgdiv {
-    max-width: 45%;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-#descdiv {
-    max-width: 45%;
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-#calendar {
-    margin-top:15px;
-}
-
-#programCard {
-    margin-top:15px;
-}
-
-#custWG {
-    margin-top:15px;
-}
-
-#photoprogress {
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    
+#logoInverted {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }

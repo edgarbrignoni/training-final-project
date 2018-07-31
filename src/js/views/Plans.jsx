@@ -1,137 +1,64 @@
 import React from 'react';
-import 'bootstrap';
-import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
-import {Consumer} from "../stores/AppContext.jsx";
 
     
-export default class Plans extends React.Component {
-    constructor(props) {
-    super(props);
-    this.state = {
-        //arrObj: [0,1,2,3],
-        p_bootstrap: [0,1],
-        oldValue: '',
-        newValue: ''
-        };
-        this.arrObj = [];   
-        this.count = 0;
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
-    }
-
-    GetStyleClass () {
-        switch (this.count) {
-            case 1:
-                return {
-                    left: "bg-success",
-                    right: "bg-light"
-                };
-            case 2:
-                return {
-                    left: "bg-dark",
-                    right: "bg-light"
-                };
-            case 3:
-                return {
-                    left: "bg-dark",
-                    right: "bg-light"
-                };
-            case 4:
-                return {
-                    left: "bg-success",
-                    right: "bg-light"
-                };
-            }
-    }
-
-    pushValueObj(value) {
-        this.arrObj.push(value);
-        //this.forceUpdate();
-        }
-        
-    callActionState (idPlanshop) {
-        return null; 
-        }        
-        
-    returnValueArrays (index, parray, pcounter) {
-        return<div className="container">
-            <Navbar />
-            <div className="d-md-flex flex-md-6 w-100 my-md-3 pl-md-3" key={index}>
-                {parray.map((value, index) => {
-                    ++this.count;
-                    return <div className={this.GetStyleClass(this.count).left+" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"} key={index} >
-                        <div className="my-3 py-3">
-                            <h2 className="display-5">{value.name}</h2>
-                            <p className="lead">{value.description}</p>
-                            <p className="lead">Price: ${value.price}</p>
-                            <Consumer>
-                                {
-                                    ({actions}) => {
-                                        return <button className="btn btn-primary" onClick={() => actions.addPlanToCart(value.id)}>Purchase</button>;
-                                        }
-                                }  
-                            </Consumer> 
-                        </div>
-                        <div className={"cardLoop1 "+this.GetStyleClass(this.count).right+" box-shadow mx-auto"}>
-                            <img className="img-responsive" src={value.image} alt="Chania" width="400" height="300" />
-                        </div>
-                        <style>{'div .cardLoop1 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
-                    </div>;
-                    })
-                }
-            </div>
-        </div>;
-        
-        }
+class Plans extends React.Component {
     
-    SetPlanArticle (index, newValue, counter, pindexOf, plastIndexOf) {
-        if ( pindexOf === plastIndexOf-1 ) {
-            if ( this.arrObj.length == 0 ) {
-                this.pushValueObj(newValue);
-                return this.returnValueArrays(index, this.arrObj, counter);
-                }
-            else {this.pushValueObj(newValue);
-                return this.returnValueArrays(index, this.arrObj, counter);
-                }
-            } 
-        else { if ( JSON.stringify(this.arrObj)=='[]' ) {
-                this.pushValueObj(newValue);
-                return null;
-                }
-                else {  this.pushValueObj(newValue);
-                    if ( this.arrObj.length == 2 ) {
-                        let parray = this.arrObj;
-                        this.arrObj = [];
-                        
-                        return  this.returnValueArrays(index, parray, counter);
-                    }      
-                    else { return null; }
-                    }
-            }   
-    }
- 
     render() {
-        let counter = 0;
-        var counter2 = 0;
-            return (<div className="containerBody" >
-                <Consumer>
-                    {
-                    ({ state }) => 
-                        (state.planshop.map((value, index) => {
-                        return (
-                        this.SetPlanArticle (index, 
-                            value, 
-                            ++counter,
-                            state.planshop.indexOf(value),
-                            state.planshop.length));})
-                    )}        
-                </Consumer>
-            </div>);
-            }
+        return (
+            <React.Fragment>
+                <Navbar />
+                <h1 className="py-2 text-center">PLANS</h1>
+                {/*
+                <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+                    <div className="col-md-5 p-lg-5 mx-auto my-5">
+                        <h1 className="display-4 font-weight-normal">Punny headline</h1>
+                        <p className="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple`s marketing pages.</p>
+                        <a className="btn btn-outline-secondary" href="#">Coming soon</a>
+                    </div>
+                    <div className="product-device shadow-sm d-none d-md-block"></div>
+                    <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                </div>
+                */}
+                <div className="container">
+                    <div className="row d-md-flex-disable flex-md-equal w-100 mb-md-3 pl-md-3">
+                        <div className="bg-dark col-lg-6 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                            <div className="my-3 py-3">
+                                <h2 className="display-5">Another headline</h2>
+                                <p className="lead">And an even wittier subheading.</p>
+                            </div>
+                            <div className="plans-style bg-light shadow-sm mx-auto"></div>
+                        </div>
+                        <div className="bg-light col-lg-6 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                            <div className="my-3 p-3">
+                                <h2 className="display-5">Another headline</h2>
+                                <p className="lead">And an even wittier subheading.</p>
+                            </div>
+                            <div className="plans-style bg-dark shadow-sm mx-auto"></div>
+                        </div>
+                    </div>
+                    <div className="row d-md-flex-disable flex-md-equal w-100 mb-md-3 pl-md-3">
+                        <div className="bg-light col-lg-6 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                            <div className="my-3 p-3">
+                                <h2 className="display-5">Another headline</h2>
+                                <p className="lead">And an even wittier subheading.</p>
+                            </div>
+                            <div className="plans-style bg-dark shadow-sm mx-auto"></div>
+                        </div>
+                        <div className="bg-dark col-lg-6 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                            <div className="my-3 py-3">
+                                <h2 className="display-5">Another headline</h2>
+                                <p className="lead">And an even wittier subheading.</p>
+                            </div>
+                            <div className="plans-style bg-light shadow-sm mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                <Footer />
+            </React.Fragment>
+        );
     }
+}
+
+export default Plans;

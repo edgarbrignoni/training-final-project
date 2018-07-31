@@ -11,60 +11,72 @@ class Carousel extends React.Component{
     
     render(){
         return (
-            <div className="row">
-                <div className="col-md-12 mb-4">
-                    {/* Carousel Wrapper */}
-                    <div id="carousel-example-1z" className="carousel slide carousel-fade" data-ride="carousel">
-                        {/* Indicators */}
-                        <ol className="carousel-indicators">
-                            <li data-target="#carousel-example-1z" data-slide-to="0" className="active"></li>
-                            <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-                        </ol>
-                        {/* Indicators */}
-                        {/* Slides */}
-                        <div className="carousel-inner" role="listbox">
-                            {/* First slide */}
-                            <div className="carousel-item active">
-                                <img
-                                    className="d-block w-100"
-                                    src="https://www.condohotelsplayadelcarmen.com/wp-content/uploads/2016/03/THE-GYM.png"
-                                    alt="First slide"
-                                />
+            <div className="container">
+                <p>&nbsp;</p>
+                <div id="myCarousel" className="carousel slide" data-ride="carousel">
+                    <ol className="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1" className=""></li>
+                        <li data-target="#myCarousel" data-slide-to="2" className=""></li>
+                    </ol>
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <img 
+                                className="carousel-image first-slide" 
+                                src="http://assets.menshealth.co.uk/main/thumbs/33874/kettlebell-2.jpg" 
+                                alt="First slide"
+                            />
+                            {/*
+                            <div className="container">
+                                <div className="carousel-caption text-left">
+                                    <h1>Example headline.</h1>
+                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    <p><a className="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                                </div>
                             </div>
-                            {/* First slide */}
-                            {/* Second slide */}
-                            <div className="carousel-item">
-                                <img
-                                    className="d-block w-100"
-                                    src="https://higherlogicdownload.s3.amazonaws.com/THELANDING/3c8de08e-e6aa-40f9-ab1c-e9cfc8b94fd0/UploadedImages/summit-2018/Sunrise-Yoga.jpg"
-                                    alt="Second slide"
-                                />
-                            </div>
-                            {/* /Second slide */}
-                            {/* Third slide */}
-                            <div className="carousel-item">
-                                <img
-                                    className="d-block w-100"
-                                    src="https://static1.squarespace.com/static/5a7f8d418fd4d236a4ae0a7d/t/5aad3423575d1f89f2b65f17/1521303750853/banner-cookingstage.jpg?format=1500w"
-                                    alt="Third slide"
-                                />
-                            </div>
-                            {/* /Third slide */}
+                            */}
                         </div>
-                        {/* Slides */}
-                        {/* Controls */}
-                        <a className="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Previous</span>
-                        </a>
-                        <a className="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="sr-only">Next</span>
-                        </a>
-                        {/* Controls */}
+                        <div className="carousel-item">
+                            <img 
+                                className="carousel-image second-slide"
+                                src="https://imgix.bustle.com/elite-daily/2016/08/07212135/yoga-poses-alexis-novak.jpg" 
+                                alt="Second slide"
+                            />
+                            {/*
+                            <div className="container">
+                                <div className="carousel-caption">
+                                    <h1>Another example headline.</h1>
+                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    <p><a className="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                                </div>
+                            </div>
+                            */}
+                        </div>
+                        <div className="carousel-item">
+                            <img 
+                                className="carousel-image third-slide" 
+                                src="https://i2.wp.com/www.travelantern.com/wp-content/uploads/2017/09/culinary-couple.jpg?ssl=1" 
+                                alt="Third slide"
+                            />
+                            {/*
+                            <div className="container">
+                                <div className="carousel-caption text-right">
+                                    <h1>One more for good measure.</h1>
+                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                    <p><a className="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                                </div>
+                            </div>
+                            */}
+                        </div>
                     </div>
-                    {/* Carousel Wrapper */}
+                    <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         );

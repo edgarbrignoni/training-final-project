@@ -15,6 +15,7 @@ class ProfileWorkout extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
+                <h1 className="py-2 text-center">PROFILE</h1>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
