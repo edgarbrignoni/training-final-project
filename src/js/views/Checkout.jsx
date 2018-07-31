@@ -98,7 +98,16 @@ class Checkout extends React.Component{
                                     </div>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="email">Email <span className="text-muted">(Optional)</span></label>
+                                    <label htmlFor="password">Password</label>
+                                    <div className="input-group">
+                                        <input type="text" className="form-control" id="password" placeholder="Password" required="" />
+                                        <div className="invalid-feedback">
+                                            Create your password.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mb-3">
+                                    <label htmlFor="email">Email<span className="text-muted"></span></label>
                                     <input type="email" className="form-control" id="email" placeholder="you@example.com" />
                                     <div className="invalid-feedback">
                                     Please enter a valid email address for shipping updates.
