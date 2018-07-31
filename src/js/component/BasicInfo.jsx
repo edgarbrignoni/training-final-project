@@ -26,6 +26,18 @@ class BasicInfo extends React.Component{
                                 <label htmlFor="inputLastN4">Last Name *</label>
                                 <input type="LastN" className="form-control" id="inputLastN4" placeholder=""/>
                             </div>
+                            <div className="form-group col-md-4">
+                                <label htmlFor="inputName44">User Name *</label>
+                                <input type="username" className="form-control" id="inputName44" placeholder=""/>
+                            </div>
+                            <div className="form-group col-md-4">
+                                <label htmlFor="inputLastN44">Password *</label>
+                                <input type="password" className="form-control" id="inputLastN44" placeholder=""/>
+                            </div>
+                            <div className="form-group col-md-4">
+                                <label htmlFor="inputLastN444">Re-type Password *</label>
+                                <input type="password" className="form-control" id="inputLastN444" placeholder=""/>
+                            </div>
                             <div className="form-group col-md-2">
                                 <label htmlFor="inputAge">Age *</label>
                                 <input type="text" className="form-control" id="inputAge"/>

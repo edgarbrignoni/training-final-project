@@ -43,14 +43,13 @@ class NavBar extends React.Component{
                     </button>
                     <div className="collapse navbar-collapse justify-content-end text-center" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <Link to={"/Home"} className="nav-item nav-link text-white" >Home</Link>
-                            <Link to={"/Workout"} className="nav-item nav-link text-white" >Workout</Link>
-                            <Link to={"/Yoga"} className="nav-item nav-link text-white" >Yoga</Link>
-                            <Link to={"/Nutrition"} className="nav-item nav-link text-white" >Nutrition</Link>
-                            <Link to={"/Plans"} className="nav-item nav-link text-white" >Plans</Link>
-                            <Link to={"/Registration"} className="nav-item nav-link text-white" >Registration</Link>
-                            <Link to={"/Checkout"} className="nav-item nav-link text-white" >Checkout</Link>
-                            <Link to={"/Profile"} className="nav-item nav-link text-white" >Profile</Link>
+                            <Link to={"/home"} className="nav-item nav-link text-white" >Home</Link>
+                            <Link to={"/blog"} className="nav-item nav-link text-white" >Blog</Link>
+                            <Link to={"/plans"} className="nav-item nav-link text-white" >Plans</Link>
+                            <Link to={"/cart"} className="nav-item nav-link text-white" >Cart</Link>
+                            <Link to={"/checkout"} className="nav-item nav-link text-white" >Checkout</Link>
+                            <Link to={"/registration"} className="nav-item nav-link text-white" >Registration</Link>
+                            <Link to={"/profile"} className="nav-item nav-link text-white" >Profile</Link>
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button 
                                     type="button" 

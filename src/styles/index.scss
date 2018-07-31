@@ -1,7 +1,7 @@
 // @import '~bootstrap/scss/bootstrap.scss';
 // @import './cerulean.css';
-// @import './sketchy.css';
-@import './yeti.css';
+@import './sketchy.css';
+// @import './yeti.css';
 // @import './cosmo.css';
 // @import './superhero.css';
 // @import './solar.css';
@@ -36,6 +36,7 @@ button.btn.btn-link {
 
 .btn-checkout {
     margin-top: 7px;
+    text-decoration: none;
 }
 
 .carousel {
