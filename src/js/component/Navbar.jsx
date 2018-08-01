@@ -41,7 +41,7 @@ class NavBar extends React.Component{
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end text-center" id="navbarNavAltMarkup">
+                    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <Link to={"/home"} className="nav-item nav-link text-white" >Home</Link>
                             <Link to={"/blog"} className="nav-item nav-link text-white" >Blog</Link>
@@ -53,7 +53,7 @@ class NavBar extends React.Component{
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button 
                                     type="button" 
-                                    className="btn btn-link text-white" 
+                                    className="btn btn-link text-center text-white" 
                                     onClick={(e) => actions.logout()}>
                                     <img id="logoInverted" className="img-fluid" src="./img/login.png" />
                                     <p className="login">Logout</p>
@@ -61,7 +61,7 @@ class NavBar extends React.Component{
                             :
                                 <button
                                     type="button"
-                                    className="btn btn-link text-white"
+                                    className="btn btn-link text-center text-white"
                                     data-toggle="modal" 
                                     data-target="#exampleModal">
                                     <img id="logoInverted" className="img-fluid" src="./img/user.png" />

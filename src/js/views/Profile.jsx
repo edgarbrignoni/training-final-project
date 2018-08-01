@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 import MemberInfo from "../component/MemberInfo.jsx";
@@ -40,13 +41,18 @@ class ProfileWorkout extends React.Component{
                     </div>
                     <div className="row">
                         <div className="col-lg-6">
-                            <UpcomingWorkouts />   
+                            <UpcomingWorkouts />
+                            
                         </div> 
                         <div className="col-lg-6">
                             <UpcomingMeals />
                         </div>
                     </div>
+                    <Link style={{ textDecoration: 'none' }} to="/home">
+                        <button className="btn btn-danger btn-checkout btn-block" type="submit">Logout</button>
+                    </Link>
                 </div>
+                <hr className="mb-4" />
                 <Footer />
             </React.Fragment>
         );

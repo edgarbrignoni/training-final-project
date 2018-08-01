@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "./stores/AppContext.jsx";
 
+import ScrollToTop from "./component/ScrollToTop.jsx";
 import Home from "./views/Home.jsx";
 import Profile from "./views/Profile.jsx";
 import Blog from "./views/Blog.jsx";
@@ -189,19 +190,21 @@ class Layout extends React.Component {
         return (
             <React.Fragment>
                 <BrowserRouter>
-                    <Switch>
-                        <Provider value={{state:this.state, actions:this.actions}}>
-                            <Route exact path="/" component={Home} />
-                            <Route exact path="/home" component={Home} />
-                            <Route exact path="/profile" component={Profile} />
-                            <Route exact path="/blog" component={Blog} />
-                            <Route exact path="/registration" component={Registration} />
-                            <Route exact path="/plans" component={Plans} />
-                            <Route exact path="/checkout" component={Checkout} />
-                            <Route exact path="/cart" component={Cart} />
-                        </Provider>
-                        <Route render={() => <h1>Not found!</h1>} />
-                    </Switch>
+                    <ScrollToTop>
+                        <Switch>
+                            <Provider value={{state:this.state, actions:this.actions}}>
+                                <Route exact path="/" component={Home} />
+                                <Route exact path="/home" component={Home} />
+                                <Route exact path="/profile" component={Profile} />
+                                <Route exact path="/blog" component={Blog} />
+                                <Route exact path="/registration" component={Registration} />
+                                <Route exact path="/plans" component={Plans} />
+                                <Route exact path="/checkout" component={Checkout} />
+                                <Route exact path="/cart" component={Cart} />
+                            </Provider>
+                            <Route render={() => <h1>Not found!</h1>} />
+                        </Switch>
+                    </ScrollToTop>
                 </BrowserRouter>
             </React.Fragment>
         );

@@ -31,12 +31,13 @@ class Registration extends React.Component{
                         </div>
                         <div className="col-lg-6">
                             <PhysicalActivity />
-                            <Link style={{ textDecoration: 'none' }} to="/profile">
-                                <button className="btn btn-primary btn-checkout btn-block" type="submit">Submit</button>
-                            </Link>
                         </div>
                     </div>
+                    <Link style={{ textDecoration: 'none' }} to="/profile">
+                        <button className="btn btn-primary btn-checkout btn-block" type="submit">Submit</button>
+                    </Link>
                 </div>
+                <hr className="mb-4" />
                 <Footer />
             </React.Fragment>
         );
