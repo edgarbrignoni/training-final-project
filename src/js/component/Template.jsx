@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-class ComponentName extends React.Component{
+class Post extends React.Component{
 
 	constructor(props){
         super(props);
@@ -18,8 +18,8 @@ class ComponentName extends React.Component{
     }
 }
 
-export default ComponentName;
+export default Post;
 
-ComponentName.propTypes = {
+Post.propTypes = {
     prop_name: PropTypes.type_of_the_prop
 };

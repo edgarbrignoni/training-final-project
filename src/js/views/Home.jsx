@@ -1,5 +1,4 @@
 import React from 'react';
-import { Consumer } from "../stores/AppContext.jsx";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 import Carousel from "../component/Carousel.jsx";

@@ -10,6 +10,7 @@ import Registration from "./views/Registration.jsx";
 import Plans from "./views/Plans.jsx";
 import Checkout from "./views/Checkout.jsx";
 import Cart from "./views/Cart.jsx";
+import Post from "./component/Post.jsx";
 
 
 class Layout extends React.Component {
@@ -210,6 +211,7 @@ class Layout extends React.Component {
                                 <Route exact path="/plans" component={Plans} />
                                 <Route exact path="/checkout" component={Checkout} />
                                 <Route exact path="/cart" component={Cart} />
+                                <Route exact path="/post" component={Post} />
                             </Provider>
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>

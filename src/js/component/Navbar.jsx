@@ -47,6 +47,7 @@ class NavBar extends React.Component{
                             <Link to={"/blog"} className="nav-item nav-link text-white" >Blog</Link>
                             <Link to={"/plans"} className="nav-item nav-link text-white" >Plans</Link>
                             {/*
+                            <Link to={"/post"} className="nav-item nav-link text-white" >Post</Link>
                             <Link to={"/checkout"} className="nav-item nav-link text-white" >Checkout</Link>
                             <Link to={"/registration"} className="nav-item nav-link text-white" >Registration</Link>
                             <Link to={"/profile"} className="nav-item nav-link text-white" >Profile</Link>
