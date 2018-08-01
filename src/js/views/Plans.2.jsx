@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 
@@ -37,9 +36,7 @@ class Plans extends React.Component {
                                     <li>Email support</li>
                                     <li>Help center access</li>
                                 </ul>
-                                <Link style={{ textDecoration: 'none' }} to="/checkout">
-                                    <button type="button" className="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
-                                </Link>
+                                <button type="button" className="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
                             </div>
                         </div>
                         <div className="card mb-4 shadow-sm">
@@ -54,9 +51,7 @@ class Plans extends React.Component {
                                     <li>Priority email support</li>
                                     <li>Help center access</li>
                                 </ul>
-                                <Link style={{ textDecoration: 'none' }} to="/checkout">
-                                    <button type="button" className="btn btn-lg btn-block btn-primary">Get started</button>
-                                </Link>
+                                <button type="button" className="btn btn-lg btn-block btn-primary">Get started</button>
                             </div>
                         </div>
                         <div className="card mb-4 shadow-sm">
@@ -71,9 +66,7 @@ class Plans extends React.Component {
                                     <li>Phone and email support</li>
                                     <li>Help center access</li>
                                 </ul>
-                                <Link style={{ textDecoration: 'none' }} to="/checkout">
-                                    <button type="button" className="btn btn-lg btn-block btn-primary">Contact us</button>
-                                </Link>
+                                <button type="button" className="btn btn-lg btn-block btn-primary">Contact us</button>
                             </div>
                         </div>
                     </div>

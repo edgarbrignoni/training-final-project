@@ -46,10 +46,11 @@ class NavBar extends React.Component{
                             <Link to={"/home"} className="nav-item nav-link text-white" >Home</Link>
                             <Link to={"/blog"} className="nav-item nav-link text-white" >Blog</Link>
                             <Link to={"/plans"} className="nav-item nav-link text-white" >Plans</Link>
-                            <Link to={"/cart"} className="nav-item nav-link text-white" >Cart</Link>
+                            {/*
                             <Link to={"/checkout"} className="nav-item nav-link text-white" >Checkout</Link>
                             <Link to={"/registration"} className="nav-item nav-link text-white" >Registration</Link>
                             <Link to={"/profile"} className="nav-item nav-link text-white" >Profile</Link>
+                            */}
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button 
                                     type="button" 

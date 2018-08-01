@@ -1,21 +1,27 @@
-// @import '~bootstrap/scss/bootstrap.scss';
-@import './cerulean.css';
-// @import './sketchy.css';
-// @import './yeti.css';
-// @import './cosmo.css';
-// @import './superhero.css';
-// @import './solar.css';
-// @import './united.css';
-// @import './slate.css';
-// @import './journal.css';
-// @import './flaty.css';
-// @import './spacelab.css';
-// @import './sandstone.css';
-// @import './minty.css';
-// @import './lumen.css';
-// @import './darkly.css';
-// @import './lux.css';
-// @import './cyborg.css';
+@import '~bootstrap/scss/bootstrap.scss';
+// @import './cerulean.css';
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
 
 button.btn.btn-link {
     width: 62px;
