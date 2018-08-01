@@ -18,69 +18,64 @@ class Layout extends React.Component {
         super();
         
         this.state = {
-            "blog": [
+            "workout": [
                 {
                     ID: 0,
                     title: "Muscle Building",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "https://legionathletics.com/wp-content/uploads/2016/02/best-shoulder-workouts-bodybuilding.jpg.pagespeed.ce.gqJBfDv4jB.jpg",
-                    post: "Workout"
-                },
-                {
-                    ID: 6,
-                    title: "Eat Right",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "https://holisticpowersite.files.wordpress.com/2017/02/right-meal-for-weight-loss.jpg?w=600&h=400&crop=1",
-                    post: "Nutrition"
-                },
-                {
-                    ID: 2,
-                    title: "Increase Strength",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "https://cdn.shopify.com/s/files/1/1602/7323/t/5/assets/promo1.jpg?632522925084405598",
-                    post: "Workout"
-                },
-                {
-                    ID: 3,
-                    title: "Mountain Pose",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "https://cdn.shopify.com/s/files/1/2289/7641/files/CV0A4202_grande.jpg?v=1527110452",
-                    post: "Yoga"
-                },
-                {
-                    ID: 7,
-                    title: "Sports Nutrition",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg",
-                    post: "Nutrition"
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "https://legionathletics.com/wp-content/uploads/2016/02/best-shoulder-workouts-bodybuilding.jpg.pagespeed.ce.gqJBfDv4jB.jpg"
                 },
                 {
                     ID: 1,
                     title: "Fat Loss",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "http://banzweightloss.com/wp-content/uploads/2015/06/fat-loss-tips.jpg",
-                    post: "Workout"
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "http://banzweightloss.com/wp-content/uploads/2015/06/fat-loss-tips.jpg"
                 },
                 {
-                    ID: 4,
+                    ID: 2,
+                    title: "Increase Strength",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "https://cdn.shopify.com/s/files/1/1602/7323/t/5/assets/promo1.jpg?632522925084405598"
+                }
+            ],
+            "yoga": [
+                {
+                    ID: 0,
+                    title: "Mountain Pose",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "https://cdn.shopify.com/s/files/1/2289/7641/files/CV0A4202_grande.jpg?v=1527110452"
+                },
+                {
+                    ID: 1,
                     title: "Downward Dog",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "http://www.veroyoga.com/wp-content/uploads/2017/01/veronica-yoga-downdog.jpg",
-                    post: "Yoga"
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "http://www.veroyoga.com/wp-content/uploads/2017/01/veronica-yoga-downdog.jpg"
                 },
                 {
-                    ID: 8,
-                    title: "Lose Weight",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "https://img-aws.ehowcdn.com/600x600p/photos.demandstudios.com/getty/article/56/244/87622630.jpg",
-                    post: "Nutrition"
-                },
-                {
-                    ID: 5,
+                    ID: 2,
                     title: "Warrior Pose",
-                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    image: "https://cdn.shopify.com/s/files/1/1908/5465/files/warrior_pose_o_grande.jpeg?v=1509134214",
-                    post: "Yoga"
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "https://cdn.shopify.com/s/files/1/1908/5465/files/warrior_pose_o_grande.jpeg?v=1509134214"
+                }
+            ],
+            "nutrition": [
+                {
+                    ID: 0,
+                    title: "Eat Right",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "https://holisticpowersite.files.wordpress.com/2017/02/right-meal-for-weight-loss.jpg?w=600&h=400&crop=1"
+                },
+                {
+                    ID: 1,
+                    title: "Sports Nutrition",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg"
+                },
+                {
+                    ID: 2,
+                    title: "Lose Weight",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    img600x400: "https://img-aws.ehowcdn.com/600x600p/photos.demandstudios.com/getty/article/56/244/87622630.jpg"
                 }
             ],
             "profile": [

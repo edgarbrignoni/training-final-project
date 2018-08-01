@@ -33,9 +33,13 @@ class Registration extends React.Component{
                             <PhysicalActivity />
                         </div>
                     </div>
-                    <Link style={{ textDecoration: 'none' }} to="/profile">
-                        <button className="btn btn-primary btn-checkout btn-block" type="submit">Submit</button>
-                    </Link>
+                    <div className="row">
+                        <div className="col-md-4 offset-md-4">
+                            <Link style={{ textDecoration: 'none' }} to="/profile">
+                                <button className="btn btn-primary btn-checkout btn-block" type="submit">Submit</button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 <hr className="mb-4" />
                 <Footer />

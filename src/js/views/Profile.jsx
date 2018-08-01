@@ -48,9 +48,13 @@ class ProfileWorkout extends React.Component{
                             <UpcomingMeals />
                         </div>
                     </div>
-                    <Link style={{ textDecoration: 'none' }} to="/home">
-                        <button className="btn btn-danger btn-checkout btn-block" type="submit">Logout</button>
-                    </Link>
+                    <div className="row">
+                        <div className="col-md-4 offset-md-4">
+                            <Link style={{ textDecoration: 'none' }} to="/home">
+                                <button className="btn btn-danger btn-checkout btn-block" type="submit">Logout</button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 <hr className="mb-4" />
                 <Footer />

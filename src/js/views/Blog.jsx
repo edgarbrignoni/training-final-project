@@ -10,67 +10,21 @@ class Workout extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
-                <h1 className="py-2 text-center">WORKOUT</h1>
-                <p className="py-2 text-center">“Wake Up. Work Out. Look Hot. Kick Ass”</p>
+                <h1 className="py-2 text-center">BLOG</h1>
                 <div className="container">
                     <div className="container p-0">
                         <div className="row">
                             <Consumer>
                                 {({ state }) => (
-                                    state.workout.map((item, index) => {
+                                    state.blog.map((item, index) => {
                                         return (
                                             <Card 
                                                 key={index}
                                                 ID={item.ID}
                                                 title={item.title}
-                                                description={item.description}
-                                                image={item.img600x400}
-                                            />
-                                        );
-                                    })
-                                )}
-                            </Consumer>
-                        </div>
-                    </div>
-                </div>
-                <h1 className="py-2 text-center">YOGA</h1>
-                <p className="py-2 text-center">“Yoga means addition – addition of energy, strength and beauty to body, mind and soul.”</p>
-                <div className="container">
-                    <div className="container p-0">
-                        <div className="row">
-                            <Consumer>
-                                {({ state }) => (
-                                    state.yoga.map((item, index) => {
-                                        return (
-                                            <Card 
-                                                key={index}
-                                                ID={item.ID}
-                                                title={item.title}
-                                                description={item.description}
-                                                image={item.img600x400}
-                                            />
-                                        );
-                                    })
-                                )}
-                            </Consumer>
-                        </div>
-                    </div>
-                </div>
-                <h1 className="py-2 text-center">NUTRITION</h1>
-                <p className="py-2 text-center">“To eat is a necessity, but to eat intelligently is an art.”</p>
-                <div className="container">
-                    <div className="container p-0">        
-                        <div className="row">
-                            <Consumer>
-                                {({ state }) => (
-                                    state.nutrition.map((item, index) => {
-                                        return (
-                                            <Card 
-                                                key={index}
-                                                ID={item.ID}
-                                                title={item.title}
-                                                description={item.description}
-                                                image={item.img600x400}
+                                                desc={item.desc}
+                                                post={item.post}
+                                                image={item.image}
                                             />
                                         );
                                     })

@@ -27,7 +27,7 @@ class BasicInfo extends React.Component{
                                 <input type="LastN" className="form-control" id="inputLastN4" placeholder=""/>
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputName44">User Name *</label>
+                                <label htmlFor="inputName44">Email *</label>
                                 <input type="username" className="form-control" id="inputName44" placeholder=""/>
                             </div>
                             <div className="form-group col-md-4">
