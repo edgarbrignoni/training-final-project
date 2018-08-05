@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 class Card extends React.Component{
@@ -24,7 +25,16 @@ class Card extends React.Component{
                         <h4 className="card-title text-center"><strong>{this.props.title}</strong></h4>
                     </div>
                     <div className="card-text p-3 bg-transparent">{this.props.desc}</div>
-                    <div className="card-footer bg-transparent border-0"><strong>#{this.props.post}</strong></div>
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="card-footer bg-transparent border-0"><strong>#{this.props.post}</strong></div>
+                        </div>
+                        <div className="col-lg-6">
+                            <Link style={{ textDecoration: 'none' }} to="/post">
+                                <button type="button" className="btn btn-info">READ MORE</button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
