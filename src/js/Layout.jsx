@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "./stores/AppContext.jsx";
-
 import ScrollToTop from "./component/ScrollToTop.jsx";
 import Home from "./views/Home.jsx";
 import Profile from "./views/Profile.jsx";
