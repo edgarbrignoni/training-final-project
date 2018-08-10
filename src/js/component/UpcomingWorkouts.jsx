@@ -20,82 +20,37 @@ class UpcomingWorkouts extends React.Component{
                         <FontAwesomeIcon className="fa-lg" icon={faCog} />
                     </button>
                 </div>
-                <div className="row no-gutters">
-                    <div className="col-4">
-                        <div className="card-footer bg-transparent border-dark p-2">MONDAY</div>
-                    </div>
-                    <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">
-                            CHEST AND ABS
-                        </div>
-                    </div>
+                <div className="month"> 
+                    <ul>
+                        <li>Your Weekly Workout</li>
+                    </ul>
                 </div>
-                <div className="row no-gutters">
-                    <div className="col-4">
-                        <div className="card-footer bg-transparent border-dark p-2">TUESDAY</div>
+                <div className="row">
+                    <div className="col-md-12">
+                        <ul className="weekdays">
+                            <li>Mo</li>
+                            <li>Tu</li>
+                            <li>We</li>
+                            <li>Th</li>
+                            <li>Fr</li>
+                            <li>Sa</li>
+                            <li>Su</li>
+                        </ul>
+                        <ul className="days"> 
+                            <li>
+                                <Link style={{ textDecoration: 'none' }} to="/workout">
+                                    <button type="button" className="btn btn-light">Chest<br/>Arms</button>
+                                </Link>    
+                            </li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                        </ul>
                     </div>
-                    <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">
-                            SHOULDERS TRICEPS BICEPS
-                        </div>
-                    </div>
-                </div>
-                <div className="row no-gutters">
-                    <div className="col-4">
-                        <div className="card-footer bg-transparent border-dark p-2">WEDNESDAY</div>
-                    </div>
-                    <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">
-                            CARDIO:<br />
-                            TIME:<br />
-                            INTENSITY:<br />
-                        </div>
-                    </div>
-                </div>
-                <div className="row no-gutters">
-                    <div className="col-4">
-                        <div className="card-footer bg-transparent border-dark p-2">THURSDAY</div>
-                    </div>
-                    <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">
-                            UPPER BODY:<br />
-                            REPETITIONS:<br />
-                            INTENSITY:<br />
-                        </div>
-                    </div>
-                </div>
-                <div className="row no-gutters">
-                    <div className="col-4">
-                        <div className="card-footer bg-transparent border-dark p-2">FRIDAY</div>
-                    </div>
-                    <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">
-                            LOWER BODY:<br />
-                            REPETITIONS:<br />
-                            INTENSITY:<br />
-                        </div>
-                    </div>
-                </div>
-                <div className="row no-gutters">
-                    <div className="col-4">
-                        <div className="card-footer bg-transparent border-dark p-2">SATURDAY</div>
-                    </div>
-                    <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">
-                            CARDIO:<br />
-                            TIME:<br />
-                            INTENSITY:<br />
-                        </div>
-                    </div>
-                </div>
-                <div className="row no-gutters">
-                    <div className="col-4">
-                        <div className="card-footer bg-transparent border-dark p-2">SUNDAY</div>
-                    </div>
-                    <div className="col-8">
-                        <div className="card-footer bg-transparent border-dark p-2">REST</div>
-                    </div>
-                </div>
+                </div>    
             </div>
         );
     }

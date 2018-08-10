@@ -11,6 +11,7 @@ import Plans from "./views/Plans.jsx";
 import Checkout from "./views/Checkout.jsx";
 import Cart from "./views/Cart.jsx";
 import Post from "./component/Post.jsx";
+import Workout from "./component/Workout.jsx";
 
 
 class Layout extends React.Component {
@@ -84,6 +85,16 @@ class Layout extends React.Component {
                     post: "Yoga"
                 }
             ],
+            "workouts": [
+                {
+                    ID: 0,
+                    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    muscleType: "Chest",
+                    exerciseType: "Bench Press",
+                    sets: "",
+                    reps: ""
+                }
+            ],
             "profile": [
                 {
                     ID: 1,
@@ -119,7 +130,7 @@ class Layout extends React.Component {
                     title: "Free",
                     main: "Personalized Training",
                     price: 45,
-                    image: "https://legionathletics.com/wp-content/uploads/2016/02/best-shoulder-workouts-bodybuilding.jpg.pagespeed.ce.gqJBfDv4jB.jpg",
+                    image: "https://legionathletics.com/wp-content/uploads/2016/02/best-shoulder-Chests-bodybuilding.jpg.pagespeed.ce.gqJBfDv4jB.jpg",
                     desc: "Achive your fitness goals with personlize training."
                 },
                 {
@@ -212,6 +223,7 @@ class Layout extends React.Component {
                                 <Route exact path="/checkout" component={Checkout} />
                                 <Route exact path="/cart" component={Cart} />
                                 <Route exact path="/post" component={Post} />
+                                <Route exact path="/workout" component={Workout} />
                             </Provider>
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>
