@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
@@ -37,6 +38,10 @@ class ComponentName extends React.Component{
                                     </blockquote>
                                     <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
                                     <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                    <Link style={{ textDecoration: 'none' }} to="/blog">
+                                        <button type="button" className="btn btn-info">SEE MORE POSTS</button>
+                                    </Link>
+                                    <p></p>
                                 </div>
                             </div>
                             <aside className="col-md-4 blog-sidebar">
