@@ -43,13 +43,9 @@ class Member extends React.Component{
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-12">
                             <UpcomingWorkouts />
-                            
                         </div> 
-                        <div className="col-lg-6">
-                            <UpcomingMeals />
-                        </div>
                     </div>
                     <div className="row">
                         <div className="col-md-4 offset-md-4">
