@@ -16,7 +16,10 @@ class Checkout extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
+                <p>&nbsp;</p>
+                {/*
                 <h1 className="py-2 text-center">CHECKOUT</h1>
+                */}
                 <div className="container">
                     <div className="row">
                         <div className="col-12 order-md-2 mb-4">
@@ -116,7 +119,7 @@ class Checkout extends React.Component{
                                     </div>
                                     <div className="col-md-3">
                                         <label></label>
-                                        <Link style={{ textDecoration: 'none' }} to="/plans">
+                                        <Link style={{ textDecoration: 'none' }} to="/plan">
                                             <button className="btn btn-danger btn-checkout btn-block" type="submit-disable">Cancel</button>
                                         </Link>
                                     </div>

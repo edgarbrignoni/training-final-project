@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "./stores/AppContext.jsx";
 import ScrollToTop from "./component/ScrollToTop.jsx";
 import Home from "./views/Home.jsx";
-import Profile from "./views/Profile.jsx";
+import Member from "./views/Member.jsx";
 import Blog from "./views/Blog.jsx";
 import Registration from "./views/Registration.jsx";
-import Plans from "./views/Plans.jsx";
+import Plan from "./views/Plan.jsx";
 import Checkout from "./views/Checkout.jsx";
 import Cart from "./views/Cart.jsx";
 import Post from "./component/Post.jsx";
@@ -83,36 +83,35 @@ class Layout extends React.Component {
                     post: "Yoga"
                 }
             ],
-            "profile": [
+            "member": [
                 {
                     ID: 1,
-                    memberFirstName: "John",
-                    memberLastName: "Doe",
-                    memberAge: 35,
-                    memberGender: "Male",
-                    memberLocation: "Miami",
-                    memberSubscriptionDate: 20180723,
-                    membertHeightCM: 170,
-                    membertWeightLBS: 200,
-                    membertWaistINCH: 38,
-                    membertBodyFatPERC: 6,
-                    memberLeanBodyMass: 0,
+                    first_name: "John",
+                    last_name: "Doe",
+                    age: 35,
+                    gender: "Male",
+                    location: "Miami",
+                    subscription_date: 20180723,
+                    height: 170,
+                    weight: 200,
+                    waist: 38,
+                    body_fat: 6,
+                    lean_body_mass: 0,
                     memberPhoto: "./img/no-photo-headshot.jpg",
-                    currentWeightLBS: 180,
-                    currentWaistINCH: 36,
-                    currentBodyFatPERC: 5,
-                    currentLeanBodyMass: 0,
+                    current_weight: 180,
+                    current_waist: 36,
+                    current_body_fat: 5,
+                    current_lean_body_mass: 0,
                     currentPhoto: "./img/no-photo-headshot.jpg",
-                    goalWeightLBS: 170,
-                    goalWaistINCH: 32,
-                    goalBodyFatPERC: 4,
-                    goalLeanBodyMass: 0,
+                    goal_weight: 170,
+                    goal_waist: 32,
+                    goal_body_fat: 4,
+                    goal_lean_body_mass: 0,
                     goalPhoto: "./img/no-photo-fullshot.png",
-                    goalOverallPERC: 0,
-                    bodyFat: 0
+                    goal_overall: 0
                 }
             ],
-            "planshop": [
+            "plan": [
                 {
                     ID: 0,
                     title: "Free",
@@ -204,10 +203,10 @@ class Layout extends React.Component {
                             <Provider value={{state:this.state, actions:this.actions}}>
                                 <Route exact path="/" component={Home} />
                                 <Route exact path="/home" component={Home} />
-                                <Route exact path="/profile" component={Profile} />
+                                <Route exact path="/member" component={Member} />
                                 <Route exact path="/blog" component={Blog} />
                                 <Route exact path="/registration" component={Registration} />
-                                <Route exact path="/plans" component={Plans} />
+                                <Route exact path="/plan" component={Plan} />
                                 <Route exact path="/checkout" component={Checkout} />
                                 <Route exact path="/cart" component={Cart} />
                                 <Route exact path="/post" component={Post} />

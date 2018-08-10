@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap/scss/bootstrap.scss';
 // @import './cerulean.css';
-// @import './sketchy.css';
+@import './sketchy.css';
 // @import './yeti.css';
 // @import './cosmo.css';
 // @import './superhero.css';
@@ -22,6 +22,18 @@ button.btn.btn-link {
     width: 62px;
     height: 62px;
     text-decoration: none;
+}
+
+#home-btn {
+    margin-left: 10px;
+}
+
+#toggler-btn {
+    margin-right: 10px;
+}
+
+button.btn.btn-info {
+    margin-bottom: 10px;
 }
 
 .plans-style {

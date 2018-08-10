@@ -4,13 +4,16 @@ import Navbar from "../component/Navbar.jsx";
 import Card from "../component/Card.jsx";
 import Footer from "../component/Footer.jsx";
 
-class Workout extends React.Component{
+class Blog extends React.Component{
     
     render(){
         return (
             <React.Fragment>
                 <Navbar />
+                <p>&nbsp;</p>
+                {/*
                 <h1 className="py-2 text-center">BLOG</h1>
+                */}
                 <div className="container">
                     <div className="container p-0">
                         <div className="row">
@@ -39,4 +42,4 @@ class Workout extends React.Component{
     }
 }
 
-export default Workout;
+export default Blog;

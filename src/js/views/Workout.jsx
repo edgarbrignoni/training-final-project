@@ -4,7 +4,7 @@ import Navbar from "../component/Navbar.jsx";
 import Card from "../component/Card.jsx";
 import Footer from "../component/Footer.jsx";
 
-class Workout extends React.Component{
+class Workouts extends React.Component{
     
     render(){
         return (
@@ -17,7 +17,7 @@ class Workout extends React.Component{
                         <div className="row">
                             <Consumer>
                                 {({ state }) => (
-                                    state.workout.map((item, index) => {
+                                    state.workouts.map((item, index) => {
                                         return (
                                             <Card 
                                                 key={index}
@@ -39,4 +39,4 @@ class Workout extends React.Component{
     }
 }
 
-export default Workout;
+export default Workouts;

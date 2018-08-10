@@ -20,7 +20,7 @@ class BasicInfo extends React.Component{
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <label htmlFor="inputName4">First Name *</label>
-                                <input type="Name" className="form-control" id="inputName4" placeholder=""/>
+                                <input type="text" className="form-control" id="inputName4" placeholder=""/>
                             </div>
                             <div className="form-group col-md-6">
                                 <label htmlFor="inputLastN4">Last Name *</label>

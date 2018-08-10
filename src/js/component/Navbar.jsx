@@ -30,7 +30,8 @@ class NavBar extends React.Component{
         return(
             <div className="navbar-spacer">
                 <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-md fixed-top">
-                    <button 
+                    <button
+                        id="home-btn"
                         type="button" 
                         className="btn btn-link p-0">
                         <Link className="navbar-brand" to="/">
@@ -38,19 +39,19 @@ class NavBar extends React.Component{
                             <p className="login">Home</p>
                         </Link>
                     </button>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <button id="toggler-btn" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <Link to={"/home"} className="nav-item nav-link text-white" >Home</Link>
                             <Link to={"/blog"} className="nav-item nav-link text-white" >Blog</Link>
-                            <Link to={"/plans"} className="nav-item nav-link text-white" >Plans</Link>
+                            <Link to={"/plan"} className="nav-item nav-link text-white" >Plan</Link>
                             {/*
                             <Link to={"/post"} className="nav-item nav-link text-white" >Post</Link>
                             <Link to={"/checkout"} className="nav-item nav-link text-white" >Checkout</Link>
                             <Link to={"/registration"} className="nav-item nav-link text-white" >Registration</Link>
-                            <Link to={"/profile"} className="nav-item nav-link text-white" >Profile</Link>
+                            <Link to={"/member"} className="nav-item nav-link text-white" >Member</Link>
                             */}
                             {session && typeof(session.user_nicename) !== 'undefined' ?
                                 <button 

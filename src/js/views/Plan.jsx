@@ -5,14 +5,15 @@ import Footer from "../component/Footer.jsx";
 import Shop from "../component/Shop.jsx";
 
     
-class Plans extends React.Component {
+class Plan extends React.Component {
     
     render() {
         return (
             <React.Fragment>
                 <Navbar />
-                <h1 className="py-2 text-center">PLANS</h1>
+                <p>&nbsp;</p>
                 {/*
+                <h1 className="py-2 text-center">PLANS</h1>
                 <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
                     <div className="col-md-5 p-lg-5 mx-auto my-5">
                         <h1 className="display-4 font-weight-normal">Punny headline</h1>
@@ -28,7 +29,7 @@ class Plans extends React.Component {
                     <div className="card-deck mb-3 text-center">
                         <Consumer>
                             {({ state }) => (
-                                state.planshop.map((item, index) => {
+                                state.plan.map((item, index) => {
                                     return (
                                         <Shop 
                                             key={index}
@@ -52,4 +53,4 @@ class Plans extends React.Component {
     }
 }
 
-export default Plans;
+export default Plan;

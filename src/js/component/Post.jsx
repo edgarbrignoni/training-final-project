@@ -16,11 +16,14 @@ class ComponentName extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
+                <p>&nbsp;</p>
+                {/*
                 <h1 className="py-2 text-center">POST</h1>
+                */}
                 <div className="container">
                     <div className="container p-0">
                         <div className="row">
-                            <div className="col-md-8 blog-main">
+                            <div className="col-md-12 blog-main">
                                 <div className="jumbotron p-3 p-md-5 text-white rounded bg-dark">
                                     <div className="col-md-6 px-0">
                                         <h1 className="display-4 font-italic">Title of the post</h1>
@@ -44,6 +47,7 @@ class ComponentName extends React.Component{
                                     <p></p>
                                 </div>
                             </div>
+                            {/*
                             <aside className="col-md-4 blog-sidebar">
                                 <div className="p-3 mb-3 bg-light rounded">
                                     <h4 className="font-italic">About</h4>
@@ -75,6 +79,7 @@ class ComponentName extends React.Component{
                                     </ol>
                                 </div>
                             </aside>
+                            */}
                         </div>
                     </div>
                 </div>

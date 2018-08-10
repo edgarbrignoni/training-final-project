@@ -16,7 +16,10 @@ class Checkout extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
+                <p>&nbsp;</p>
+                {/*
                 <h1 className="py-2 text-center">CART</h1>
+                */}
                 <div className="container">
                     <div className="row">
                         <div className="col-12 order-md-2 mb-4">

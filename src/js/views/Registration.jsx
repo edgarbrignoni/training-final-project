@@ -14,7 +14,10 @@ class Registration extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
+                <p>&nbsp;</p>
+                {/*
                 <h1 className="py-2 text-center">REGISTRATION</h1>
+                */}
                 <div className="container">
                     <BasicInfo />
                     <div className="row">
@@ -35,7 +38,7 @@ class Registration extends React.Component{
                     </div>
                     <div className="row">
                         <div className="col-md-4 offset-md-4">
-                            <Link style={{ textDecoration: 'none' }} to="/profile">
+                            <Link style={{ textDecoration: 'none' }} to="/member">
                                 <button className="btn btn-primary btn-checkout btn-block" type="submit">Submit</button>
                             </Link>
                         </div>

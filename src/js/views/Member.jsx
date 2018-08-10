@@ -10,13 +10,16 @@ import ProgressPhoto from "../component/ProgressPhoto.jsx";
 import UpcomingWorkouts from "../component/UpcomingWorkouts.jsx";
 import UpcomingMeals from "../component/UpcomingMeals.jsx";
 
-class ProfileWorkout extends React.Component{
+class Member extends React.Component{
     
     render(){
         return (
             <React.Fragment>
                 <Navbar />
-                <h1 className="py-2 text-center">PROFILE</h1>
+                <p>&nbsp;</p>
+                {/*
+                <h1 className="py-2 text-center">MEMBER</h1>
+                */}
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
@@ -63,4 +66,4 @@ class ProfileWorkout extends React.Component{
     }
 }
 
-export default ProfileWorkout;
+export default Member;

@@ -24,8 +24,9 @@ class MemberInfo extends React.Component{
                     <h5 className="card-title">Age:</h5>
                     <h5 className="card-title">Gender:</h5>
                     <h5 className="card-title">Location:</h5>
+                    <h5 className="card-title">Current Plan:</h5>
                 </div>
-                <div className="card-footer bg-transparent border-dark">Member since June 16 ,2018</div>
+                <div className="card-footer bg-transparent border-dark">Member since June 16, 2018</div>
             </div>
         );
     }
