@@ -10,9 +10,8 @@ class NavBar extends React.Component{
         super(props);
         
         this.state = {
-            post_title: "",
-            post_content: "",
-            gender: "",
+            username: "",
+            password: "",
             modal: false
         };
     }
@@ -87,12 +86,11 @@ class NavBar extends React.Component{
                             <div className="modal-body">
                                 <form role="form" onSubmit={(e) => {
                                     e.preventDefault();
-                                    actions.updateSample(this.state.post_title, this.state.post_content, this.state.gender);
+                                    actions.loadSession(this.state.username, this.state.password);
                                 }}>
                                     <div className="form-group">
-                                        <input type="text" name="post_title" value={this.state.post_title} placeholder="Title" onChange={(e) => this.setState({post_title: e.target.value})} />
-                                        <input type="text" name="post_content" value={this.state.post_content} placeholder="Content" onChange={(e) => this.setState({post_content: e.target.value})} />
-                                        <input type="text" name="gender" value={this.state.gender} placeholder="Gender" onChange={(e) => this.setState({gender: e.target.value})} />
+                                        <input type="text" name="user" value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
+                                        <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                     </div>
                                     <input type="submit" value="Login" />
                                 </form>
