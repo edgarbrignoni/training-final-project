@@ -10,9 +10,12 @@ class NavBar extends React.Component{
         super(props);
         
         this.state = {
-            post_title: "",
-            post_content: "",
-            gender: "",
+            id: "196",
+            title: "TITLE",
+            content: "CONTENT",
+            gender: "Female",
+            date: "20180111",
+            time: "11:11:11",
             modal: false
         };
     }
@@ -87,12 +90,15 @@ class NavBar extends React.Component{
                             <div className="modal-body">
                                 <form role="form" onSubmit={(e) => {
                                     e.preventDefault();
-                                    actions.updateSample(this.state.post_title, this.state.post_content, this.state.gender);
+                                    actions.updateSample(this.state.id,this.state.title,this.state.content,this.state.gender,this.state.date,this.state.time);
                                 }}>
                                     <div className="form-group">
-                                        <input type="text" name="post_title" value={this.state.post_title} placeholder="Title" onChange={(e) => this.setState({post_title: e.target.value})} />
-                                        <input type="text" name="post_content" value={this.state.post_content} placeholder="Content" onChange={(e) => this.setState({post_content: e.target.value})} />
+                                        <input type="text" name="id" value={this.state.id} placeholder="ID" onChange={(e) => this.setState({id: e.target.value})} />
+                                        <input type="text" name="title" value={this.state.title} placeholder="Title" onChange={(e) => this.setState({title: e.target.value})} />
+                                        <input type="text" name="content" value={this.state.content} placeholder="Content" onChange={(e) => this.setState({content: e.target.value})} />
                                         <input type="text" name="gender" value={this.state.gender} placeholder="Gender" onChange={(e) => this.setState({gender: e.target.value})} />
+                                        <input type="text" name="date" value={this.state.date} placeholder="YYYYMMDD" onChange={(e) => this.setState({date: e.target.value})} />
+                                        <input type="text" name="time" value={this.state.time} placeholder="HH:MM:SS" onChange={(e) => this.setState({time: e.target.value})} />
                                     </div>
                                     <input type="submit" value="Login" />
                                 </form>

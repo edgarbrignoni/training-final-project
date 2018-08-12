@@ -189,7 +189,7 @@ class Layout extends React.Component {
                 );
             },
             //"updateSample": (id, userId, answer) => {
-            "updateSample": (post_title, post_content, gender) => {
+            "updateSample": (id, title, content, gender, date, time) => {
                 /*var indexOfEvent = 0;
                 var theArrayWithEvent = this.state.events.filter( (item, index) => {
                     
@@ -219,16 +219,18 @@ class Layout extends React.Component {
                 });*/
                 
                 let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/sample/';
-                let id = '';
+                // let id = '';
                 
                 var data = {
-                    id: 175,
-                    post_title: post_title,
-                    post_content: post_content,
-                    gender: gender
+                    id: id,
+                    title: title,
+                    content: content,
+                    gender: gender,
+                    date: date,
+                    time: time
                 };
                 
-                //fetch(url+id, {
+                // fetch(url+id, {
                 fetch(url, {
                     method: 'PUT',
                     body: JSON.stringify(data),
@@ -250,16 +252,28 @@ class Layout extends React.Component {
                 session: {
                 }
             }),
-            addPlanToCart: (planId) => {
-                let tempCart = this.state.cart;
+            // "loadInitialData": () => { 
                 
-                let arrayWithThePlan = this.state.planshop.filter( (plan) => {
-                    return plan.id === planId;  
-                });
+            // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/events')
+            //   .then(response => response.json())
+            //   .then(data => this.setState({ events: data, isLoading: false }))
+            //   .catch(error => console.log(error));
+              
+            // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
+            //   .then(response => response.json())
+            //   .then(data => this.setState({ meetups: data }))
+            //   .catch(error => console.log(error));
+            // },
+            // addPlanToCart: (planId) => {
+            //     let tempCart = this.state.cart;
                 
-                tempCart.push(arrayWithThePlan[0]);
-                this.setState({cart: tempCart});
-            }
+            //     let arrayWithThePlan = this.state.planshop.filter( (plan) => {
+            //         return plan.id === planId;  
+            //     });
+                
+            //     tempCart.push(arrayWithThePlan[0]);
+            //     this.setState({cart: tempCart});
+            // }
         };
     }
 
