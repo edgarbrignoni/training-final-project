@@ -161,7 +161,7 @@ class Layout extends React.Component {
         
         this.actions = {
             "loadSession": (receivedUsername, receivedPassword) => {
-                // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/jwt-auth/v1/token', {
+                // fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/jwt-auth/v1/token', {
                 // method: 'post',
                 // body: JSON.stringify(
                 //     {
@@ -181,27 +181,99 @@ class Layout extends React.Component {
                     {
                         session: {
                             ID: 1000,
-                            user_nicename: receivedUsername,
-                            password: receivedPassword,
+                            user_nicename: "edgarbrignoni",
+                            password: "1234",
                             token: "gfdrtu6545hftydhgrhxfh"
                         }
                     }
                 );
             },
+            //"updateSample": (id, userId, answer) => {
+            "updateSample": (id, title, content, gender, date, time) => {
+                /*var indexOfEvent = 0;
+                var theArrayWithEvent = this.state.events.filter( (item, index) => {
+                    
+                    if(item.ID === parseInt(id)){
+                        indexOfEvent = index;
+                        return true;
+                    }
+                    
+                });
+                let event = theArrayWithEvent[0];
+                
+                if(answer === "yes"){
+                    event.meta_keys._rsvpYes.push(userId);
+                }else{
+                    event.meta_keys._rsvpNo.push(userId);
+                }
+                
+                var tempArray = this.state.events;
+                tempArray[indexOfEvent] = event;
+                
+                this.setState({"events": tempArray});
+                
+                ReactGA.event({
+                  category: 'User',
+                  action: 'RSVP',
+                  value: answer === "yes" ? 1 : 0
+                });*/
+                
+                let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/sample/';
+                // let id = '';
+                
+                var data = {
+                    id: id,
+                    title: title,
+                    content: content,
+                    gender: gender,
+                    date: date,
+                    time: time
+                };
+                
+                // fetch(url+id, {
+                fetch(url, {
+                    method: 'PUT',
+                    body: JSON.stringify(data),
+                    headers: new Headers({
+                        'Content-Type': 'application/json',
+                        //'Authorization': 'Bearer '+this.state.session.token
+                    })
+                })
+                .then(data => {
+                  if (data.status !== 200 ) {
+                    throw new Error(data);//INVALID TOKEN
+                  }
+                  this.actions.loadInitialData();
+                })
+                .catch(error => console.log(error));
+                
+            },
             "logout": () => this.setState({
                 session: {
                 }
             }),
-            addPlanToCart: (planId) => {
-                let tempCart = this.state.cart;
+            // "loadInitialData": () => { 
                 
-                let arrayWithThePlan = this.state.planshop.filter( (plan) => {
-                    return plan.id === planId;  
-                });
+            // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/events')
+            //   .then(response => response.json())
+            //   .then(data => this.setState({ events: data, isLoading: false }))
+            //   .catch(error => console.log(error));
+              
+            // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
+            //   .then(response => response.json())
+            //   .then(data => this.setState({ meetups: data }))
+            //   .catch(error => console.log(error));
+            // },
+            // addPlanToCart: (planId) => {
+            //     let tempCart = this.state.cart;
                 
-                tempCart.push(arrayWithThePlan[0]);
-                this.setState({cart: tempCart});
-            }
+            //     let arrayWithThePlan = this.state.planshop.filter( (plan) => {
+            //         return plan.id === planId;  
+            //     });
+                
+            //     tempCart.push(arrayWithThePlan[0]);
+            //     this.setState({cart: tempCart});
+            // }
         };
     }
 
