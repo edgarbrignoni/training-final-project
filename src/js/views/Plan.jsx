@@ -25,7 +25,6 @@ class Plan extends React.Component {
                 </div>
                 */}
                 <div className="container">
-                
                     <div className="card-deck mb-3 text-center">
                         <Consumer>
                             {({ state }) => (
@@ -45,7 +44,6 @@ class Plan extends React.Component {
                             )}
                         </Consumer>
                     </div>
-                        
                 </div>
                 <Footer />
             </React.Fragment>

@@ -24,10 +24,11 @@ class Blog extends React.Component{
                                             <Card 
                                                 key={index}
                                                 ID={item.ID}
-                                                title={item.title}
-                                                desc={item.desc}
-                                                post={item.post}
-                                                image={item.image}
+                                                title={item.post_title}
+                                                desc={item.post_content}
+                                                post={item.post_modified}
+                                                // image={item.thumbnail[0]}
+                                                image={item.meta_keys.video}
                                             />
                                         );
                                     })

@@ -5,7 +5,7 @@ import { withSession } from '../stores/AppContext.jsx';
 import PropTypes from "prop-types";
 // import logo from '../../img/logo4Geeks.png';
 
-class NavBar extends React.Component{
+class Navbar extends React.Component{
     constructor(props){
         super(props);
         
@@ -38,7 +38,7 @@ class NavBar extends React.Component{
                         id="home-btn"
                         type="button" 
                         className="btn btn-link p-0">
-                        <Link className="navbar-brand" to="/">
+                        <Link className="navbar-brand" to="/login">
                             <img id="logoInverted" className="img-fluid" src="./img/home.png" />
                             <p className="login">Home</p>
                         </Link>
@@ -111,9 +111,9 @@ class NavBar extends React.Component{
     }
 }
 
-export default withSession(NavBar);
+export default withSession(Navbar);
 
-NavBar.propTypes = {
+Navbar.propTypes = {
     session: PropTypes.object,
     actions: PropTypes.object,
     currentView: PropTypes.string
