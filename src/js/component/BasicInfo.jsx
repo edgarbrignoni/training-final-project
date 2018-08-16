@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
+import PropTypes from "prop-types";
 
 
 class BasicInfo extends React.Component{
@@ -25,7 +26,7 @@ class BasicInfo extends React.Component{
             <div className="card border-dark mb-3">
                 <div className="card-header text-white bg-dark border-dark">BASIC INFO:</div>
                 <div className="card-body text-dark">
-                    <form>
+                    <div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
                                 <label htmlFor="inputName4">First Name *</label>
@@ -64,7 +65,7 @@ class BasicInfo extends React.Component{
                                 <input type="OcupationN" name="ocupation" value={this.state.ocupation}className="form-control" id="inputOcupationN4" onChange={(e) => this.setState({ocupation: e.target.value})}/>
                             </div>
                         </div>
-                    </form>    
+                    </div>    
                 </div>
                 <div className="card-footer bg-transparent border-dark">* This field is required.</div>
             </div>

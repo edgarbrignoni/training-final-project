@@ -14,16 +14,11 @@ import PropTypes from "prop-types";
 class Member extends React.Component{
     
     render(){
-        const {session, actions} = this.props;
+        
         return (
             <React.Fragment>
                 <Navbar />
                 <p>&nbsp;</p>
-                <form role="form" onSubmit={(e) => {
-                        e.preventDefault();
-                        actions.loadSession(this.state.firstName, this.state.lastName, this.state.email, this.state.password, this.state.repassword, this.state.age, this.state.height, this.state.weight, this.state.ocupation);
-                    }}>
-                </form>    
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
@@ -67,9 +62,3 @@ class Member extends React.Component{
 }
 
 export default Member;
-
-Member.propTypes = {
-    session: PropTypes.object,
-    actions: PropTypes.object,
-    currentView: PropTypes.string
-};

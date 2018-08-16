@@ -189,48 +189,20 @@ class Layout extends React.Component {
                 );
             },
             //"updateSample": (id, userId, answer) => {
-            "updateSample": (id, title, content, gender, date, time) => {
-                /*var indexOfEvent = 0;
-                var theArrayWithEvent = this.state.events.filter( (item, index) => {
-                    
-                    if(item.ID === parseInt(id)){
-                        indexOfEvent = index;
-                        return true;
-                    }
-                    
-                });
-                let event = theArrayWithEvent[0];
+            "updateSample": (firstName, lastName, email, password, repassword, age, height, weight, ocupation) => {
+                console.log(firstName, lastName, email, password, repassword, age, height, weight, ocupation);
                 
-                if(answer === "yes"){
-                    event.meta_keys._rsvpYes.push(userId);
-                }else{
-                    event.meta_keys._rsvpNo.push(userId);
-                }
-                
-                var tempArray = this.state.events;
-                tempArray[indexOfEvent] = event;
-                
-                this.setState({"events": tempArray});
-                
-                ReactGA.event({
-                  category: 'User',
-                  action: 'RSVP',
-                  value: answer === "yes" ? 1 : 0
-                });*/
-                
-                let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/sample/';
-                // let id = '';
+                let url = 'https://my-first-wordpress-mberrio10.c9users.io/wp-json/sample_api/v1/member/';
                 
                 var data = {
-                    id: id,
-                    title: title,
-                    content: content,
-                    gender: gender,
-                    date: date,
-                    time: time
+                //     id: id,
+                    firstName: firstName,
+                    lastName: lastName,
+                    age: age
+                //     date: date,
+                //     time: time
                 };
                 
-                // fetch(url+id, {
                 fetch(url, {
                     method: 'PUT',
                     body: JSON.stringify(data),
@@ -252,7 +224,7 @@ class Layout extends React.Component {
                 session: {
                 }
             }),
-            // "loadInitialData": () => { 
+            "loadInitialData": () => { 
                 
             // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/events')
             //   .then(response => response.json())
@@ -273,7 +245,7 @@ class Layout extends React.Component {
                 
             //     tempCart.push(arrayWithThePlan[0]);
             //     this.setState({cart: tempCart});
-            // }
+            }
         };
     }
 
