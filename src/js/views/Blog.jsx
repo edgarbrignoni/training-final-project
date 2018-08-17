@@ -26,9 +26,11 @@ class Blog extends React.Component{
                                                 ID={item.ID}
                                                 title={item.post_title}
                                                 desc={item.post_content}
-                                                post={item.post_modified}
+                                                // post={item.post_date}
+                                                category={item.category[0].name}
+                                                image={item.meta_keys.image}
                                                 // image={item.thumbnail[0]}
-                                                image={item.meta_keys.video}
+                                                // image={item.meta_keys.video}
                                             />
                                         );
                                     })
