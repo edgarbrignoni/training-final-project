@@ -16,7 +16,16 @@ class Card extends React.Component{
             <div className="col-md-4 mt-2 mb-4">
                 <div className="card border-0 card-cascade wider">
                     <div className="view view-cascade">
+                        <iframe 
+                            id="ytplayer" 
+                            type="text/html" 
+                            width={"100%"} 
+                            src={"" + this.props.image + "?showinfo=0&autoplay=1&controls=0"}
+                            frameBorder="0">
+                        </iframe>
+                        {/*
                         <img src={"" + this.props.image + ""} className="card-img-top"/>
+                        */}
                         <a href="#!">
                             <div className="mask rgba-white-slight"></div>
                         </a>
@@ -25,14 +34,16 @@ class Card extends React.Component{
                         <h4 className="card-title text-center"><strong>{this.props.title}</strong></h4>
                     </div>
                     <div className="card-text p-3 bg-transparent">{this.props.desc}</div>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="card-footer bg-transparent border-0"><strong>#{this.props.post}</strong></div>
-                        </div>
-                        <div className="col-lg-6">
-                            <Link style={{ textDecoration: 'none' }} to="/post">
-                                <button type="button" className="btn btn-info">READ MORE</button>
-                            </Link>
+                    <div className="card-footer bg-transparent border-0">
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <strong>{this.props.post}</strong>
+                            </div>
+                            <div className="col-lg-6 mt-2">
+                                <Link style={{ textDecoration: 'none' }} to="/post">
+                                    <button type="button" className="btn btn-info">READ MORE</button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

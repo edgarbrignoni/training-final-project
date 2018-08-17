@@ -14,7 +14,12 @@ class Featurette extends React.Component{
                         </Link>
                     </div>
                     <div className="col-md-5">
-                        <img className="featurette-image img-fluid mx-auto" data-holder-rendered="true" data-src="holder.js/500x500/auto" alt="500x500" src="http://thedailygrind88.com/wp-content/uploads/2018/02/Gym-Pads-The-Perfect-Alternative-to-Workout-Gloves-Weight-Lifting-Grip-Pad-Universal-Size-Bodybuilding-Glove-With-4-Fingers-Video-and-eBook-With-20-Exercises-for-Arms-by-Legendary-Workout-0-0.jpg" />
+                        <img 
+                            className="featurette-image img-fluid mx-auto" 
+                            data-holder-rendered="true" 
+                            data-src="holder.js/500x500/auto" 
+                            alt="500x500" 
+                            src="https://www.correxiko.com/wp-content/uploads/2015/10/correxiko-women-lift-weight.jpg" />
                     </div>
                 </div>
                 <div className="row featurette">
@@ -26,7 +31,12 @@ class Featurette extends React.Component{
                         </Link>
                     </div>
                     <div className="col-md-5 order-md-1">
-                        <img className="featurette-image img-fluid mx-auto" data-holder-rendered="true" data-src="holder.js/500x500/auto" alt="500x500" src="https://www.merrithew.com/imagelib/default-source/store/st-06132-a.jpg" />
+                        <img 
+                            className="featurette-image img-fluid mx-auto" 
+                            data-holder-rendered="true" 
+                            data-src="holder.js/500x500/auto" 
+                            alt="500x500" 
+                            src="https://www.merrithew.com/imagelib/default-source/store/st-06132-a.jpg" />
                     </div>
                 </div>
                 <div className="row featurette">
@@ -38,7 +48,12 @@ class Featurette extends React.Component{
                         </Link>
                     </div>
                     <div className="col-md-5">
-                        <img className="featurette-image img-fluid mx-auto" data-holder-rendered="true" data-src="holder.js/500x500/auto" alt="500x500" src="https://nutritionfacts.org/app/uploads/2017/04/Organic-Foods.jpeg" />
+                        <img 
+                            className="featurette-image img-fluid mx-auto" 
+                            data-holder-rendered="true" 
+                            data-src="holder.js/500x500/auto" 
+                            alt="500x500" 
+                            src="https://nutritionfacts.org/app/uploads/2017/04/Organic-Foods.jpeg" />
                     </div>
                 </div>
             </div>

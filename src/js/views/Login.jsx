@@ -1,34 +1,65 @@
-<div class="container login-container">
-  <div class="row">
-    <div class="col-lg-6 new-customer">
-       
-	<h2 class="strong text-center mb-4">New Customer</h2>
-	<a href="/eating-guides/" alt="Eating Guides">
-		<img src="https://foodbabe.com/app/themes/foodbabe/dist/images/home/meal-plan-eating-guide.png" class="w-100 mb-4">
-	</a>
-	<h5 class="strong text-center mb-4 text-muted">Start feeling healthy and full of energy!</h5>
-	<div class="text-center mb-4">
-		<a href="/eating-guides/" class="btn btn-lg btn-orange caps w-100">GET INSTANT ACCESS</a>
-	</div>
-	<p class="text-center mb-4 text-muted">After purchase, you'll receive your password to login!</p>
-    </div>
-    <div class="col-lg-6 returning-customer">
-     
-	<h2 class="strong text-center mb50">Returning Customer</h2>
-	<form method="POST" action="https://my.foodbabe.com/login" accept-charset="UTF-8" id="my-login-form">
-	  <div class="d-none form-group mb-4">
-	    <label for="formGroupInputUsername"><span class="text-muted strong">Username</span><span class="text-muted"> (Required)</span></label>
-	    <input type="identity" class="form-control form-control-lg sharp" id="formGroupInputUsername" name="identity" placeholder="Username...">
-	  </div>
-	  <div class="d-none form-group mb35">
-	    <label for="formGroupInputPassword"><span class="text-muted strong">Password</span><span class="text-muted"> (Required)</span></label>
-	    <input type="password" class="form-control form-control-lg sharp" id="formGroupInputPassword" name="password" placeholder="Password...">
-	  </div>
-	  <a href="https://my.foodbabe.com/login" class="btn btn-lg btn-pink w-100 mt-4" id="xmy-login-btn">LOGIN</a>
-	</form>
-	<div class="text-center alert alert-warning mt-4" id="my-login-msg" style="display:none"></div>
+import React from 'react';
+import { Consumer } from '../stores/AppContext.jsx';
+import PropTypes from "prop-types";
+import Navbar from '../component/Navbar.jsx';
 
-	<p class="text-center mt-4"><a href="https://my.foodbabe.com/forgot-password" class="text-muted">Forgot password?</a></p>
-    </div>
-  </div>
-</div>
+class Login extends React.Component{
+
+	constructor(props){
+        super(props);
+        this.state = {
+        };
+    }
+    
+    render(){
+        return (
+            <React.Fragment>
+                <Navbar />
+                <main className="py-4 pl-1 foodbabe-main">
+                    <div className="container myfb-login">
+                        <div className="row justify-content-center">
+                            <div className="col-md-10">
+                                <div className="card">
+                                    <div className="card-header bg-dark">LOGIN</div>
+                                    <div className="card-body">
+                                        <form method="POST" action="./login">
+                                            <input type="hidden" name="_token" value="h51GZO8hFTrBOqnEXYDZmJJlE9vHD1sNyS6dgM6p" />
+                                            <div className="form-group row">
+                                                <label htmlFor="identity" className="col-sm-4 col-form-label text-md-right">Username</label>
+                                                <div className="col-md-6">
+                                                    <input id="identity" type="identity" className="form-control fb-input-lg" name="identity" value="" autoFocus="" autoComplete="off" />
+                                                </div>
+                                            </div>
+                                            <div className="form-group row">
+                                                <label htmlFor="password" className="col-md-4 col-form-label text-md-right">Password</label>
+                                                <div className="col-md-6">
+                                                    <input id="password" type="password" className="form-control" name="password" required="" autoComplete="off" />
+                                                </div>
+                                            </div>
+                                            <div className="form-group row mb-0">
+                                                <div className="col-md-6 offset-md-4">
+                                                    <button type="submit" className="btn btn-primary">
+                                                        Login
+                                                    </button>
+                                                    <a className="btn btn-link" href="./forgot">
+                                                        Forgot Your Password?
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </React.Fragment>
+        );
+    }
+}
+
+export default Login;
+
+Login.propTypes = {
+    //prop_name: PropTypes.type_of_the_prop
+};

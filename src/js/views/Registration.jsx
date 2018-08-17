@@ -309,7 +309,7 @@ class Registration extends React.Component{
                                         </div>
                                         <div className="form-check-disable">
                                             <p></p>
-                                            <input className="form-control" type="text" name="hmtweek" value={this.state.hmtweek} id="inputText3" placeholder="How manny times a week..." onChange={(e) => this.setState({hmtweek: e.target.value})}/>
+                                            <input className="form-control" type="text" name="hmtweek" value={this.state.hmtweek} id="inputText3" placeholder="How many times a week..." onChange={(e) => this.setState({hmtweek: e.target.value})}/>
                                         </div>
                                         <p></p>
                                         <div className="form-check-disable">
