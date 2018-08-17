@@ -10,8 +10,12 @@ class Navbar extends React.Component{
         super(props);
         
         this.state = {
-            username: "",
-            password: "",
+            id: "196",
+            title: "TITLE",
+            content: "CONTENT",
+            gender: "Female",
+            date: "20180111",
+            time: "11:11:11",
             modal: false
         };
     }
@@ -34,7 +38,7 @@ class Navbar extends React.Component{
                         id="home-btn"
                         type="button" 
                         className="btn btn-link p-0">
-                        <Link className="navbar-brand" to="/">
+                        <Link className="navbar-brand" to="/login">
                             <img id="logoInverted" className="img-fluid" src="./img/home.png" />
                             <p className="login">Home</p>
                         </Link>
@@ -86,11 +90,15 @@ class Navbar extends React.Component{
                             <div className="modal-body">
                                 <form role="form" onSubmit={(e) => {
                                     e.preventDefault();
-                                    actions.loadSession(this.state.username, this.state.password);
+                                    actions.updateSample(this.state.id,this.state.title,this.state.content,this.state.gender,this.state.date,this.state.time);
                                 }}>
                                     <div className="form-group">
-                                        <input type="text" name="user" value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
-                                        <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
+                                        <input type="text" name="id" value={this.state.id} placeholder="ID" onChange={(e) => this.setState({id: e.target.value})} />
+                                        <input type="text" name="title" value={this.state.title} placeholder="Title" onChange={(e) => this.setState({title: e.target.value})} />
+                                        <input type="text" name="content" value={this.state.content} placeholder="Content" onChange={(e) => this.setState({content: e.target.value})} />
+                                        <input type="text" name="gender" value={this.state.gender} placeholder="Gender" onChange={(e) => this.setState({gender: e.target.value})} />
+                                        <input type="text" name="date" value={this.state.date} placeholder="YYYYMMDD" onChange={(e) => this.setState({date: e.target.value})} />
+                                        <input type="text" name="time" value={this.state.time} placeholder="HH:MM:SS" onChange={(e) => this.setState({time: e.target.value})} />
                                     </div>
                                     <input type="submit" value="Login" />
                                 </form>

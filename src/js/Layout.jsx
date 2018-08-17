@@ -232,8 +232,8 @@ class Layout extends React.Component {
                 
             fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/blog')
               .then(response => response.json())
-              .then(data => this.setState({ blog: data, isLoading: false }))
-              .catch(error => console.log(error));
+              .then(data => this.setState({ blog: data, isLoading: false }));
+            //   .catch(error => console.log(error));
               
             // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
             //   .then(response => response.json())
@@ -271,7 +271,7 @@ class Layout extends React.Component {
                                 <Route exact path="/plan" component={Plan} />
                                 <Route exact path="/checkout" component={Checkout} />
                                 <Route exact path="/cart" component={Cart} />
-                                <Route exact path="/post" component={Post} />
+                                <Route exact path="/post/:theid" component={Post} />
                                 <Route exact path="/workout" component={Workout} />
                                 <Route exact path="/login" component={Login} />
                                 <Route exact path="/signup" component={Signup} />

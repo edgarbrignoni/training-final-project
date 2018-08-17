@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
 class Featurette extends React.Component{
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            
+        };
+    }
     
     render(){
         return (
@@ -9,7 +18,7 @@ class Featurette extends React.Component{
                     <div className="col-md-7">
                         <h2 className="featurette-heading">First featurette heading. <span className="text-muted">It ll blow your mind.</span></h2>
                         <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                        <Link style={{ textDecoration: 'none' }} to="/post">
+                        <Link style={{ textDecoration: 'none' }} to={"/post/"+this.props.ID}>
                             <button type="button" className="btn btn-info">READ MORE</button>
                         </Link>
                     </div>
@@ -62,3 +71,12 @@ class Featurette extends React.Component{
 }
 
 export default Featurette;
+
+Featurette.propTypes = {
+    ID: PropTypes.number,
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    image: PropTypes.string,
+    post: PropTypes.string,
+    category: PropTypes.string
+};

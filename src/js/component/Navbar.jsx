@@ -3,19 +3,17 @@ import $ from "jquery";
 import { Link } from "react-router-dom";
 import { withSession } from '../stores/AppContext.jsx';
 import PropTypes from "prop-types";
-// import logo from '../../img/logo4Geeks.png';
+import Home from '../../img/home.png';
+import Login from '../../img/login.png';
+import User from '../../img/user.png';
 
 class Navbar extends React.Component{
     constructor(props){
         super(props);
         
         this.state = {
-            id: "196",
-            title: "TITLE",
-            content: "CONTENT",
-            gender: "Female",
-            date: "20180111",
-            time: "11:11:11",
+            username: "",
+            password: "",
             modal: false
         };
     }
@@ -27,7 +25,7 @@ class Navbar extends React.Component{
     //}
     
     render(){
-        let homeActive = this.props.currentView === "home" ? "active" :"";
+        //let homeActive = this.props.currentView === "home" ? "active" :"";
         
         const {session, actions} = this.props;
         
@@ -38,8 +36,8 @@ class Navbar extends React.Component{
                         id="home-btn"
                         type="button" 
                         className="btn btn-link p-0">
-                        <Link className="navbar-brand" to="/login">
-                            <img id="logoInverted" className="img-fluid" src="./img/home.png" />
+                        <Link className="navbar-brand" to="/">
+                            <img id="logoInverted" className="img-fluid" src={Home} />
                             <p className="login">Home</p>
                         </Link>
                     </button>
@@ -62,7 +60,7 @@ class Navbar extends React.Component{
                                     type="button" 
                                     className="btn btn-link text-center text-white" 
                                     onClick={(e) => actions.logout()}>
-                                    <img id="logoInverted" className="img-fluid" src="./img/login.png" />
+                                    <img id="logoInverted" className="img-fluid" src={Login} />
                                     <p className="login">Logout</p>
                                 </button>
                             :
@@ -71,7 +69,7 @@ class Navbar extends React.Component{
                                     className="btn btn-link text-center text-white"
                                     data-toggle="modal" 
                                     data-target="#exampleModal">
-                                    <img id="logoInverted" className="img-fluid" src="./img/user.png" />
+                                    <img id="logoInverted" className="img-fluid" src={User} />
                                     <p className="login">Login</p>
                                 </button>
                             }
@@ -90,15 +88,11 @@ class Navbar extends React.Component{
                             <div className="modal-body">
                                 <form role="form" onSubmit={(e) => {
                                     e.preventDefault();
-                                    actions.updateSample(this.state.id,this.state.title,this.state.content,this.state.gender,this.state.date,this.state.time);
+                                    actions.loadSession(this.state.username, this.state.password);
                                 }}>
                                     <div className="form-group">
-                                        <input type="text" name="id" value={this.state.id} placeholder="ID" onChange={(e) => this.setState({id: e.target.value})} />
-                                        <input type="text" name="title" value={this.state.title} placeholder="Title" onChange={(e) => this.setState({title: e.target.value})} />
-                                        <input type="text" name="content" value={this.state.content} placeholder="Content" onChange={(e) => this.setState({content: e.target.value})} />
-                                        <input type="text" name="gender" value={this.state.gender} placeholder="Gender" onChange={(e) => this.setState({gender: e.target.value})} />
-                                        <input type="text" name="date" value={this.state.date} placeholder="YYYYMMDD" onChange={(e) => this.setState({date: e.target.value})} />
-                                        <input type="text" name="time" value={this.state.time} placeholder="HH:MM:SS" onChange={(e) => this.setState({time: e.target.value})} />
+                                        <input type="text" name="user" value={this.state.user} placeholder="Username" onChange={(e) => this.setState({username: e.target.value})} />
+                                        <input type="password" name="password" value={this.state.password} placeholder="Password" onChange={(e) => this.setState({password: e.target.value})} />
                                     </div>
                                     <input type="submit" value="Login" />
                                 </form>
