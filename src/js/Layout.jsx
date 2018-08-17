@@ -239,7 +239,7 @@ class Layout extends React.Component {
             //   .then(response => response.json())
             //   .then(data => this.setState({ meetups: data }))
             //   .catch(error => console.log(error));
-            },
+            }
             // addPlanToCart: (planId) => {
             //     let tempCart = this.state.cart;
                 
@@ -249,7 +249,6 @@ class Layout extends React.Component {
                 
             //     tempCart.push(arrayWithThePlan[0]);
             //     this.setState({cart: tempCart});
-            }
         };
     }
     
