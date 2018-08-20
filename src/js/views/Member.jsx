@@ -8,7 +8,7 @@ import BodyComposition from "../component/BodyComposition.jsx";
 import BodyFatGoals from "../component/BodyFatGoals.jsx";
 import ProgressPhoto from "../component/ProgressPhoto.jsx";
 import UpcomingWorkouts from "../component/UpcomingWorkouts.jsx";
-import UpcomingMeals from "../component/UpcomingMeals.jsx";
+// import UpcomingMeals from "../component/UpcomingMeals.jsx";
 import PropTypes from "prop-types";
 
 class Member extends React.Component{

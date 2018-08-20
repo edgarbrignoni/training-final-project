@@ -15,6 +15,8 @@ class Registration extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            username:"username",
+            login:"login",
             first_name:"John", 
             last_name:"Smith", 
             email:"john.smith@4Geeks.com", 
@@ -63,7 +65,9 @@ class Registration extends React.Component{
                 */}
                 <form role="form" onSubmit={(e) => {
                         e.preventDefault();
-                        actions.submitRegistration(
+                        actions.createUser(
+                            this.state.username,
+                            this.state.login,
                             this.state.first_name, 
                             this.state.last_name, 
                             this.state.email, 
