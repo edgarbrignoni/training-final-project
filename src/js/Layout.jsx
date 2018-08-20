@@ -193,8 +193,8 @@ class Layout extends React.Component {
                 );
             },
             //"updateSample": (id, userId, answer) => {
-            "updateSample": (firstName, lastName, email, password, repassword, age, height, weight, ocupation) => {
-                console.log(firstName, lastName, email, password, repassword, age, height, weight, ocupation);
+            "updateMember": (firstName, lastName, email, password, repassword, age, height, weight, ocupation, hChol, obese, diabetes, hypertension, heartAttack, otherCarDis, famChol, famObese, famDiabetes, famHyper, famHAtk, otherdsease, fracture, luxation, sprain, colInjur, lowBack, kneeinjur, tear, chronic, physAct, exActive, hmtweek, purpose, goaldesc) => {
+                console.log (firstName, lastName, email, password, repassword, age, height, weight, ocupation, hChol, obese, diabetes, hypertension, heartAttack, otherCarDis, famChol, famObese, famDiabetes, famHyper, famHAtk, otherdsease, fracture, luxation, sprain, colInjur, lowBack, kneeinjur, tear, chronic, physAct, exActive, hmtweek, purpose, goaldesc);
                 
                 let url = 'https://my-first-wordpress-mberrio10.c9users.io/wp-json/sample_api/v1/member/';
                 
@@ -230,9 +230,13 @@ class Layout extends React.Component {
             }),
             "loadInitialData": () => { 
                 
-            fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/blog')
+            fetch('https://my-first-wordpress-mberrio10.c9users.io/wp-json/sample_api/v1/blog')
               .then(response => response.json())
               .then(data => this.setState({ blog: data, isLoading: false }));
+              //   .catch(error => console.log(error));
+            fetch('https://my-first-wordpress-mberrio10.c9users.io/wp-json/sample_api/v1/workout')
+              .then(response => response.json())
+              .then(data => this.setState({ workouts: data, isLoading: false }));
             //   .catch(error => console.log(error));
               
             // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
