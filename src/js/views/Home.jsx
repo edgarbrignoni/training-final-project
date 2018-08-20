@@ -5,7 +5,14 @@ import Footer from "../component/Footer.jsx";
 import Carousel from "../component/Carousel.jsx";
 import Featurette from "../component/Featurette.jsx";
 
-class MainPage extends React.Component{
+class Home extends React.Component{
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            
+        };
+    }
     
     render(){
         return (
@@ -15,18 +22,22 @@ class MainPage extends React.Component{
                 <Consumer>
                     {({ state }) => (
                         state.blog.map((item, index) => {
-                            return (
-                                <Featurette 
-                                    key={index}
-                                    ID={item.ID}
-                                    title={item.post_title}
-                                    desc={item.post_content}
-                                    // post={item.post_date}
-                                    category={item.category[0].name}
-                                    // image={item.thumbnail[0]}
-                                    image={item.meta_keys.video}
-                                />
-                            );
+                            while (index < 4) {
+                                return (
+                                    <Featurette 
+                                        key={index}
+                                        index={index}
+                                        id={item.ID}
+                                        title={item.post_title}
+                                        desc={item.post_content}
+                                        // category={item.category[0].name}
+                                        image={item.meta_keys.image}
+                                        // post={item.post_date}
+                                        // image={item.thumbnail[0]}
+                                        // image={item.meta_keys.video}
+                                    />
+                                );
+                            }
                         })
                     )}
                 </Consumer>
@@ -36,4 +47,4 @@ class MainPage extends React.Component{
     }
 }
 
-export default MainPage;
+export default Home;

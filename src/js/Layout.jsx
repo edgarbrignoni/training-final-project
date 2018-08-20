@@ -14,6 +14,7 @@ import Workout from "./component/Workout.jsx";
 import Login from "./views/Login.jsx";
 import Signup from "./views/Signup.jsx";
 import Forgot from "./views/Forgot.jsx";
+import Create from "./views/Create.jsx";
 
 
 class Layout extends React.Component {
@@ -159,6 +160,12 @@ class Layout extends React.Component {
                     image: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg"
                 }    
             ],
+            "session": {
+                ID: 1,
+                username: "mompy",
+                password: "abc123",
+                token: "wjer147892akerfdv"
+            },
             cart:[
             ]
         };
@@ -192,19 +199,116 @@ class Layout extends React.Component {
                     }
                 );
             },
-            //"updateSample": (id, userId, answer) => {
-            "updateSample": (firstName, lastName, email, password, repassword, age, height, weight, ocupation) => {
-                console.log(firstName, lastName, email, password, repassword, age, height, weight, ocupation);
-                
-                let url = 'https://my-first-wordpress-mberrio10.c9users.io/wp-json/sample_api/v1/member/';
+            "submitRegistration": (
+                first_name, 
+                last_name, 
+                email, 
+                password, 
+                repassword, 
+                age, 
+                height, 
+                weight, 
+                occupation,
+                high_cholesterol,
+                obese,
+                diabetes,
+                hypertension,
+                heart_attack,
+                other_cardiac_disease,
+                history_high_cholesterol,
+                history_obese,
+                history_diabetes,
+                history_hypertension,
+                history_heart_attack,
+                history_other_cardiac_disease,
+                fracture,
+                luxation,
+                sprain,
+                column_injury,
+                low_back_pain,
+                knee_injury,
+                repetitive_tear,
+                chronic_pain,
+                physical_active,
+                example_activities,
+                times_week,
+                purpose,
+                goal_description
+            ) => {
+                console.log(
+                    first_name, 
+                    last_name, 
+                    email, 
+                    password, 
+                    repassword, 
+                    age, 
+                    height, 
+                    weight, 
+                    occupation,
+                    high_cholesterol,
+                    obese,
+                    diabetes,
+                    hypertension,
+                    heart_attack,
+                    other_cardiac_disease,
+                    history_high_cholesterol,
+                    history_obese,
+                    history_diabetes,
+                    history_hypertension,
+                    history_heart_attack,
+                    history_other_cardiac_disease,
+                    fracture,
+                    luxation,
+                    sprain,
+                    column_injury,
+                    low_back_pain,
+                    knee_injury,
+                    repetitive_tear,
+                    chronic_pain,
+                    physical_active,
+                    example_activities,
+                    times_week,
+                    purpose,
+                    goal_description
+                );
+                    
+                let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/member/';
                 
                 var data = {
-                //     id: id,
-                    firstName: firstName,
-                    lastName: lastName,
-                    age: age
-                //     date: date,
-                //     time: time
+                    first_name: first_name,
+                    last_name: last_name,
+                    email: email,
+                    password: password,
+                    repassword: repassword,
+                    age: age,
+                    height: height,
+                    weight: weight, 
+                    occupation: occupation,
+                    high_cholesterol: high_cholesterol,
+                    obese: obese,
+                    diabetes: diabetes,
+                    hypertension: hypertension,
+                    heart_attack: heart_attack,
+                    other_cardiac_disease: other_cardiac_disease,
+                    history_high_cholesterol: history_high_cholesterol,
+                    history_obese: history_obese,
+                    history_diabetes: history_diabetes,
+                    history_hypertension: history_hypertension,
+                    history_heart_attack: history_heart_attack,
+                    history_other_cardiac_disease: history_other_cardiac_disease,
+                    fracture: fracture,
+                    luxation: luxation,
+                    sprain: sprain,
+                    column_injury: column_injury,
+                    low_back_pain: low_back_pain,
+                    knee_injury: knee_injury,
+                    repetitive_tear: repetitive_tear,
+                    chronic_pain: chronic_pain,
+                    physical_active: physical_active,
+                    example_activities: example_activities,
+                    times_week: times_week,
+                    purpose: purpose,
+                    goal_description: goal_description
                 };
                 
                 fetch(url, {
@@ -220,8 +324,56 @@ class Layout extends React.Component {
                     throw new Error(data);//INVALID TOKEN
                   }
                   this.actions.loadInitialData();
-                });
-                //.catch(error => console.log(error));
+                  window.location.replace("/home");
+                })
+                .catch(error => console.log(error));
+                
+            },
+            "createUser": (
+                username,
+                login,
+                first_name,
+                last_name,
+                email,
+                password
+            ) => {
+                console.log(
+                    username,
+                    login,
+                    first_name,
+                    last_name,
+                    email,
+                    password
+                );
+                    
+                let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/user/';
+                
+                var data = {
+                    username: username,
+                    login: email,
+                    first_name: first_name,
+                    last_name: last_name,
+                    email: email,
+                    password: password
+                };
+                
+                fetch(url, {
+                    method: 'PUT',
+                    body: JSON.stringify(data),
+                    headers: new Headers({
+                        'Content-Type': 'application/json'
+                        //'Authorization': 'Bearer '+this.state.session.token
+                    })
+                })
+                .then(data => {
+                  if (data.status !== 200 ) {
+                    alert(email + " registration already exist, please try a different email.");
+                    throw new Error(data);//INVALID TOKEN
+                  }
+                  this.actions.loadInitialData();
+                  window.location.replace("/home");
+                })
+                .catch(error => console.log(error));
                 
             },
             "logout": () => this.setState({
@@ -231,24 +383,30 @@ class Layout extends React.Component {
             "loadInitialData": () => { 
                 
             fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/blog')
-              .then(response => response.json())
-              .then(data => this.setState({ blog: data, isLoading: false }));
-            //   .catch(error => console.log(error));
+            .then(response => response.json())
+            .then(data => this.setState({ blog: data, isLoading: false }))
+            .catch(error => console.log(error));
+            
+            // fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/workout')
+            // .then(response => response.json())
+            // .then(data => this.setState({ workout: data, isLoading: false }))
+            // .catch(error => console.log(error));
               
             // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
             //   .then(response => response.json())
             //   .then(data => this.setState({ meetups: data }))
             //   .catch(error => console.log(error));
+            },
+            "addPlanToCart": (planId) => {
+                let tempCart = this.state.cart;
+                
+                let arrayWithThePlan = this.state.planshop.filter( (plan) => {
+                    return plan.id === planId;  
+                });
+                
+                tempCart.push(arrayWithThePlan[0]);
+                this.setState({cart: tempCart});
             }
-            // addPlanToCart: (planId) => {
-            //     let tempCart = this.state.cart;
-                
-            //     let arrayWithThePlan = this.state.planshop.filter( (plan) => {
-            //         return plan.id === planId;  
-            //     });
-                
-            //     tempCart.push(arrayWithThePlan[0]);
-            //     this.setState({cart: tempCart});
         };
     }
     
@@ -276,6 +434,7 @@ class Layout extends React.Component {
                                 <Route exact path="/login" component={Login} />
                                 <Route exact path="/signup" component={Signup} />
                                 <Route exact path="/forgot" component={Forgot} />
+                                <Route exact path="/create" component={Create} />
                             </Provider>
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>

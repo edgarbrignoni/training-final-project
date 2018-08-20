@@ -23,12 +23,12 @@ class Blog extends React.Component{
                                         return (
                                             <Card 
                                                 key={index}
-                                                ID={item.ID}
+                                                id={item.ID}
                                                 title={item.post_title}
                                                 desc={item.post_content}
-                                                // post={item.post_date}
-                                                category={item.category[0].name}
+                                                // category={item.category[0].name}
                                                 image={item.meta_keys.image}
+                                                // post={item.post_date}
                                                 // image={item.thumbnail[0]}
                                                 // image={item.meta_keys.video}
                                             />

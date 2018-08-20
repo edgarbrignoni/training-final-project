@@ -23,16 +23,19 @@ class Card extends React.Component{
                     </div>
                     <div className="mt-3 p-0 text-center card-body card-body-cascade">
                         <h4 className="card-title">{this.props.title}</h4>
+                        <p></p>
+                        {/*
                         <p className="mt-2">
                             #{this.props.category}
                         </p>
+                        */}
                     </div>
                     {/*
                     <div className="card-text p-3 bg-transparent">{this.props.desc}</div>
                     */}
                     <div className="p-0 card-footer bg-transparent border-0">
                         <div className="p-0 text-center">
-                            <Link style={{ textDecoration: 'none' }} to={"/post/"+this.props.ID}>
+                            <Link style={{ textDecoration: 'none' }} to={"/post/"+this.props.id}>
                                 <button type="button" className="btn btn-info text-center">READ MORE</button>
                             </Link>
                         </div>
@@ -46,7 +49,7 @@ class Card extends React.Component{
 export default Card;
 
 Card.propTypes = {
-    ID: PropTypes.number,
+    id: PropTypes.number,
     title: PropTypes.string,
     desc: PropTypes.string,
     image: PropTypes.string,
