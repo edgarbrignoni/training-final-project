@@ -15,7 +15,8 @@ import Login from "./views/Login.jsx";
 import Signup from "./views/Signup.jsx";
 import Forgot from "./views/Forgot.jsx";
 import Create from "./views/Create.jsx";
-import Calendar from "./component/Calendar.jsx";
+import Success from "./views/Success.jsx";
+
 
 class Layout extends React.Component {
     
@@ -180,9 +181,9 @@ class Layout extends React.Component {
                     throw new Error(data);//INVALID TOKEN
                   }
                   this.actions.loadInitialData();
-                  window.location.replace("/home");
-                });
-                // .catch(error => console.log(error));
+                  window.location.replace("/success");
+                })
+                .catch(error => console.log(error));
                 
             },
             "createUser": (
@@ -348,7 +349,7 @@ class Layout extends React.Component {
                                 <Route exact path="/signup" component={Signup} />
                                 <Route exact path="/forgot" component={Forgot} />
                                 <Route exact path="/create" component={Create} />
-                                <Route exact path="/calendar/:theid" component={Calendar} />
+                                <Route exact path="/success" component={Success} />
                             </Provider>
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>
