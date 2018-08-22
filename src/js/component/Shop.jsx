@@ -3,12 +3,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 class Shop extends React.Component{
-
-	constructor(props){
-        super(props);
-        this.state = {
-        };
-    }
     
     render(){
         return (
@@ -21,7 +15,10 @@ class Shop extends React.Component{
                     <ul className="list-unstyled mt-3 mb-4">
                         <li>{this.props.desc}</li>
                     </ul>
-                    <Link style={{ textDecoration: 'none' }} to="/checkout">
+                    <Link 
+                        to={"/checkout/"+this.props.id}
+                        style={{ textDecoration: 'none' }} 
+                    >
                         <button type="button" className="btn btn-lg btn-block btn-outline-primary">Get started</button>
                     </Link>
                 </div>
@@ -33,6 +30,7 @@ class Shop extends React.Component{
 export default Shop;
 
 Shop.propTypes = {
+    id: PropTypes.number,
     title: PropTypes.string,
     main: PropTypes.string,
     price: PropTypes.number,

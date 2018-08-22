@@ -64,18 +64,14 @@ class Navbar extends React.Component{
                                     <p className="login">Logout</p>
                                 </button>
                             :
-                                <Link style={{ textDecoration: 'none' }} to="/signup">
-                                    <button
-                                        type="button"
-                                        className="btn btn-link text-center text-white"
-                                        data-toggle-disable="modal" 
-                                        data-target-disable="#exampleModal"
-                                    >
-                                        <img id="logoInverted" className="img-fluid" src={User} />
-                                        <p className="login">Login</p>
-                                    </button>
-                                </Link>
-                                
+                                <button
+                                    type="button"
+                                    className="btn btn-link text-center text-white"
+                                    data-toggle="modal" 
+                                    data-target="#exampleModal">
+                                    <img id="logoInverted" className="img-fluid" src={User} />
+                                    <p className="login">Login</p>
+                                </button>
                             }
                         </div>
                     </div>

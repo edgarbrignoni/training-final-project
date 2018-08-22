@@ -24,7 +24,7 @@ class Signup extends React.Component{
                             </a>
                             <h5 className="strong text-center mb-4 text-muted">Start feeling healthy and full of energy!</h5>
                             <div className="text-center mb-4">
-                                <a href="./plan" className="btn btn-primary caps w-100">SELECT A PLAN</a>
+                                <a href="./plan" className="btn btn-lg btn-block btn-outline-primary caps w-100">Select a Plan</a>
                             </div>
                             <p className="text-center mb-4 text-muted">After purchase, you`ll receive your password to login!</p>
                         </div>
@@ -39,7 +39,7 @@ class Signup extends React.Component{
                                     <label htmlFor="formGroupInputPassword"><span className="text-muted strong">Password</span><span className="text-muted"> (Required)</span></label>
                                     <input type="password" className="form-control form-control-lg sharp" id="formGroupInputPassword" name="password" placeholder="Password..." />
                                 </div>
-                                <a href="./login" className="btn btn-primary w-100 mt-4" id="xmy-login-btn">LOGIN</a>
+                                <a href="./login" className="btn btn-lg btn-block btn-outline-primary w-100 mt-4" id="xmy-login-btn">Login</a>
                             </form>
                             <div className="text-center alert alert-warning mt-4" id="my-login-msg" style={{ display:'none' }}>
                             </div>

@@ -606,9 +606,14 @@ class Registration extends React.Component{
                         <div className="row">
                             <div className="col-md-4 offset-md-4">
                                 {/*
-                                <Link style={{ textDecoration: 'none' }} to="/member">
-                                    <button className="btn btn-primary btn-checkout btn-block" type="submit">Submit</button>
-                                </Link>
+                                <Redirect to='/member'>
+                                    <button 
+                                        className="btn btn-primary btn-checkout btn-block" 
+                                        type="submit"
+                                    >
+                                        Submit
+                                    </button>
+                                </Redirect>
                                 */}
                                 <button 
                                     className="btn btn-primary btn-checkout btn-block" 

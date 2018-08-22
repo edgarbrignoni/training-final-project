@@ -22,7 +22,7 @@ class Home extends React.Component{
                 <Consumer>
                     {({ state }) => (
                         state.blog.map((item, index) => {
-                            while (index < 4) {
+                            while (index < 3) {
                                 return (
                                     <Featurette 
                                         key={index}

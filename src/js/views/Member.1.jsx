@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { withSession } from '../stores/AppContext.jsx';
-import PropTypes from "prop-types";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 import MemberInfo from "../component/MemberInfo.jsx";
@@ -10,10 +8,13 @@ import BodyComposition from "../component/BodyComposition.jsx";
 import BodyFatGoals from "../component/BodyFatGoals.jsx";
 import ProgressPhoto from "../component/ProgressPhoto.jsx";
 import UpcomingWorkouts from "../component/UpcomingWorkouts.jsx";
+// import UpcomingMeals from "../component/UpcomingMeals.jsx";
+import PropTypes from "prop-types";
 
 class Member extends React.Component{
     
     render(){
+        
         return (
             <React.Fragment>
                 <Navbar />

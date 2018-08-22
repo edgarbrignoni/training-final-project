@@ -21,9 +21,9 @@ class ProgressPhoto extends React.Component{
                 </div>
                 <div className="card-body text-dark">
                     <div className="row">
-                        <div className="col-md-4 mb-1"><img src="./img/no-photo-headshot.jpg" className="card-img-top"/></div>
-                        <div className="col-md-4 mb-1"><img src="./img/no-photo-headshot.jpg" className="card-img-top"/></div>
-                        <div className="col-md-4 mb-1"><img src="./img/no-photo-headshot.jpg" className="card-img-top"/></div>
+                        <div className="col-md-4 mb-1"><img src="../img/no-photo-headshot.jpg" className="card-img-top"/></div>
+                        <div className="col-md-4 mb-1"><img src="../img/no-photo-headshot.jpg" className="card-img-top"/></div>
+                        <div className="col-md-4 mb-1"><img src="../img/no-photo-headshot.jpg" className="card-img-top"/></div>
                     </div>
                 </div>
             </div>

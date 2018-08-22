@@ -1,11 +1,12 @@
 import React from 'react';
+import { Consumer } from "../stores/AppContext.jsx";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
 
-class UpcomingWorkouts extends React.Component{
+class Calendar extends React.Component{
     
     render(){
         return (
@@ -35,7 +36,19 @@ class UpcomingWorkouts extends React.Component{
                             <li>
                                 <Link style={{ textDecoration: 'none' }} to="/workout">
                                     <button type="button" className="btn btn-light">
-                                        Chest<br />Abs
+                                        <Consumer>
+                                            {({ state }) => {
+                                                var obj = state.members[0];
+                                                // var result = Object.keys(obj).map(function(key) {
+                                                //   return [Number(key), obj[key]];
+                                                // });
+                                                
+                                                console.log(obj);
+                                                return (
+                                                    <h1>Hello</h1>
+                                                );
+                                            }}
+                                        </Consumer>
                                     </button>
                                 </Link>    
                             </li>
@@ -53,8 +66,8 @@ class UpcomingWorkouts extends React.Component{
     }
 }
 
-export default UpcomingWorkouts;
+export default Calendar;
 
-UpcomingWorkouts.propTypes = {
+Calendar.propTypes = {
     match: PropTypes.object
 };

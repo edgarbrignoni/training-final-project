@@ -32,7 +32,7 @@ class Forgot extends React.Component{
                                             </div>
                                             <div className="form-group row mb-0">
                                                 <div className="col-md-6 offset-md-4">
-                                                    <button type="submit" className="btn btn-primary" id="btn-pwd-reminder">
+                                                    <button type="submit" className="btn btn-outline-primary" id="btn-pwd-reminder">
                                                         Send Password Reset Link
                                                     </button>
                                                 </div>

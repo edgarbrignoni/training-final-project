@@ -36,7 +36,7 @@ class Card extends React.Component{
                     <div className="p-0 card-footer bg-transparent border-0">
                         <div className="p-0 text-center">
                             <Link style={{ textDecoration: 'none' }} to={"/post/"+this.props.id}>
-                                <button type="button" className="btn btn-info text-center">READ MORE</button>
+                                <button type="button" className="btn btn-info text-center mb-3">READ MORE</button>
                             </Link>
                         </div>
                     </div>

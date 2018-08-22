@@ -15,7 +15,6 @@ import Login from "./views/Login.jsx";
 import Signup from "./views/Signup.jsx";
 import Forgot from "./views/Forgot.jsx";
 import Create from "./views/Create.jsx";
-import Calendar from "./component/Calendar.jsx";
 
 class Layout extends React.Component {
     
@@ -86,10 +85,11 @@ class Layout extends React.Component {
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ session: data });
+                    window.sessionStorage.token = data.token;
                     this.actions.loadInitialData();
                     window.location.replace("/member");
                 });
-                //.catch(error => console.log(error));
+                // .catch(error => console.log(error));
             },
             "submitRegistration": (
                 first_name, 
@@ -180,7 +180,7 @@ class Layout extends React.Component {
                     throw new Error(data);//INVALID TOKEN
                   }
                   this.actions.loadInitialData();
-                  window.location.replace("/home");
+                  window.location.replace("/member");
                 });
                 // .catch(error => console.log(error));
                 
@@ -191,37 +191,7 @@ class Layout extends React.Component {
                 first_name,
                 last_name,
                 email,
-                password,
-                repassword, 
-                age, 
-                height, 
-                weight, 
-                occupation,
-                high_cholesterol,
-                obese,
-                diabetes,
-                hypertension,
-                heart_attack,
-                other_cardiac_disease,
-                history_high_cholesterol,
-                history_obese,
-                history_diabetes,
-                history_hypertension,
-                history_heart_attack,
-                history_other_cardiac_disease,
-                fracture,
-                luxation,
-                sprain,
-                column_injury,
-                low_back_pain,
-                knee_injury,
-                repetitive_tear,
-                chronic_pain,
-                physical_active,
-                example_activities,
-                times_week,
-                purpose,
-                goal_description
+                password
             ) => {
                     
                 let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/user/';
@@ -232,37 +202,7 @@ class Layout extends React.Component {
                     first_name: first_name,
                     last_name: last_name,
                     email: email,
-                    password: password,
-                    repassword: repassword,
-                    age: age,
-                    height: height,
-                    weight: weight, 
-                    occupation: occupation,
-                    high_cholesterol: high_cholesterol,
-                    obese: obese,
-                    diabetes: diabetes,
-                    hypertension: hypertension,
-                    heart_attack: heart_attack,
-                    other_cardiac_disease: other_cardiac_disease,
-                    history_high_cholesterol: history_high_cholesterol,
-                    history_obese: history_obese,
-                    history_diabetes: history_diabetes,
-                    history_hypertension: history_hypertension,
-                    history_heart_attack: history_heart_attack,
-                    history_other_cardiac_disease: history_other_cardiac_disease,
-                    fracture: fracture,
-                    luxation: luxation,
-                    sprain: sprain,
-                    column_injury: column_injury,
-                    low_back_pain: low_back_pain,
-                    knee_injury: knee_injury,
-                    repetitive_tear: repetitive_tear,
-                    chronic_pain: chronic_pain,
-                    physical_active: physical_active,
-                    example_activities: example_activities,
-                    times_week: times_week,
-                    purpose: purpose,
-                    goal_description: goal_description
+                    password: password
                 };
                 
                 fetch(url, {
@@ -279,7 +219,7 @@ class Layout extends React.Component {
                     throw new Error(data);//INVALID TOKEN
                   }
                   this.actions.loadInitialData();
-                  window.location.replace("/member");
+                  window.location.replace("/home");
                 });
                 // .catch(error => console.log(error));
             
@@ -348,7 +288,6 @@ class Layout extends React.Component {
                                 <Route exact path="/signup" component={Signup} />
                                 <Route exact path="/forgot" component={Forgot} />
                                 <Route exact path="/create" component={Create} />
-                                <Route exact path="/calendar/:theid" component={Calendar} />
                             </Provider>
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>
