@@ -15,6 +15,7 @@ import Login from "./views/Login.jsx";
 import Signup from "./views/Signup.jsx";
 import Forgot from "./views/Forgot.jsx";
 import Create from "./views/Create.jsx";
+import Success from "./views/Success.jsx";
 
 
 class Layout extends React.Component {
@@ -199,11 +200,6 @@ class Layout extends React.Component {
                     }
                 );
             },
-<<<<<<< HEAD
-            //"updateSample": (id, userId, answer) => {
-            "updateMember": (firstName, lastName, email, password, repassword, age, height, weight, ocupation, hChol, obese, diabetes, hypertension, heartAttack, otherCarDis, famChol, famObese, famDiabetes, famHyper, famHAtk, otherdsease, fracture, luxation, sprain, colInjur, lowBack, kneeinjur, tear, chronic, physAct, exActive, hmtweek, purpose, goaldesc) => {
-                console.log (firstName, lastName, email, password, repassword, age, height, weight, ocupation, hChol, obese, diabetes, hypertension, heartAttack, otherCarDis, famChol, famObese, famDiabetes, famHyper, famHAtk, otherdsease, fracture, luxation, sprain, colInjur, lowBack, kneeinjur, tear, chronic, physAct, exActive, hmtweek, purpose, goaldesc);
-=======
             "submitRegistration": (
                 first_name, 
                 last_name, 
@@ -278,7 +274,6 @@ class Layout extends React.Component {
                 );
                     
                 let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/member/';
->>>>>>> 7975d11fd4308eb2245e3418f30d1fe37d0f3417
                 
                 var data = {
                     first_name: first_name,
@@ -330,7 +325,7 @@ class Layout extends React.Component {
                     throw new Error(data);//INVALID TOKEN
                   }
                   this.actions.loadInitialData();
-                  window.location.replace("/home");
+                  window.location.replace("/success");
                 })
                 .catch(error => console.log(error));
                 
@@ -388,16 +383,6 @@ class Layout extends React.Component {
             }),
             "loadInitialData": () => { 
                 
-<<<<<<< HEAD
-            fetch('https://my-first-wordpress-mberrio10.c9users.io/wp-json/sample_api/v1/blog')
-              .then(response => response.json())
-              .then(data => this.setState({ blog: data, isLoading: false }));
-              //   .catch(error => console.log(error));
-            fetch('https://my-first-wordpress-mberrio10.c9users.io/wp-json/sample_api/v1/workout')
-              .then(response => response.json())
-              .then(data => this.setState({ workouts: data, isLoading: false }));
-            //   .catch(error => console.log(error));
-=======
             fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/blog')
             .then(response => response.json())
             .then(data => this.setState({ blog: data, isLoading: false }))
@@ -407,7 +392,6 @@ class Layout extends React.Component {
             // .then(response => response.json())
             // .then(data => this.setState({ workout: data, isLoading: false }))
             // .catch(error => console.log(error));
->>>>>>> 7975d11fd4308eb2245e3418f30d1fe37d0f3417
               
             // fetch('https://wordpress-breathecode-cli-nachovz.c9users.io/wp-json/sample_api/v1/meetups')
             //   .then(response => response.json())
@@ -452,6 +436,7 @@ class Layout extends React.Component {
                                 <Route exact path="/signup" component={Signup} />
                                 <Route exact path="/forgot" component={Forgot} />
                                 <Route exact path="/create" component={Create} />
+                                <Route exact path="/success" component={Success} />
                             </Provider>
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>

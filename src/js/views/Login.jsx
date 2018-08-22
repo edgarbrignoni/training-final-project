@@ -41,7 +41,7 @@ class Login extends React.Component{
                                                     <button type="submit" className="btn btn-primary">
                                                         Login
                                                     </button>
-                                                    <a className="btn btn-link" href="./forgot">
+                                                    <a className="btn btn-link" href="/forgot">
                                                         Forgot Your Password?
                                                     </a>
                                                 </div>
