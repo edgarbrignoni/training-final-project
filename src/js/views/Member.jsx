@@ -1,7 +1,6 @@
 import React from 'react';
+import { Consumer } from "../stores/AppContext.jsx";
 import { Link } from "react-router-dom";
-import { withSession } from '../stores/AppContext.jsx';
-import PropTypes from "prop-types";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 import MemberInfo from "../component/MemberInfo.jsx";
@@ -10,8 +9,22 @@ import BodyComposition from "../component/BodyComposition.jsx";
 import BodyFatGoals from "../component/BodyFatGoals.jsx";
 import ProgressPhoto from "../component/ProgressPhoto.jsx";
 import UpcomingWorkouts from "../component/UpcomingWorkouts.jsx";
+import PropTypes from "prop-types";
 
 class Member extends React.Component{
+    
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            session: {
+                id: 1000,
+                user_nicename: "johnsmith",
+                password: "password",
+                token: "gfdrtu6545hftydhgrhxfh"
+            }
+        };
+    }    
     
     render(){
         return (
@@ -37,13 +50,13 @@ class Member extends React.Component{
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <ProgressPhoto />
-                        </div>
+                            <UpcomingWorkouts />
+                        </div> 
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <UpcomingWorkouts />
-                        </div> 
+                            <ProgressPhoto />
+                        </div>
                     </div>
                     <div className="row">
                         <div className="col-md-4 offset-md-4">

@@ -72,5 +72,4 @@ Featurette.propTypes = {
     desc: PropTypes.string,
     image: PropTypes.string,
     post: PropTypes.string
-    // category: PropTypes.string
 };

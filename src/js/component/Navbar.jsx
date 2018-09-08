@@ -8,6 +8,7 @@ import Login from '../../img/login.png';
 import User from '../../img/user.png';
 
 class Navbar extends React.Component{
+    
     constructor(props){
         super(props);
         
@@ -38,7 +39,6 @@ class Navbar extends React.Component{
                         className="btn btn-link p-0">
                         <Link className="navbar-brand" to="/">
                             <img id="logoInverted" className="img-fluid" src={Home} />
-                            <p className="login">Home</p>
                         </Link>
                     </button>
                     <button id="toggler-btn" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,6 @@ class Navbar extends React.Component{
                                     className="btn btn-link text-center text-white" 
                                     onClick={(e) => actions.logout()}>
                                     <img id="logoInverted" className="img-fluid" src={Login} />
-                                    <p className="login">Logout</p>
                                 </button>
                             :
                                 <Link style={{ textDecoration: 'none' }} to="/signup">
@@ -72,7 +71,6 @@ class Navbar extends React.Component{
                                         data-target-disable="#exampleModal"
                                     >
                                         <img id="logoInverted" className="img-fluid" src={User} />
-                                        <p className="login">Login</p>
                                     </button>
                                 </Link>
                                 
@@ -113,6 +111,6 @@ export default withSession(Navbar);
 
 Navbar.propTypes = {
     session: PropTypes.object,
-    actions: PropTypes.object,
-    currentView: PropTypes.string
+    actions: PropTypes.object
+    // currentView: PropTypes.string
 };

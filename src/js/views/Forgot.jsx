@@ -1,6 +1,4 @@
 import React from 'react';
-import { Consumer } from '../stores/AppContext.jsx';
-import PropTypes from "prop-types";
 import Navbar from '../component/Navbar.jsx';
 
 class Forgot extends React.Component{
@@ -52,7 +50,3 @@ class Forgot extends React.Component{
 }
 
 export default Forgot;
-
-Forgot.propTypes = {
-    prop_name: PropTypes.type_of_the_prop
-};

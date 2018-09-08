@@ -1,72 +1,91 @@
 import React from 'react';
+import { withSession } from '../stores/AppContext.jsx';
 import { Consumer } from "../stores/AppContext.jsx";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faCog from '@fortawesome/fontawesome-free-solid/faCog';
-
+import Navbar from "../component/Navbar.jsx";
+import Footer from "../component/Footer.jsx";
 
 class Calendar extends React.Component{
+
+	constructor(props){
+        super(props);
+        this.state = {
+        };
+    }
     
     render(){
+        const numbers = [0,1,2];
+        const listItems = numbers.map((number) =>{
+            <li key={number.toString()}>
+                {number}
+            </li>;
+            });
         return (
-            <div className="card border-dark mb-3">
-                <div className="card-header text-white bg-dark border-dark">UPCOMING WORKOUTS:
-                    <button type="button" className="btn btn-secondary btn-sm float-right">
-                        <FontAwesomeIcon className="fa-lg" icon={faCog} />
-                    </button>
-                </div>
-                <div className="month"> 
-                    <ul>
-                        <li>Your Weekly Workout</li>
-                    </ul>
-                </div>
-                <div className="row">
-                    <div className="col-md-12">
-                        <ul className="weekdays">
-                            <li>Mo</li>
-                            <li>Tu</li>
-                            <li>We</li>
-                            <li>Th</li>
-                            <li>Fr</li>
-                            <li>Sa</li>
-                            <li>Su</li>
-                        </ul>
-                        <ul className="days"> 
-                            <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
-                                    <button type="button" className="btn btn-light">
-                                        <Consumer>
-                                            {({ state }) => {
-                                                var obj = state.members[0];
-                                                // var result = Object.keys(obj).map(function(key) {
-                                                //   return [Number(key), obj[key]];
-                                                // });
-                                                
-                                                console.log(obj);
-                                                return (
-                                                    <h1>Hello</h1>
-                                                );
-                                            }}
-                                        </Consumer>
-                                    </button>
-                                </Link>    
-                            </li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                        </ul>
-                    </div>
-                </div>    
-            </div>
+            <React.Fragment>
+                <Navbar />
+                <p>&nbsp;</p>
+                <ul>{listItems}</ul>
+                {/*
+                <h1 className="py-2 text-center">POST</h1>
+                */}
+                <Consumer>
+                    {({ state }) => {
+                        const member = state.members.find( member => member.ID === parseInt(this.props.match.params.theid) );
+                        if (member === undefined) { 
+                            return(<p>Loading...</p>);
+                        } 
+                        else {
+                            // let workouts1 = [0,1,2];
+                            // console.log(typeof(workouts1));
+                            // console.log(workouts1);
+                            for (var i=0; i < member.meta_keys.monday.length; i++) {
+                                // workouts[i] = state.workouts.find( workout => workout.ID === parseInt(member.meta_keys.monday[i]));
+                                console.log(parseInt(member.meta_keys.monday[i]));
+                                console.log(typeof(parseInt(member.meta_keys.monday[i])));
+                                // workouts.push(member.meta_keys.monday[i]);
+                            }
+                            // console.log(typeof(workouts));
+                            // console.log(workouts);
+                            // console.log('done');
+                            // workouts1.map((item, index) => {
+                            //     return (
+                            //         <h1 key={index.toString()}>Hello {item}</h1>
+                            //     );
+                            // });
+                            // return (
+                            //     <div className="container">
+                            //         <div className="container p-0">
+                            //             <div className="row">
+                            //                 <div className="col-md-8 blog-main-disable">
+                            //                     <br />
+                            //                     <div className="col-md-12 blog-post">
+                            //                         <h2 className="blog-post-title">{post.post_title}</h2>
+                            //                         <p className="blog-post-meta">
+                            //                             {Moment(post.post_date).format("dddd, MMMM Do YYYY")} by AUTHOR.ID
+                            //                         </p>
+                            //                         <p>
+                            //                             {post.meta_keys.monday[0]}
+                            //                         </p>
+                            //                         <Link style={{ textDecoration: 'none' }} to="/blog">
+                            //                             <button type="button" className="btn btn-info">SEE MORE POSTS</button>
+                            //                         </Link>
+                            //                         <p></p>
+                            //                     </div>
+                            //                 </div>
+                            //             </div>
+                            //         </div>
+                            //     </div>
+                            // );
+                        }
+                    }}
+                </Consumer>
+                <Footer />
+            </React.Fragment>
         );
     }
 }
 
-export default Calendar;
+export default withSession(Calendar);
 
 Calendar.propTypes = {
     match: PropTypes.object

@@ -27,7 +27,7 @@ class Checkout extends React.Component{
                 */}
                 <Consumer>
                     {({ state }) => {
-                        const checkout = state.plan.find( checkout => checkout.ID === parseInt(this.props.match.params.theid) );
+                        const checkout = state.plans.find( checkout => checkout.ID === parseInt(this.props.match.params.theid) );
                         if (!checkout) { 
                             return(<p>Loading...</p>);
                         } 

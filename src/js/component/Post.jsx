@@ -24,7 +24,7 @@ class Post extends React.Component{
                 */}
                 <Consumer>
                     {({ state }) => {
-                        const post = state.blog.find( post => post.ID === parseInt(this.props.match.params.theid) );
+                        const post = state.blogs.find( post => post.ID === parseInt(this.props.match.params.theid) );
                         if (!post) { 
                             return(<p>Loading...</p>);
                         } 

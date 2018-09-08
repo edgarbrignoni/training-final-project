@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
 class Footer extends React.Component{
 
@@ -62,7 +61,3 @@ class Footer extends React.Component{
 }
 
 export default Footer;
-
-Footer.propTypes = {
-    //prop_name: PropTypes.type_of_the_prop
-};

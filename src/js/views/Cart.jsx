@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 
@@ -83,7 +82,3 @@ class Checkout extends React.Component{
 }
 
 export default Checkout;
-
-Checkout.propTypes = {
-    // prop_name: PropTypes.type_of_the_prop
-};

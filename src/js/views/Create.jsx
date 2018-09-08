@@ -1,13 +1,7 @@
 import React from 'react';
-import { Link, Redirect } from "react-router-dom";
 import { withSession } from '../stores/AppContext.jsx';
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
-// import BasicInfo from "../component/BasicInfo.jsx";
-// import ClinicalRecord from "../component/ClinicalRecord.jsx";
-// import FamilyHistory from "../component/FamilyHistory.jsx";
-// import PhysicalCondition from "../component/PhysicalCondition.jsx";
-// import PhysicalActivity from "../component/PhysicalActivity.jsx";
 import PropTypes from "prop-types";
 
 class Registration extends React.Component{
@@ -629,7 +623,6 @@ class Registration extends React.Component{
     }
 }
 export default withSession(Registration);
-
 
 Registration.propTypes = {
     session: PropTypes.object,

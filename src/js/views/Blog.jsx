@@ -19,7 +19,7 @@ class Blog extends React.Component{
                         <div className="row">
                             <Consumer>
                                 {({ state }) => (
-                                    state.blog.map((item, index) => {
+                                    state.blogs.map((item, index) => {
                                         return (
                                             <Card 
                                                 key={index}

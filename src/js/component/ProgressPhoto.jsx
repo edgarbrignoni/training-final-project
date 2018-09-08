@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
@@ -32,7 +31,3 @@ class ProgressPhoto extends React.Component{
 }
 
 export default ProgressPhoto;
-
-ProgressPhoto.propTypes = {
-    //prop_name: PropTypes.type_of_the_prop
-};

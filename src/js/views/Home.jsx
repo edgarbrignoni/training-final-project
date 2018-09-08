@@ -21,7 +21,7 @@ class Home extends React.Component{
                 <Carousel />
                 <Consumer>
                     {({ state }) => (
-                        state.blog.map((item, index) => {
+                        state.blogs.map((item, index) => {
                             while (index < 3) {
                                 return (
                                     <Featurette 

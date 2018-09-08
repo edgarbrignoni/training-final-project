@@ -25,7 +25,7 @@ class Navbar extends React.Component{
     }
     
     render(){
-        //let homeActive = this.props.currentView === "home" ? "active" :"";
+        // let homeActive = this.props.currentView === "home" ? "active" :"";
         
         const {session, actions} = this.props;
         
@@ -109,6 +109,6 @@ export default withSession(Navbar);
 
 Navbar.propTypes = {
     session: PropTypes.object,
-    actions: PropTypes.object,
-    currentView: PropTypes.string
+    actions: PropTypes.object
+    // currentView: PropTypes.string
 };

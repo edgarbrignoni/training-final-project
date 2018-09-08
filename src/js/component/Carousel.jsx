@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
 class Carousel extends React.Component{
 
@@ -84,7 +83,3 @@ class Carousel extends React.Component{
 }
 
 export default Carousel;
-
-Carousel.propTypes = {
-    prop_name: PropTypes.string
-};

@@ -4,8 +4,20 @@ import PropTypes from "prop-types";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 
-
 class UpcomingWorkouts extends React.Component{
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            mon: 460,
+            tue: 457,
+            wed: 453,
+            thu: 450,
+            fri: 447,
+            sat: 445,
+            sun: 460
+        };
+    }
     
     render(){
         return (
@@ -33,40 +45,62 @@ class UpcomingWorkouts extends React.Component{
                         </ul>
                         <ul className="days"> 
                             <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
+                                <Link style={{ textDecoration: 'none' }} to={"/workout/"+this.state.mon}>
                                     <button type="button" className="btn btn-light">
-                                        Chest<br />Abs
+                                        Lower Body
+                                        <br/>
+                                        Quads
                                     </button>
                                 </Link>    
                             </li>
                             <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
-                                    <button type="button" className="btn btn-light">Chest<br/>Arms</button>
+                                <Link style={{ textDecoration: 'none' }} to={"/workout/"+this.state.tue}>
+                                    <button type="button" className="btn btn-light">
+                                        Arms
+                                    </button>
                                 </Link>
                             </li>
                             <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
-                                    <button type="button" className="btn btn-light">Chest<br/>Arms</button>
+                                <Link style={{ textDecoration: 'none' }} to={"/workout/"+this.state.wed}>
+                                    <button type="button" className="btn btn-light">
+                                        Lower Body
+                                        <br />
+                                        Glutes
+                                    </button>
                                 </Link>
                             </li>
                             <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
-                                    <button type="button" className="btn btn-light">Chest<br/>Arms</button>
+                                <Link style={{ textDecoration: 'none' }} to={"/workout/"+this.state.thu}>
+                                    <button type="button" className="btn btn-light">
+                                        Shoulders
+                                        <br/>
+                                        Arms
+                                    </button>
                                 </Link>
                             </li>
                             <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
-                                    <button type="button" className="btn btn-light">Chest<br/>Arms</button>
+                                <Link style={{ textDecoration: 'none' }} to={"/workout/"+this.state.fri}>
+                                    <button type="button" className="btn btn-light">
+                                        Biceps
+                                        <br/>
+                                        Triceps
+                                    </button>
                                 </Link>
                             </li>
                             <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
-                                    <button type="button" className="btn btn-light">Chest<br/>Arms</button>
+                                <Link style={{ textDecoration: 'none' }} to={"/workout/"+this.state.sat}>
+                                    <button type="button" className="btn btn-light">
+                                        Upper Body
+                                        <br />
+                                        Abs
+                                    </button>
                                 </Link>
                             </li>
                             <li>
-                                <Link style={{ textDecoration: 'none' }} to="/workout">
-                                    <button type="button" className="btn btn-light">Chest<br/>Arms</button>
+                                <Link style={{ textDecoration: 'none' }} to={"/member"}>
+                                    <button type="button" className="btn btn-light">
+                                        Rest
+                                    </button>
                                 </Link>
                             </li>
                         </ul>
@@ -80,5 +114,6 @@ class UpcomingWorkouts extends React.Component{
 export default UpcomingWorkouts;
 
 UpcomingWorkouts.propTypes = {
+    id: PropTypes.number,
     match: PropTypes.object
 };

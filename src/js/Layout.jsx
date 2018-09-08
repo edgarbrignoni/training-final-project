@@ -11,12 +11,11 @@ import Checkout from "./views/Checkout.jsx";
 import Cart from "./views/Cart.jsx";
 import Post from "./component/Post.jsx";
 import Workout from "./component/Workout.jsx";
-import Login from "./views/Login.jsx";
 import Signup from "./views/Signup.jsx";
 import Forgot from "./views/Forgot.jsx";
 import Create from "./views/Create.jsx";
 import Success from "./views/Success.jsx";
-
+import Calendar from "./component/Calendar.jsx";
 
 class Layout extends React.Component {
     
@@ -24,50 +23,44 @@ class Layout extends React.Component {
         super();
         
         this.state = {
-            "blog": [
+            "blogs": [
             ],
-            "workout": [
+            "workouts": [
             ],
             "members": [
             ],
-            "plan": [
+            "plans": [
                 {
                     ID: 0,
                     title: "Free",
                     main: "Personalized Training",
-                    price: 45,
-                    image: "https://legionathletics.com/wp-content/uploads/2016/02/best-shoulder-Chests-bodybuilding.jpg.pagespeed.ce.gqJBfDv4jB.jpg",
-                    desc: "Achive your fitness goals with personlize training."
+                    desc: "Achive your fitness goals with personlize training.",
+                    price: 45
                 },
                 {
                     ID: 1,
                     title: "Title",
                     main: "Yoga Sessions",
                     desc: "Get your body and mind sync with personlize sessions.",
-                    price: 45,
-                    image: "https://cdn.shopify.com/s/files/1/2289/7641/files/CV0A4202_grande.jpg?v=1527110452"
+                    price: 45
                 },
                 {
                     ID: 2,
                     title: "Title",
                     main: "Bundle Yoga and Workout Sessions",
                     desc: "With yoga becoming more and more popular, it's no surprise that bodybuilders can make use of it, get your bundle. ",
-                    price: 80,
-                    image: "http://www.formulaoz.com/img/BODYBUILDING-DIET-yoga-and-bodybuilding-2.jpg"
+                    price: 80
                 },
                 {
                     ID: 3,
                     title: "Title",
                     main: "Training / Yoga / Nutrition",
                     desc: "The only thing standing between you an your goals is a click away, get the body you always wanted.",
-                    price: 175,
-                    image: "https://blogs.altru.org/wp-content/uploads/2018/03/Smoothie-600x400.jpg"
+                    price: 175
                 }    
             ],
             "session": {
-            },
-            "cart":[
-            ]
+            }
         };
         
         this.actions = {
@@ -87,6 +80,7 @@ class Layout extends React.Component {
                 .then(response => response.json())
                 .then(data => {
                     this.setState({ session: data });
+                    window.sessionStorage.token = data.token;
                     this.actions.loadInitialData();
                     window.location.replace("/member");
                 });
@@ -182,8 +176,8 @@ class Layout extends React.Component {
                   }
                   this.actions.loadInitialData();
                   window.location.replace("/success");
-                })
-                .catch(error => console.log(error));
+                });
+                // .catch(error => console.log(error));
                 
             },
             "createUser": (
@@ -225,7 +219,7 @@ class Layout extends React.Component {
                 goal_description
             ) => {
                     
-                let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/user/';
+                let url = 'https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/users/';
                 
                 var data = {
                     username: username,
@@ -291,35 +285,20 @@ class Layout extends React.Component {
             }),
             "loadInitialData": () => { 
                 
-            fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/blog')
+            fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/blogs')
             .then(response => response.json())
-            .then(data => this.setState({ blog: data, isLoading: false }));
+            .then(data => this.setState({ blogs: data, isLoading: false }));
             // .catch(error => console.log(error));
             
-            fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/workout')
+            fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/workouts')
             .then(response => response.json())
-            .then(data => this.setState({ workout: data, isLoading: false }));
+            .then(data => this.setState({ workouts: data, isLoading: false }));
             // .catch(error => console.log(error));
             
-            fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/member')
+            fetch('https://backend-final-project-edgarbrignoni.c9users.io/wp-json/sample_api/v1/members')
             .then(response => response.json())
             .then(data => this.setState({ members: data, isLoading: false }));
             // .catch(error => console.log(error));
-            
-            fetch('https://my-first-wordpress-emilyv.c9users.io/wp-json/wp/v2/posts?_embed')
-            .then(response => response.json())
-            .then(data => this.setState({ posts: data, isLoading: false }));
-            // .catch(error => console.log(error));
-            },
-            "addPlanToCart": (planId) => {
-                let tempCart = this.state.cart;
-                
-                let arrayWithThePlan = this.state.planshop.filter( (plan) => {
-                    return plan.id === planId;  
-                });
-                
-                tempCart.push(arrayWithThePlan[0]);
-                this.setState({cart: tempCart});
             }
         };
     }
@@ -344,12 +323,12 @@ class Layout extends React.Component {
                                 <Route exact path="/checkout/:theid" component={Checkout} />
                                 <Route exact path="/cart" component={Cart} />
                                 <Route exact path="/post/:theid" component={Post} />
-                                <Route exact path="/workout" component={Workout} />
-                                <Route exact path="/login" component={Login} />
+                                <Route exact path="/workout/:theid" component={Workout} />
                                 <Route exact path="/signup" component={Signup} />
                                 <Route exact path="/forgot" component={Forgot} />
                                 <Route exact path="/create" component={Create} />
                                 <Route exact path="/success" component={Success} />
+                                <Route exact path="/calendar" component={Calendar} />
                             </Provider>
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>

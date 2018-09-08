@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Consumer } from "../stores/AppContext.jsx";
 import Navbar from "../component/Navbar.jsx";
+import PropTypes from "prop-types";
 import Footer from "../component/Footer.jsx";
 
 class Workout extends React.Component{
@@ -15,10 +17,10 @@ class Workout extends React.Component{
         return (
             <React.Fragment>
                 <Navbar />
-                <h1 className="py-2 text-center">Monday Workout</h1>
+                <h1 className="py-2 text-center">Workout for Today</h1>
                 <Consumer>
                     {({ state }) => {
-                        const selected = state.workout.find( selected => selected.ID === parseInt("460") );
+                        const selected = state.workouts.find( selected => selected.ID === parseInt(this.props.match.params.theid) );
                         if (!selected) { 
                             return(<p>Loading...</p>);
                         } 
@@ -58,7 +60,7 @@ class Workout extends React.Component{
                                                     <table className="table table-bordered">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col">Chest</th>
+                                                                <th scope="col">{selected.meta_keys.muscle_type}</th>
                                                             </tr>
                                                         </thead>
                                                     </table>
@@ -93,6 +95,10 @@ class Workout extends React.Component{
                                                         </tbody>
                                                     </table>
                                                 </div>
+                                                <Link style={{ textDecoration: 'none' }} to="/member">
+                                                    <button type="button" className="btn btn-outline-primary">RETURN TO ACCOUNT</button>
+                                                </Link>
+                                                <p></p>
                                             </div>
                                         </div>
                                     </div>
@@ -108,3 +114,7 @@ class Workout extends React.Component{
 }
 
 export default Workout;
+
+Workout.propTypes = {
+    match: PropTypes.object
+};

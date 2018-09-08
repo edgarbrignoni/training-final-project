@@ -15,7 +15,7 @@ class Plan extends React.Component {
                     <div className="card-deck mb-3 text-center">
                         <Consumer>
                             {({ state }) => (
-                                state.plan.map((item, index) => {
+                                state.plans.map((item, index) => {
                                     return (
                                         <Shop 
                                             key={index}

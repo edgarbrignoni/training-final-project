@@ -9,13 +9,24 @@ import BodyComposition from "../component/BodyComposition.jsx";
 import BodyFatGoals from "../component/BodyFatGoals.jsx";
 import ProgressPhoto from "../component/ProgressPhoto.jsx";
 import UpcomingWorkouts from "../component/UpcomingWorkouts.jsx";
-// import UpcomingMeals from "../component/UpcomingMeals.jsx";
 import PropTypes from "prop-types";
 
 class Member extends React.Component{
     
-    render(){
+    constructor(props){
+        super(props);
         
+        this.state = {
+            session: {
+                id: 1000,
+                user_nicename: "johnsmith",
+                password: "password",
+                token: "gfdrtu6545hftydhgrhxfh"
+            }
+        };
+    } 
+    
+    render(){
         return (
             <React.Fragment>
                 <Navbar />
@@ -23,7 +34,7 @@ class Member extends React.Component{
                 <Consumer>
                     {({ state }) => {
                     
-                        const member = state.member.find( member => member.ID === parseInt(this.props.match.params.theid) );
+                        const member = state.members.find( member => member.ID === parseInt(this.props.match.params.theid) );
                         if(!member){ 
                             
                             return(<p>Loading</p>);
